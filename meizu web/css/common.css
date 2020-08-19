@@ -1,0 +1,501 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px/1.5 Helvetica,Tahoma,Arial,Hiragino Sans GB,Microsoft YaHei,SimSun,Heiti,sans-serif;
+}
+
+.typearea {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  content: '';
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+header > content {
+  height: 82px;
+}
+header .logo {
+  float: left;
+  padding: 28px 0;
+}
+header .logo a {
+  display: block;
+  width: 125px;
+  height: 24px;
+  background: url("../images/logo.png") no-repeat 0 0/cover;
+}
+header .user-car {
+  float: right;
+  width: 29px;
+  height: 29px;
+  margin: 27px 0 0 8px;
+  background: url("../images/buycar.png") no-repeat 0 center;
+  position: relative;
+}
+header .user-car em {
+  position: absolute;
+  top: -2px;
+  right: -3px;
+  height: 15px;
+  border-radius: 50%;
+  background: #c00;
+  color: #fff;
+  line-height: 15px;
+  text-align: center;
+  display: inline-block;
+  padding: 0 4px;
+  text-indent: 0;
+}
+header .user-msg {
+  float: right;
+  width: 29px;
+  height: 29px;
+  margin: 27px 0 0 8px;
+  position: relative;
+}
+header .user-msg .user-list {
+  width: 100%;
+  height: 100%;
+  background: url("../images/user-black.png") no-repeat;
+  cursor: pointer;
+}
+header .user-msg .user-item {
+  position: absolute;
+  top: 37px;
+  left: -34.5px;
+  width: 98px;
+  text-align: center;
+  padding: 15px 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: none;
+}
+header .user-msg .user-item::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 40px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+}
+header .user-msg .user-item li {
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+header .user-msg .user-item li:last-child {
+  margin-bottom: 0;
+}
+header .user-msg .user-item li a {
+  color: #515151;
+}
+header .user-msg .user-item li a:hover {
+  color: #008cff;
+}
+header .user-msg:hover .user-item {
+  display: block;
+}
+header .header-search {
+  float: right;
+  margin: 26px 5px 0 10px;
+  width: 170px;
+  height: 28px;
+  border-color: transparent;
+  line-height: 29px;
+  font-size: 12px;
+  border: 1px solid #999;
+  border-radius: 20px;
+  background-color: #fff;
+  position: relative;
+}
+header .header-search input {
+  display: block;
+  border: none;
+  padding: 0;
+  outline: 0;
+  height: 127px;
+  height: 20px;
+  margin: 5px 0 0 15px;
+  transition: width .5s;
+  font-size: 12px;
+  line-height: 20px;
+  color: #333;
+  background-color: transparent;
+}
+header .header-search a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 36px;
+  height: 30px;
+  padding-right: 2px;
+  color: #515151;
+  text-align: right;
+  font-size: 22px;
+}
+header .topnav {
+  float: right;
+}
+header .topnav .topnav-list {
+  float: left;
+}
+header .topnav .topnav-list > a {
+  display: block;
+  padding: 31px 20px 30px;
+  line-height: 21px;
+  transition: color .1s linear;
+  color: #fff;
+}
+header .topnav .topnav-list > a:hover {
+  color: #008cff;
+}
+header .topnav .changeheader:hover .topnav-cover {
+  height: 183px;
+  border-bottom: 1px solid #e9e9e9;
+}
+header .topnav-cover {
+  position: absolute;
+  top: 82px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  height: 0;
+  border: none;
+  overflow: hidden;
+  transition: all .1s;
+}
+header .topnav-cover .content {
+  position: relative;
+}
+header .topnav-cover ul {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 5px 0 20px;
+  position: absolute;
+  top: 0;
+}
+header .topnav-cover ul:hover a {
+  opacity: .5;
+  transition: all .2s ease-in-out;
+}
+header .topnav-cover li {
+  display: inline-block;
+  width: 142px;
+  height: 140px;
+  padding: 5px 5px 20px;
+  font-size: 12px;
+  text-align: center;
+}
+header .topnav-cover li a {
+  display: block;
+  width: 142px;
+  color: #333;
+  position: relative;
+}
+header .topnav-cover li a:hover {
+  opacity: 1;
+}
+header .topnav-cover li a img {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+header .topnav-cover li a em {
+  font-style: normal;
+}
+header .appdown-cover {
+  position: absolute;
+  top: 82px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+header .appdown-cover img {
+  width: 1240px;
+  margin: 10px auto;
+}
+header .appdown-cover .down-left,
+header .appdown-cover .down-right {
+  position: absolute;
+  top: 210px;
+  left: 50%;
+  width: 125px;
+  height: 28px;
+}
+header .appdown-cover .down-left img,
+header .appdown-cover .down-right img {
+  width: 100%;
+}
+header .appdown-cover .down-left {
+  transform: translateX(-245px);
+}
+header .appdown-cover .down-right {
+  transform: translateX(378px);
+}
+header .appdown:hover .appdown-cover {
+  height: 320px;
+  transition: all .2s;
+}
+
+footer {
+  padding: 48px 0 20px;
+  border-top: 1px solid #f1f1f1;
+  font-size: 12px;
+  color: #999;
+}
+footer a {
+  color: #999;
+}
+footer a:hover {
+  color: #008cff;
+}
+footer .footer-server {
+  float: left;
+}
+footer .footer-server li {
+  float: left;
+  width: 150px;
+  text-align: center;
+}
+footer .footer-server li a {
+  display: block;
+  line-height: 27px;
+  font-size: 12px;
+  color: #666;
+}
+footer .footer-server li img {
+  width: 50px;
+  margin: 0 auto;
+}
+footer .footer-server li span {
+  line-height: 30px;
+  color: #999;
+}
+footer .footer-online {
+  float: right;
+  text-align: right;
+  margin-top: -18px;
+}
+footer .footer-online span {
+  color: #999;
+  font-size: 12px;
+  line-height: 30px;
+}
+footer .footer-online p {
+  color: #008cff;
+  font-size: 25px;
+  font-weight: 400;
+  margin-top: -6px;
+  line-height: 40px;
+}
+footer .footer-online a {
+  height: 30px;
+  padding: 0 16px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  border-radius: 20px;
+  margin-top: 3px;
+  display: inline-block;
+  background: #008cff;
+}
+footer .footer-line {
+  margin: 10px auto 28px;
+  height: 1px;
+  border-top: 1px solid #eee;
+}
+footer .footer-info {
+  float: left;
+}
+footer .footer-info li {
+  float: left;
+  padding-right: 15px;
+  border-right: 1px solid #d6d6d6;
+  height: 18px;
+  margin-right: 15px;
+}
+footer .footer-info li a {
+  display: block;
+  position: relative;
+  line-height: 18px;
+}
+footer .footer-info li a:hover {
+  color: #008cff;
+}
+footer .footer-info .language {
+  border-right: none;
+  position: relative;
+}
+footer .footer-info .language:hover .more-lang {
+  display: block;
+}
+footer .footer-info .language a {
+  padding-right: 10px;
+  padding-left: 3px;
+}
+footer .footer-info .language a:hover {
+  color: #515151;
+}
+footer .footer-info .language span {
+  margin-bottom: -4px;
+}
+footer .footer-info .language .lang-logo {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url("../images/language-sprite.png") no-repeat 0 0/cover;
+  margin-left: -3px;
+}
+footer .footer-info .language .more-lang {
+  position: absolute;
+  bottom: 18px;
+  font-size: 12px;
+  padding-bottom: 12px;
+  display: none;
+}
+footer .footer-info .language .more-lang li {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+footer .footer-info .language .more-lang ul {
+  overflow: hidden;
+  width: 115px;
+  background: #fff;
+  border: 1px solid #f1f1f1;
+}
+footer .footer-info .language .more-lang .lang-list {
+  height: 37px;
+  padding: 2px 4px 0 10px;
+  background: #fff;
+  line-height: 35px;
+}
+footer .footer-info .certificate {
+  padding-top: 8px;
+}
+footer .footer-info .certificate a {
+  margin: 0 3px;
+}
+footer .footer-info .police {
+  padding: 0 6px;
+}
+footer .footer-info .police span {
+  display: inline-block;
+  width: 14px;
+  height: 18px;
+  background: url("../images/footer-police.png") no-repeat 50% center;
+  margin-bottom: -4px;
+}
+footer .footer-info .footer-license,
+footer .footer-info .footer-wel,
+footer .footer-info .footer-trust {
+  margin: 0 !important;
+}
+footer .footer-info .footer-license span,
+footer .footer-info .footer-wel span,
+footer .footer-info .footer-trust span {
+  display: inline-block;
+  width: 20px;
+  height: 18px;
+  margin-bottom: -4px;
+}
+footer .footer-info .footer-license span {
+  background: url("../images/footer-license-01.png") no-repeat 50% center;
+}
+footer .footer-info .footer-license span:hover {
+  background-image: url("../images/footer-license-02.png");
+}
+footer .footer-info .footer-wel span {
+  background: url("../images/footer-wel-01.png") no-repeat 50% center;
+}
+footer .footer-info .footer-wel span:hover {
+  background-image: url("../images/footer-wel-02.png");
+}
+footer .footer-info .footer-trust span {
+  width: 25px;
+  background: url("../images/footer-trust-01.png") no-repeat 50% center;
+}
+footer .footer-info .footer-trust span:hover {
+  background-image: url("../images/footer-trust-02.png");
+}
+footer .subscribe {
+  float: right;
+  margin-top: 25px;
+  position: relative;
+}
+footer .subscribe span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100%;
+}
+footer .subscribe span::after {
+  content: '';
+  width: 1px;
+  height: 14px;
+  position: absolute;
+  right: -10px;
+  bottom: 0;
+  background: #eee;
+}
+footer .subscribe a:nth-child(1) span {
+  background-image: url("../images/subscribe-01.png");
+}
+footer .subscribe a:nth-child(1) span:hover {
+  background-image: url("../images/subscribe-01-01.png");
+}
+footer .subscribe a:nth-child(1):hover img {
+  display: block;
+}
+footer .subscribe a:nth-child(2) span {
+  background-image: url("../images/subscribe-02.png");
+}
+footer .subscribe a:nth-child(2) span:hover {
+  background-image: url("../images/subscribe-02-01.png");
+}
+footer .subscribe a:nth-child(2):hover img {
+  display: block;
+}
+footer .subscribe a:nth-child(3) span {
+  background-image: url("../images/subscribe-03.png");
+}
+footer .subscribe a:nth-child(3) span:hover {
+  background-image: url("../images/subscribe-03-01.png");
+}
+footer .subscribe a:nth-child(4) span {
+  background-image: url("../images/subscribe-04.png");
+}
+footer .subscribe a:nth-child(4) span:hover {
+  background-image: url("../images/subscribe-04-01.png");
+}
+footer .subscribe img {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  bottom: 31px;
+  display: none;
+}
+
+/*# sourceMappingURL=common.css.map */
