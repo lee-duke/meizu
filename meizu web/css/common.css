@@ -47,6 +47,9 @@ header .user-car {
   position: relative;
   cursor: pointer;
 }
+header .user-car:hover .user-car-info-box {
+  display: block;
+}
 header .user-car em {
   position: absolute;
   top: -2px;
@@ -73,6 +76,7 @@ header .user-car .user-car-info-box {
   border-radius: 3px;
   text-align: left;
   z-index: 999;
+  display: none;
 }
 header .user-car .user-car-info-box::after {
   position: absolute;
