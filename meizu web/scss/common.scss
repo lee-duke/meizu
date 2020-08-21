@@ -19,6 +19,7 @@ header{
     position: absolute;
     top: 0;
     width: 100%;
+    z-index: 999;
     &>content{
         height: 82px;
     }
@@ -37,8 +38,9 @@ header{
         width: 29px;
         height: 29px;
         margin: 27px 0 0 8px;
-        background: url('../images/buycar.png') no-repeat 0 center;
+        background: url('../images/buycar-white.png') no-repeat 0 center;
         position: relative;
+        cursor: pointer;
         em{
             position: absolute;
             top: -2px;
@@ -53,6 +55,58 @@ header{
             padding: 0 4px;
             text-indent: 0;
         }
+        .user-car-info-box{
+            position: absolute;
+            top: 39px;
+            right: -7px;
+            width: 318px;
+            min-height: 120px;
+            font-size: 12px;
+            background-color: #fff;
+            box-shadow: 1px 1px 4px rgba(153,153,153,.3);
+            border-radius: 3px;
+            text-align: left;
+            z-index: 999;
+            &::after{
+                position: absolute;
+                content: '';
+                top: -7px;
+                left: 288px;
+                width: 0;
+                height: 0;
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-bottom: 8px solid #fff;
+            }
+            .user-car-info{
+                padding: 40px 0;
+                height: 100%;
+                text-align: center;
+                overflow: hidden;
+            }
+            .user-car-status{
+                display: inline-block;
+                width: 47px;
+                height: 42px;
+                margin-right: 10px;
+                vertical-align: middle;
+                background-size: cover;
+            }
+            .login-before{
+                background-image: url('../images/login-before.png')
+                ;
+            }
+            .login-after{
+                background-image: url('../images/login-after.png')
+                ;
+            }
+            .user-car-text{
+                display: inline-block;
+                text-align: left;
+                vertical-align: middle;
+                color: #999;
+            }
+        }
     }
     .user-msg{
         float: right;
@@ -63,7 +117,7 @@ header{
         .user-list{
             width: 100%;
             height: 100%;
-            background: url('../images/user-black.png') no-repeat;
+            background: url('../images/user-white.png') no-repeat;
             cursor: pointer;
         }
         .user-item{
@@ -113,7 +167,6 @@ header{
         border-color: transparent;
         line-height: 29px;
         font-size: 12px;
-        border: 1px solid #999;
         border-radius: 20px;
         background-color: #fff;
         position: relative;
@@ -154,7 +207,7 @@ header{
                 transition: color .1s linear;
                 color: #fff;
                 &:hover{
-                    color: #008cff;
+                    color: #008cff!important;
                 }
             }
         }

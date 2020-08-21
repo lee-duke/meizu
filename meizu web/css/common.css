@@ -23,6 +23,7 @@ header {
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 999;
 }
 header > content {
   height: 82px;
@@ -42,8 +43,9 @@ header .user-car {
   width: 29px;
   height: 29px;
   margin: 27px 0 0 8px;
-  background: url("../images/buycar.png") no-repeat 0 center;
+  background: url("../images/buycar-white.png") no-repeat 0 center;
   position: relative;
+  cursor: pointer;
 }
 header .user-car em {
   position: absolute;
@@ -59,6 +61,56 @@ header .user-car em {
   padding: 0 4px;
   text-indent: 0;
 }
+header .user-car .user-car-info-box {
+  position: absolute;
+  top: 39px;
+  right: -7px;
+  width: 318px;
+  min-height: 120px;
+  font-size: 12px;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px rgba(153, 153, 153, 0.3);
+  border-radius: 3px;
+  text-align: left;
+  z-index: 999;
+}
+header .user-car .user-car-info-box::after {
+  position: absolute;
+  content: '';
+  top: -7px;
+  left: 288px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #fff;
+}
+header .user-car .user-car-info-box .user-car-info {
+  padding: 40px 0;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+header .user-car .user-car-info-box .user-car-status {
+  display: inline-block;
+  width: 47px;
+  height: 42px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background-size: cover;
+}
+header .user-car .user-car-info-box .login-before {
+  background-image: url("../images/login-before.png");
+}
+header .user-car .user-car-info-box .login-after {
+  background-image: url("../images/login-after.png");
+}
+header .user-car .user-car-info-box .user-car-text {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  color: #999;
+}
 header .user-msg {
   float: right;
   width: 29px;
@@ -69,7 +121,7 @@ header .user-msg {
 header .user-msg .user-list {
   width: 100%;
   height: 100%;
-  background: url("../images/user-black.png") no-repeat;
+  background: url("../images/user-white.png") no-repeat;
   cursor: pointer;
 }
 header .user-msg .user-item {
@@ -118,7 +170,6 @@ header .header-search {
   border-color: transparent;
   line-height: 29px;
   font-size: 12px;
-  border: 1px solid #999;
   border-radius: 20px;
   background-color: #fff;
   position: relative;
@@ -162,7 +213,7 @@ header .topnav .topnav-list > a {
   color: #fff;
 }
 header .topnav .topnav-list > a:hover {
-  color: #008cff;
+  color: #008cff !important;
 }
 header .topnav .changeheader:hover .topnav-cover {
   height: 183px;
