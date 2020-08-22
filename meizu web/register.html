@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Flyme 账号 - 登录</title>
+    <title> Flyme 账号 - 注册</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="shorcut icon" href="./images/login-favicon.ico">
     <link rel="stylesheet" href="./css/login-common.css">
@@ -22,9 +22,7 @@
         <div class="main-wrap">
             <form id="main-form">
                 <div class="form-title">
-                    <a href="javascript:;" class="account-login">账号登录</a>
-                    <span></span>
-                    <a href="javascript:;" class="code-login">二维码登录</a>
+                    <h3>注册 Flyme 账号</h3>
                 </div>
                 <div class="form-warn">
                     <span class="err-ico"></span>
@@ -32,10 +30,13 @@
                     <span class="close-err"></span>
                 </div>
                 <div class="form-account">
-                    <input type="text" name="account" id="account" placeholder="手机号/ Flyme 账号" autocomplete="off">
+                    <input type="text" name="account" id="account" placeholder="手机号">
                 </div>
                 <div class="form-account">
                     <input type="password" name="password" id="password" placeholder="密码">
+                </div>
+                <div class="form-account">
+                    <input type="password" name="confirmPassword" id="comfirmPassword" placeholder="确认密码">
                 </div>
                 <div class="form-verify">
                     <div class="text">点击按钮进行验证</div>
@@ -44,16 +45,10 @@
                     </div>
                     <div class="verify-right"></div>
                 </div>
-                <div class="rememberstatus clearfix">
-                    <input type="checkbox">
-                    <span>记住登录状态</span>
-                </div>
-                <a href="javascript:;" id="login" class="login">登录</a>
+                <a href="javascript:;" id="login" class="login">立即注册</a>
                 <div class="transfer-status clearfix">
-                    <a href="javascript:;" class="login-register">注册</a>
-                    <a href="javascript:;" class="forget-psw">忘记密码</a>
+                    <a href="./login.html" class="login-register">登录</a>
                 </div>
-                <div class="tab-status"></div>
             </form>
         </div>
     </div>
@@ -118,31 +113,36 @@
             $('.form-warn').css('opacity', 0);
         });
 
-        // 提交信息
+        // 注册
         $('#login').on('click', () => {
             var accountValue = $('#account').val().trim();
             var passwordtValue = $('#password').val().trim();
-            if (!accountValue || !passwordtValue) {
+            var confirmPasswordtValue = $('#comfirmPassword').val().trim();
+            if (!accountValue || !passwordtValue || !confirmPasswordtValue) {
                 // 账号或者密码为空时，不提交信息，并返回错误信息
                 $('.form-warn').css('opacity', 1);
-                $('.err-info').text('请输入完整的信息');
-            } else {
+                $('.err-info').text('请输入完整注册的信息');
+            }else if(passwordtValue !== confirmPasswordtValue) {
+                $('.form-warn').css('opacity', 1);
+                $('.err-info').text('两次密码输入不一致');
+            }else {
                 $.ajax({
-                    url: 'http://172.16.5.150/users/login',
+                    url: 'http://172.16.5.150/users/register',
                     type: 'post',
                     data: `account=${accountValue}&password=${passwordtValue}`,
                     success(data) {
                         // console.log('请求成功', data)
-                        if(data.length === 0){
+                        if(data === '账号已存在'){
                             $('.form-warn').css('opacity', 1);
-                            $('.err-info').text('账号或密码错误');
-                        }else {
-                            // console.log('登录成功');
+                            $('.err-info').text('账号已存在');
+                        }else{
+                            // console.log('注册成功');
                             $(window).attr('location','./index.html');
                         }
                     }
                 });
             }
+            
         });
     </script>
 </body>

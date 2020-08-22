@@ -16,13 +16,40 @@ router.get('/', function(req, res, next) {
 
 // 登录
 router.post('/login', function(req, res ,next) {
-  var sql = `select * from users where account='${req.body.account}'&&password='${req.body.password}'`
+  var sql = `select * from users where account='${req.body.account}'&&password='${req.body.password}'`;
   db.query(sql, (err, data) => {
     if(err) {
       console.log(err);
     }else {
       // console.log(data);
       res.send(data);
+    }
+  });
+});
+
+// 注册
+router.post('/register', function(req, res, next) {
+  // console.log(req.body);
+  // res.send('通了');
+  var selectSql = `select * from users where account='${req.body.account}'`;
+  db.query(selectSql, (err, data) => {
+    if(err) {
+      console.log(err);
+    }else{
+      if(data.length !== 0){
+        // 账号存在
+        res.send('账号已存在');
+      }else {
+        var insertSql = `insert into users (account, password) values ('${req.body.account}', '${req.body.password}')`
+        db.query(insertSql, (err, data) => {
+          if(err) {
+            console.log(err)
+          }else {
+            // console.log(data);
+            res.send('注册成功')
+          }
+        });
+      }
     }
   });
 });

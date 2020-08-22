@@ -83,6 +83,9 @@ header .logo span {
   margin-right: 32px;
   margin-left: 32px;
 }
+.main-content #main-form .form-title h3 {
+  color: #387aff;
+}
 .main-content #main-form .form-warn {
   position: relative;
   height: 33px;
