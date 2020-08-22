@@ -38,7 +38,7 @@ header{
         width: 29px;
         height: 29px;
         margin: 27px 0 0 8px;
-        background: url('../images/buycar-white.png') no-repeat 0 center;
+        background: url('../images/buycar-black.png') no-repeat 0 center;
         position: relative;
         cursor: pointer;
         &:hover{
@@ -123,7 +123,7 @@ header{
         .user-list{
             width: 100%;
             height: 100%;
-            background: url('../images/user-white.png') no-repeat;
+            background: url('../images/user-black.png') no-repeat;
             cursor: pointer;
         }
         .user-item{

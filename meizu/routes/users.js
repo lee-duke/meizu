@@ -21,7 +21,7 @@ router.post('/login', function(req, res ,next) {
     if(err) {
       console.log(err);
     }else {
-      // console.log(data);
+      // console.log(data[0]);
       res.send(data);
     }
   });
@@ -29,8 +29,6 @@ router.post('/login', function(req, res ,next) {
 
 // 注册
 router.post('/register', function(req, res, next) {
-  // console.log(req.body);
-  // res.send('通了');
   var selectSql = `select * from users where account='${req.body.account}'`;
   db.query(selectSql, (err, data) => {
     if(err) {
@@ -46,7 +44,11 @@ router.post('/register', function(req, res, next) {
             console.log(err)
           }else {
             // console.log(data);
-            res.send('注册成功')
+            // res.send('注册成功');
+            // 存入cookie
+            res.cookie('users', data, {
+              signed: 'meizu'
+            });
           }
         });
       }

@@ -138,6 +138,8 @@
                             $('.err-info').text('账号或密码错误');
                         }else {
                             // console.log('登录成功');
+                            // console.log(data)
+                            localStorage.setItem('users', data[0].account)
                             $(window).attr('location','./index.html');
                         }
                     }

@@ -1493,6 +1493,29 @@
                 </div>
             </div>
     </footer>
+    <script src="./js/jquery.js"></script>
+    <script>
+        // $(function() {
+            var user = localStorage.getItem('users');
+            console.log(user)
+            if(user){
+                $('.user-list').css('background', 'url(./images/user-ico.png) no-repeat center center/cover');
+                $('.user-item').html(`
+                    <li>
+                        <a href="./login.html">个人中心</a>
+                    </li>
+                    <li>
+                        <a href="./register.html">我的订单</a>
+                    </li>
+                    <li>
+                        <a href="./login.html">M码通道</a>
+                    </li>
+                    <li>
+                        <a href="./mcode.html">退出登录</a>
+                    </li>`);
+            }
+        // })
+    </script>
 </body>
 
 </html>
