@@ -1,0 +1,374 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.clearfix::after {
+  content: '';
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+
+header .content {
+  width: 1200px;
+  padding: 28px 0 40px;
+  margin: 0 auto;
+}
+header .logo {
+  float: left;
+  width: 110px;
+  height: 20px;
+}
+header .logo span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../images/login-sprite.png") no-repeat -2px -4px;
+}
+
+.main-content {
+  min-height: 750px;
+  max-height: 1080px;
+  background: linear-gradient(180deg, #edfcfd 0%, #faffff 100%);
+  position: relative;
+}
+.main-content::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../images/login-bgimg.png") no-repeat;
+}
+.main-content .main-wrap {
+  width: 1240px;
+  height: 750px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 22;
+}
+.main-content #main-form {
+  width: 368px;
+  position: absolute;
+  top: 17%;
+  right: 85px;
+  background-color: #FFF;
+  padding: 35px 35px 10px;
+  border-radius: 2px;
+  box-shadow: 0 6px 12px 0 rgba(138, 153, 150, 0.15);
+}
+.main-content #main-form .form-title {
+  margin-top: 35px;
+  width: 300px;
+  text-align: center;
+  font-size: 18px;
+}
+.main-content #main-form .form-title a {
+  color: #000;
+}
+.main-content #main-form .form-title span {
+  color: #B3ABAB;
+  display: inline-block;
+  border: 2px solid #B3ABAB;
+  border-left: 1px;
+  height: 10px;
+  line-height: 20px;
+  margin-right: 32px;
+  margin-left: 32px;
+}
+.main-content #main-form .form-warn {
+  position: relative;
+  height: 33px;
+  width: 100%;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  border: solid 1px #ffc2b3;
+  background: #ffd1ca;
+  border-radius: 2px;
+  opacity: 0;
+}
+.main-content #main-form .form-warn .err-ico {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 16px;
+  height: 16px;
+  background: url("../images/error-ico.png") no-repeat;
+}
+.main-content #main-form .form-warn .err-info {
+  color: #666;
+  font-size: 12px;
+  padding-left: 35px;
+  padding-right: 25px;
+  line-height: 33px;
+}
+.main-content #main-form .form-warn .close-err {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+  background: url("../images/close-err-ico.png") no-repeat;
+  cursor: pointer;
+}
+.main-content #main-form .form-account {
+  margin-bottom: 20px;
+  position: relative;
+  padding: 0px 10px;
+  height: 48px;
+  font-size: 14px;
+  border: 1px solid #dadada;
+  color: #474747;
+}
+.main-content #main-form .form-account input {
+  width: 94%;
+  height: 46px;
+  line-height: 22px;
+  background-color: #fff;
+  outline: none;
+  border: none;
+}
+.main-content #main-form .form-verify {
+  height: 44px;
+  border: 1px solid #dadada;
+  padding: 0 46px;
+  line-height: 42px;
+  cursor: pointer;
+  position: relative;
+  background-color: #F9F9F9;
+  margin-bottom: 20px;
+}
+.main-content #main-form .form-verify .verify-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  margin: 6px;
+  padding: 10px;
+  border: 1px solid #497FFE;
+  border-radius: 50%;
+  background-color: #C6D5F8;
+}
+.main-content #main-form .form-verify .verify-left .little-circle {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  width: 10px;
+  height: 10px;
+  background-color: #3873FF;
+  border-radius: 50%;
+}
+.main-content #main-form .form-verify .verify-right {
+  position: absolute;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  top: 11px;
+  background: url("../images/form-sprite.png") no-repeat;
+  background-size: 290%;
+  background-position: 0 41.33858%;
+}
+.main-content #main-form .rememberstatus {
+  line-height: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #7f7f7f;
+  margin-bottom: 25px;
+}
+.main-content #main-form .rememberstatus input {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-right: 5px;
+}
+.main-content #main-form .rememberstatus span {
+  float: left;
+}
+.main-content #main-form .login {
+  display: block;
+  height: 46px;
+  background-color: #387aff;
+  color: #fff;
+  font-size: 14px;
+  line-height: 46px;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.main-content #main-form .login:hover {
+  background-color: #3058df;
+}
+.main-content #main-form .transfer-status {
+  margin-bottom: 5px;
+}
+.main-content #main-form .transfer-status a {
+  color: #387aff;
+}
+.main-content #main-form .transfer-status a:hover {
+  color: #3058df;
+}
+.main-content #main-form .transfer-status .login-register {
+  float: left;
+}
+.main-content #main-form .transfer-status .forget-psw {
+  float: right;
+}
+.main-content #main-form .tab-status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  background: url("../images/tab-phone.png") no-repeat center;
+  cursor: pointer;
+}
+
+footer {
+  height: 131px;
+  border-top: 1px solid transparent;
+}
+footer a {
+  color: #000;
+}
+footer .content {
+  width: 1000px;
+  margin: 24px auto 0;
+}
+footer .content .footer-top {
+  height: 50px;
+  line-height: 50px;
+}
+footer .content .footer-link {
+  float: left;
+}
+footer .content .footer-link span {
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #888;
+}
+footer .content .footer-link .footer-language {
+  display: inline-block;
+  position: relative;
+  background: url("../images/login-sprite.png") no-repeat -80px -136px;
+  cursor: default;
+}
+footer .content .footer-link .footer-language:hover .footer-language-item {
+  display: block;
+}
+footer .content .footer-link .footer-language .footer-language-item {
+  position: absolute;
+  left: -8px;
+  bottom: 16px;
+  width: 77px;
+  height: 80px;
+  background-color: #fefefe;
+  box-shadow: 0px 0px 10px #E1E4E8;
+  border-radius: 2px;
+  display: none;
+}
+footer .content .footer-link .footer-language .footer-language-item a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  width: 118px;
+  border-bottom: solid 1px #E4E7E9;
+  font-size: 14px;
+  color: #000000;
+  text-align: left;
+  padding-left: 10px;
+}
+footer .content .footer-service {
+  float: left;
+  margin-left: 36px;
+}
+footer .content .footer-service .service-label {
+  margin-right: 10px;
+}
+footer .content .footer-service .service-num {
+  margin-right: 20px;
+}
+footer .content .footer-service .service-online {
+  display: inline-block;
+  width: 64px;
+  height: 20px;
+  line-height: 18px;
+  color: white;
+  background-color: #32a5e7;
+  border-radius: 2px;
+  text-align: center;
+}
+footer .content .footer-outerlink {
+  float: right;
+  padding-top: 9px;
+}
+footer .content .footer-outerlink a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-left: 10px;
+  position: relative;
+}
+footer .content .footer-outerlink a span {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+footer .content .footer-outerlink a:nth-child(1) span {
+  background: url("../images/login-sprite.png") no-repeat -218px -91px;
+}
+footer .content .footer-outerlink a:nth-child(2) span {
+  background: url("../images/login-sprite.png") no-repeat -302px -91px;
+}
+footer .content .footer-outerlink a:nth-child(3) span {
+  background: url("../images/login-sprite.png") no-repeat -344px -91px;
+}
+footer .content .footer-outerlink a:hover span {
+  background-position-y: -137px;
+}
+footer .content .footer-outerlink a .footer-weixin {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 39px;
+  width: 310px;
+  height: 270px;
+  background: url("../images/login-weixin.png") no-repeat;
+  display: none;
+}
+footer .content .footer-outerlink a:hover .footer-weixin {
+  display: block;
+}
+footer .content .footer-bottom {
+  font-size: 12px;
+}
+footer .content .footer-bottom span {
+  color: #7f7f7f;
+  float: left;
+}
+footer .content .footer-bottom a {
+  float: left;
+  color: #7f7f7f;
+  margin-left: 6px;
+}
+footer .content .footer-bottom a:hover {
+  color: #2b2b2b;
+}
+footer .content .footer-bottom .police {
+  background: url("../images/login-police.png") no-repeat;
+  background-size: 15px 14px;
+  padding-left: 18px;
+  background-position-y: center;
+  margin-top: -11px;
+}
+
+/*# sourceMappingURL=login-common.css.map */
