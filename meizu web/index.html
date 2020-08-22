@@ -23,6 +23,16 @@
             </div>
             <div class="user-car">
                 <em>0</em>
+                <div class="user-car-info-box">
+                    <div class="user-car-info">
+                        <div class="user-car-status login-before"></div>
+                        <div class="user-car-text">
+                            登录后可显示
+                            <br>
+                            您账号中已加入的商品哦~
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="user-msg">
                 <div class="user-list"></div>
@@ -1512,7 +1522,14 @@
                     </li>
                     <li>
                         <a href="./mcode.html">退出登录</a>
-                    </li>`);
+                    </li>`
+                );
+                $('.user-car-status').addClass('login-after');
+                $('.user-car-text').html(`
+                    您的购物车还没有商品,
+                    <br>
+                    赶紧去选购吧~
+                `);
             }
         // })
     </script>
