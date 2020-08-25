@@ -83,8 +83,10 @@ router.post('/cart', function(req, res, next) {
         }else {
           // console.log(data)
           res.send({
+            code: 200,
             productNum: productArr,
-            products: data
+            products: data,
+            msg: '请求成功'
           });
         }
       });
