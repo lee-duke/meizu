@@ -34,9 +34,9 @@ header .logo {
 }
 header .logo a {
   display: block;
+}
+header .logo a img {
   width: 125px;
-  height: 24px;
-  background: url("../images/logo.png") no-repeat 0 0/cover;
 }
 header .user-car {
   float: right;
@@ -315,6 +315,7 @@ footer {
   border-top: 1px solid #f1f1f1;
   font-size: 12px;
   color: #999;
+  background: #fff;
 }
 footer a {
   color: #999;

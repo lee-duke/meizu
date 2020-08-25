@@ -56,4 +56,55 @@ router.post('/register', function(req, res, next) {
   });
 });
 
+// 查询购物车
+router.post('/cart', function(req, res, next) {
+  // console.log(req.body);
+  // 通过用户名查询对应的购物车信息
+  var usersSql = `select cart from users where account='${req.body.name}'`;
+  db.query(usersSql, (err, data) => {
+    if(err){
+      console.log(err)
+    }else {
+      // console.log(data[0].cart)
+      var productArr = eval('(' + data[0].cart + ')');
+      var productStr = '';
+      for(let i = 0; i < productArr.length; i++){
+        if(i === productArr.length - 1){
+          productStr += `id=${productArr[i].id}`;
+        }else{
+          productStr += `id=${productArr[i].id}||`;
+        }
+      }
+      // console.log(productStr)
+      var productSql = `select * from products where ${productStr}`
+      db.query(productSql, (err, data) => {
+        if(err) {
+          console.log(err);
+        }else {
+          // console.log(data)
+          res.send({
+            productNum: productArr,
+            products: data
+          });
+        }
+      });
+    }
+  });
+});
+
+// 插入购物车
+router.post('/incart', function(req, res, next) {
+  console.log(req.body.products)
+  var usersSql = `update users set cart='${req.body.products}' where account='${req.body.name}'`;
+  db.query(usersSql, (err, data) => {
+    if(err) {
+      err
+    }else {
+      console.log(data)
+    }
+  });
+  res.send('ok')
+});
+
+
 module.exports = router;
