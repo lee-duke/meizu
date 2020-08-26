@@ -28,10 +28,10 @@ $(function () {
                             <div class="cart-select">
                                 <input type="checkbox" class="check">
                                 <a href="javascript:;" class="product-link" data-id="${data.productNum[i].id}">
-                                    <img src="${data.products[i].url}" alt="">
+                                    <img src="${data.products[i].imgurl}" alt="">
                                 </a>
                                 <a href="javascript:;" class="product-info">
-                                    <p class="cart-product-item-name">${data.products[i].name}</p>
+                                    <p class="cart-product-item-name">${data.products[i].model}</p>
                                     <p class="cart-product-desc">${data.products[i].versions}</p>
                                 </a>
                             </div>
