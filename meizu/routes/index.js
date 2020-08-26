@@ -1,5 +1,6 @@
 var express = require('express');
 var { db } = require('../db/db');
+const bodyParser = require('body-parser');
 var router = express.Router();
 
 // 配置跨区请求
@@ -43,26 +44,6 @@ router.get('/forum', function(req, res, next) {
 });
 
 // 全部商品
-// router.get('/products', function(req, res, next) {
-//   // console.log(req.query.type)
-//   var html = ''
-//   for(let i = 0; i < req.query.type.length; i++) {
-//     if(i === req.query.type.length - 1) {
-//       html += `type='${req.query.type[i]}'`
-//     }else {
-//       html += `type='${req.query.type[i]}'||`
-//     }
-//   }
-//   console.log(html)
-//   var sql = `select * from products where ${html}`;
-//   db.query(sql, (err, data) => {
-//     if(err) {
-//       console.log(err);
-//     }else {
-//       res.send(data)
-//     }
-//   });
-// });
 router.get('/products', function(req, res, next) {
   console.log(req.query)
   var sql = `select * from products where type='${req.query.type}'`;
@@ -71,7 +52,7 @@ router.get('/products', function(req, res, next) {
       console.log(err);
     }else {
       var reqdata = data;
-      var sql1= `select * from products where type='recommend'`;
+      var sql1= `select * from products where type='commend'`;
       db.query(sql1, (err, data) => {
         if(err) {
           console.log(err);
@@ -84,6 +65,33 @@ router.get('/products', function(req, res, next) {
           });
         }
       });
+    }
+  });
+});
+
+// 单个商品
+router.get('/product/:id', function(req, res, next) {
+  // console.log(req.params.id)
+  var sql = `select * from products where id=${req.params.id}`;
+  db.query(sql, function(err, data) {
+    if(err) {
+      console.log(err)
+    }else {
+      // console.log(data);
+      res.send(data)
+    }
+  });
+})
+
+// 综合论坛
+router.get('/discuss', function(req, res, next) {
+  var sql = `select * from discuss`;
+  db.query(sql, function(err, data) {
+    if(err) {
+      console.log(err)
+    }else {
+      // console.log(data);
+      res.send(data)
     }
   });
 });
