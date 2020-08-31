@@ -207,13 +207,13 @@ a {
     border-radius: 50%;
 }
 
-.goods-list .goods-list-wrap .gl-item .gl-item-link .item-slide .item-slide-dot:first-child {
+/* .goods-list .goods-list-wrap .gl-item .gl-item-link .item-slide .item-slide-dot:first-child {
     float: left;
     width: 26px;
     height: 26px;
     border-radius: 50%;
     border: 1px solid #aaa;
-}
+} */
 
 .goods-list .goods-list-wrap .gl-item .gl-item-link .item-slide .item-slide-dot img {
     width: 100%;
