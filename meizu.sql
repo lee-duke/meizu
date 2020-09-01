@@ -11,11 +11,132 @@
  Target Server Version : 50527
  File Encoding         : 65001
 
- Date: 26/08/2020 17:58:32
+ Date: 01/09/2020 19:53:45
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for city
+-- ----------------------------
+DROP TABLE IF EXISTS `city`;
+CREATE TABLE `city`  (
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '城市名称',
+  `rid` int(11) NULL DEFAULT NULL COMMENT '城市编号',
+  `provonceRid` int(255) NULL DEFAULT NULL COMMENT '所在省份编号'
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of city
+-- ----------------------------
+INSERT INTO `city` VALUES ('北京市', 110100, 110000);
+INSERT INTO `city` VALUES ('天津市', 120100, 120000);
+INSERT INTO `city` VALUES ('石家庄市', 130100, 130000);
+INSERT INTO `city` VALUES ('唐山市', 130200, 130000);
+INSERT INTO `city` VALUES ('邯郸市', 130400, 130000);
+INSERT INTO `city` VALUES ('太原市', 140100, 140000);
+INSERT INTO `city` VALUES ('大同市', 140200, 140000);
+INSERT INTO `city` VALUES ('晋城市', 140500, 140000);
+INSERT INTO `city` VALUES ('运城市', 140800, 140000);
+INSERT INTO `city` VALUES ('忻州市', 140900, 140000);
+INSERT INTO `city` VALUES ('临汾市', 141000, 140000);
+INSERT INTO `city` VALUES ('赤峰市', 150400, 150000);
+INSERT INTO `city` VALUES ('巴彦淖尔市', 150800, 150000);
+INSERT INTO `city` VALUES ('兴安盟', 152200, 150000);
+INSERT INTO `city` VALUES ('锦州市', 210700, 210000);
+INSERT INTO `city` VALUES ('朝阳市', 211300, 210000);
+INSERT INTO `city` VALUES ('哈尔滨市', 230100, 230000);
+INSERT INTO `city` VALUES ('黑河市', 231100, 230000);
+INSERT INTO `city` VALUES ('上海市', 310100, 310000);
+INSERT INTO `city` VALUES ('南京市', 320100, 320000);
+INSERT INTO `city` VALUES ('徐州市', 320300, 320000);
+INSERT INTO `city` VALUES ('常州市', 320400, 320000);
+INSERT INTO `city` VALUES ('南通市', 320600, 320000);
+INSERT INTO `city` VALUES ('连云港市', 320700, 320000);
+INSERT INTO `city` VALUES ('淮安市', 320800, 320000);
+INSERT INTO `city` VALUES ('盐城市', 320900, 320000);
+INSERT INTO `city` VALUES ('扬州市', 321000, 320000);
+INSERT INTO `city` VALUES ('泰州市', 321200, 320000);
+INSERT INTO `city` VALUES ('宿迁市', 321300, 320000);
+INSERT INTO `city` VALUES ('杭州市', 330100, 330000);
+INSERT INTO `city` VALUES ('宁波市', 330200, 330000);
+INSERT INTO `city` VALUES ('温州市', 330300, 330000);
+INSERT INTO `city` VALUES ('湖州市', 330500, 330000);
+INSERT INTO `city` VALUES ('台州市', 331000, 330000);
+INSERT INTO `city` VALUES ('合肥市', 340100, 340000);
+INSERT INTO `city` VALUES ('芜湖市', 340200, 340000);
+INSERT INTO `city` VALUES ('蚌埠市', 340300, 340000);
+INSERT INTO `city` VALUES ('马鞍山市', 340500, 340000);
+INSERT INTO `city` VALUES ('安庆市', 340800, 340000);
+INSERT INTO `city` VALUES ('阜阳市', 341200, 340000);
+INSERT INTO `city` VALUES ('宿州市', 341300, 340000);
+INSERT INTO `city` VALUES ('六安市', 341500, 340000);
+INSERT INTO `city` VALUES ('亳州市', 341600, 340000);
+INSERT INTO `city` VALUES ('福州市', 350100, 350000);
+INSERT INTO `city` VALUES ('厦门市', 350200, 350000);
+INSERT INTO `city` VALUES ('莆田市', 350300, 350000);
+INSERT INTO `city` VALUES ('泉州市', 350500, 350000);
+INSERT INTO `city` VALUES ('九江市', 360400, 360000);
+INSERT INTO `city` VALUES ('赣州市', 360700, 360000);
+INSERT INTO `city` VALUES ('青岛市', 370200, 370000);
+INSERT INTO `city` VALUES ('东营市', 370500, 370000);
+INSERT INTO `city` VALUES ('济宁市', 370800, 370000);
+INSERT INTO `city` VALUES ('临沂市', 371300, 370000);
+INSERT INTO `city` VALUES ('德州市', 371400, 370000);
+INSERT INTO `city` VALUES ('菏泽市', 371700, 370000);
+INSERT INTO `city` VALUES ('新乡市', 410700, 410000);
+INSERT INTO `city` VALUES ('商丘市', 411400, 410000);
+INSERT INTO `city` VALUES ('武汉市', 420100, 420000);
+INSERT INTO `city` VALUES ('十堰市', 420300, 420000);
+INSERT INTO `city` VALUES ('宜昌市', 420500, 420000);
+INSERT INTO `city` VALUES ('襄阳市', 420600, 420000);
+INSERT INTO `city` VALUES ('长沙市', 430100, 430000);
+INSERT INTO `city` VALUES ('株洲市', 430200, 430000);
+INSERT INTO `city` VALUES ('衡阳市', 430400, 430000);
+INSERT INTO `city` VALUES ('韶关市', 440200, 440000);
+INSERT INTO `city` VALUES ('深圳市', 440300, 440000);
+INSERT INTO `city` VALUES ('珠海市', 440400, 440000);
+INSERT INTO `city` VALUES ('佛山市', 440600, 440000);
+INSERT INTO `city` VALUES ('江门市', 440700, 440000);
+INSERT INTO `city` VALUES ('惠州市', 441300, 440000);
+INSERT INTO `city` VALUES ('东莞市', 441900, 440000);
+INSERT INTO `city` VALUES ('潮州市', 445100, 440000);
+INSERT INTO `city` VALUES ('揭阳市', 445200, 440000);
+INSERT INTO `city` VALUES ('南宁市', 450100, 450000);
+INSERT INTO `city` VALUES ('桂林市', 450300, 450000);
+INSERT INTO `city` VALUES ('重庆市', 500100, 500000);
+INSERT INTO `city` VALUES ('成都市', 510100, 510000);
+INSERT INTO `city` VALUES ('德阳市', 510600, 510000);
+INSERT INTO `city` VALUES ('遂宁市', 510900, 510000);
+INSERT INTO `city` VALUES ('南充市', 511300, 510000);
+INSERT INTO `city` VALUES ('广安市', 511600, 510000);
+INSERT INTO `city` VALUES ('资阳市', 512000, 510000);
+INSERT INTO `city` VALUES ('贵阳市', 520100, 520000);
+INSERT INTO `city` VALUES ('铜仁市', 522200, 520000);
+INSERT INTO `city` VALUES ('毕节市', 522400, 520000);
+INSERT INTO `city` VALUES ('昆明市', 530100, 530000);
+INSERT INTO `city` VALUES ('曲靖市', 530300, 530000);
+INSERT INTO `city` VALUES ('保山市', 530500, 530000);
+INSERT INTO `city` VALUES ('红河哈尼族彝族自治州', 532500, 530000);
+INSERT INTO `city` VALUES ('西安市', 610100, 610000);
+INSERT INTO `city` VALUES ('咸阳市', 610400, 610000);
+INSERT INTO `city` VALUES ('渭南市', 610500, 610000);
+INSERT INTO `city` VALUES ('汉中市', 610700, 610000);
+INSERT INTO `city` VALUES ('榆林市', 610800, 610000);
+INSERT INTO `city` VALUES ('兰州市', 620100, 620000);
+INSERT INTO `city` VALUES ('嘉峪关市', 620200, 620000);
+INSERT INTO `city` VALUES ('白银市', 620400, 620000);
+INSERT INTO `city` VALUES ('武威市', 620600, 620000);
+INSERT INTO `city` VALUES ('张掖市', 620700, 620000);
+INSERT INTO `city` VALUES ('平凉市', 620800, 620000);
+INSERT INTO `city` VALUES ('酒泉市', 620900, 620000);
+INSERT INTO `city` VALUES ('陇南市', 621200, 620000);
+INSERT INTO `city` VALUES ('西宁市', 630100, 630000);
+INSERT INTO `city` VALUES ('海西蒙古族藏族自治州', 632800, 630000);
+INSERT INTO `city` VALUES ('银川市', 640100, 640000);
+INSERT INTO `city` VALUES ('中卫市', 640500, 640000);
+INSERT INTO `city` VALUES ('香港岛', 810100, 810000);
 
 -- ----------------------------
 -- Table structure for discuss
@@ -36,125 +157,125 @@ CREATE TABLE `discuss`  (
 -- ----------------------------
 -- Records of discuss
 -- ----------------------------
-INSERT INTO `discuss` VALUES (1, '魅友动力', '谁能告诉我这BUG存在多久了？', '\'./images/discuss-01.jpg\'', '2020-08-26 17:19:20', 123, 0, 10);
-INSERT INTO `discuss` VALUES (2, '青之风咒', '关于手机备份', '\'./images/discuss-02.jpg\'', '2020-08-25 17:19:59', 154, 1, 45);
-INSERT INTO `discuss` VALUES (3, '一网舞尽', '17pro的陶瓷壳耐摔吗？', '\'./images/discuss-03.jpg\'', '2020-08-26 13:20:55', 285, 2, 24);
-INSERT INTO `discuss` VALUES (4, '坤坤歌歌', '16p系统8怎么样', '\'./images/discuss-04.jpg\'', '2020-08-26 16:20:14', 167, 3, 23);
-INSERT INTO `discuss` VALUES (5, '小爱同学吖', '我只想约看电影', '\'./images/discuss-05.jpg\'', '2020-08-26 17:23:33', 821, 4, 72);
-INSERT INTO `discuss` VALUES (6, '百事可乐6688', '魅族么么哒', '\'./images/discuss-06.jpg\'', '2020-08-26 17:29:52', 263, 5, 96);
-INSERT INTO `discuss` VALUES (7, '魅友动力', '谁能告诉我这BUG存在多久了？', '\'./images/discuss-01.jpg\'', '2020-08-26 17:19:20', 123, 0, 10);
-INSERT INTO `discuss` VALUES (8, '青之风咒', '关于手机备份', '\'./images/discuss-02.jpg\'', '2020-08-25 17:19:59', 154, 1, 45);
-INSERT INTO `discuss` VALUES (9, '一网舞尽', '17pro的陶瓷壳耐摔吗？', '\'./images/discuss-03.jpg\'', '2020-08-26 13:20:55', 285, 2, 24);
-INSERT INTO `discuss` VALUES (10, '坤坤歌歌', '16p系统8怎么样', '\'./images/discuss-04.jpg\'', '2020-08-26 16:20:14', 167, 3, 23);
-INSERT INTO `discuss` VALUES (11, '小爱同学吖', '我只想约看电影', '\'./images/discuss-05.jpg\'', '2020-08-26 17:23:33', 821, 4, 72);
-INSERT INTO `discuss` VALUES (12, '百事可乐6688', '魅族么么哒', '\'./images/discuss-06.jpg\'', '2020-08-26 17:29:52', 263, 5, 96);
-INSERT INTO `discuss` VALUES (13, '魅友动力', '谁能告诉我这BUG存在多久了？', '\'./images/discuss-01.jpg\'', '2020-08-26 17:19:20', 123, 0, 10);
-INSERT INTO `discuss` VALUES (14, '青之风咒', '关于手机备份', '\'./images/discuss-02.jpg\'', '2020-08-25 17:19:59', 154, 1, 45);
-INSERT INTO `discuss` VALUES (15, '一网舞尽', '17pro的陶瓷壳耐摔吗？', '\'./images/discuss-03.jpg\'', '2020-08-26 13:20:55', 285, 2, 24);
-INSERT INTO `discuss` VALUES (16, '坤坤歌歌', '16p系统8怎么样', '\'./images/discuss-04.jpg\'', '2020-08-26 16:20:14', 167, 3, 23);
-INSERT INTO `discuss` VALUES (17, '小爱同学吖', '我只想约看电影', '\'./images/discuss-05.jpg\'', '2020-08-26 17:23:33', 821, 4, 72);
-INSERT INTO `discuss` VALUES (18, '百事可乐6688', '魅族么么哒', '\'./images/discuss-06.jpg\'', '2020-08-26 17:29:52', 263, 5, 96);
-INSERT INTO `discuss` VALUES (19, '魅友动力', '谁能告诉我这BUG存在多久了？', '\'./images/discuss-01.jpg\'', '2020-08-26 17:19:20', 123, 0, 10);
-INSERT INTO `discuss` VALUES (20, '青之风咒', '关于手机备份', '\'./images/discuss-02.jpg\'', '2020-08-25 17:19:59', 154, 1, 45);
-INSERT INTO `discuss` VALUES (21, '一网舞尽', '17pro的陶瓷壳耐摔吗？', '\'./images/discuss-03.jpg\'', '2020-08-26 13:20:55', 285, 2, 24);
-INSERT INTO `discuss` VALUES (22, '坤坤歌歌', '16p系统8怎么样', '\'./images/discuss-04.jpg\'', '2020-08-26 16:20:14', 167, 3, 23);
-INSERT INTO `discuss` VALUES (23, '小爱同学吖', '我只想约看电影', '\'./images/discuss-05.jpg\'', '2020-08-26 17:23:33', 821, 4, 72);
-INSERT INTO `discuss` VALUES (24, '百事可乐6688', '魅族么么哒', '\'./images/discuss-06.jpg\'', '2020-08-26 17:29:52', 263, 5, 96);
-INSERT INTO `discuss` VALUES (25, '魅友动力', '谁能告诉我这BUG存在多久了？', '\'./images/discuss-01.jpg\'', '2020-08-26 17:19:20', 123, 0, 10);
-INSERT INTO `discuss` VALUES (26, '青之风咒', '关于手机备份', '\'./images/discuss-02.jpg\'', '2020-08-25 17:19:59', 154, 1, 45);
-INSERT INTO `discuss` VALUES (27, '一网舞尽', '17pro的陶瓷壳耐摔吗？', '\'./images/discuss-03.jpg\'', '2020-08-26 13:20:55', 285, 2, 24);
-INSERT INTO `discuss` VALUES (28, '坤坤歌歌', '16p系统8怎么样', '\'./images/discuss-04.jpg\'', '2020-08-26 16:20:14', 167, 3, 23);
-INSERT INTO `discuss` VALUES (29, '小爱同学吖', '我只想约看电影', '\'./images/discuss-05.jpg\'', '2020-08-26 17:23:33', 821, 4, 72);
-INSERT INTO `discuss` VALUES (30, '百事可乐6688', '魅族么么哒', '\'./images/discuss-06.jpg\'', '2020-08-26 17:29:52', 263, 5, 96);
-INSERT INTO `discuss` VALUES (31, '魅友动力', '谁能告诉我这BUG存在多久了？', '\'./images/discuss-01.jpg\'', '2020-08-26 17:19:20', 123, 0, 10);
-INSERT INTO `discuss` VALUES (32, '青之风咒', '关于手机备份', '\'./images/discuss-02.jpg\'', '2020-08-25 17:19:59', 154, 1, 45);
-INSERT INTO `discuss` VALUES (33, '一网舞尽', '17pro的陶瓷壳耐摔吗？', '\'./images/discuss-03.jpg\'', '2020-08-26 13:20:55', 285, 2, 24);
-INSERT INTO `discuss` VALUES (34, '坤坤歌歌', '16p系统8怎么样', '\'./images/discuss-04.jpg\'', '2020-08-26 16:20:14', 167, 3, 23);
-INSERT INTO `discuss` VALUES (35, '小爱同学吖', '我只想约看电影', '\'./images/discuss-05.jpg\'', '2020-08-26 17:23:33', 821, 4, 72);
-INSERT INTO `discuss` VALUES (36, '百事可乐6688', '魅族么么哒', '\'./images/discuss-06.jpg\'', '2020-08-26 17:29:52', 263, 5, 96);
-INSERT INTO `discuss` VALUES (37, '魅友动力', '谁能告诉我这BUG存在多久了？', '\'./images/discuss-01.jpg\'', '2020-08-26 17:19:20', 123, 0, 10);
-INSERT INTO `discuss` VALUES (38, '青之风咒', '关于手机备份', '\'./images/discuss-02.jpg\'', '2020-08-25 17:19:59', 154, 1, 45);
-INSERT INTO `discuss` VALUES (39, '一网舞尽', '17pro的陶瓷壳耐摔吗？', '\'./images/discuss-03.jpg\'', '2020-08-26 13:20:55', 285, 2, 24);
-INSERT INTO `discuss` VALUES (40, '坤坤歌歌', '16p系统8怎么样', '\'./images/discuss-04.jpg\'', '2020-08-26 16:20:14', 167, 3, 23);
-INSERT INTO `discuss` VALUES (41, '小爱同学吖', '我只想约看电影', '\'./images/discuss-05.jpg\'', '2020-08-26 17:23:33', 821, 4, 72);
-INSERT INTO `discuss` VALUES (42, '百事可乐6688', '魅族么么哒', '\'./images/discuss-06.jpg\'', '2020-08-26 17:29:52', 263, 5, 96);
-INSERT INTO `discuss` VALUES (44, '魅友动力', '谁能告诉我这BUG存在多久了？', '\'./images/discuss-01.jpg\'', '2020-08-26 17:19:20', 123, 0, 10);
-INSERT INTO `discuss` VALUES (45, '青之风咒', '关于手机备份', '\'./images/discuss-02.jpg\'', '2020-08-25 17:19:59', 154, 1, 45);
-INSERT INTO `discuss` VALUES (46, '一网舞尽', '17pro的陶瓷壳耐摔吗？', '\'./images/discuss-03.jpg\'', '2020-08-26 13:20:55', 285, 2, 24);
-INSERT INTO `discuss` VALUES (47, '坤坤歌歌', '16p系统8怎么样', '\'./images/discuss-04.jpg\'', '2020-08-26 16:20:14', 167, 3, 23);
-INSERT INTO `discuss` VALUES (48, '小爱同学吖', '我只想约看电影', '\'./images/discuss-05.jpg\'', '2020-08-26 17:23:33', 821, 4, 72);
-INSERT INTO `discuss` VALUES (49, '百事可乐6688', '魅族么么哒', '\'./images/discuss-06.jpg\'', '2020-08-26 17:29:52', 263, 5, 96);
-INSERT INTO `discuss` VALUES (50, '魅友动力', '谁能告诉我这BUG存在多久了？', '\'./images/discuss-01.jpg\'', '2020-08-26 17:19:20', 123, 0, 10);
-INSERT INTO `discuss` VALUES (51, '青之风咒', '关于手机备份', '\'./images/discuss-02.jpg\'', '2020-08-25 17:19:59', 154, 1, 45);
-INSERT INTO `discuss` VALUES (52, '一网舞尽', '17pro的陶瓷壳耐摔吗？', '\'./images/discuss-03.jpg\'', '2020-08-26 13:20:55', 285, 2, 24);
-INSERT INTO `discuss` VALUES (53, '坤坤歌歌', '16p系统8怎么样', '\'./images/discuss-04.jpg\'', '2020-08-26 16:20:14', 167, 3, 23);
-INSERT INTO `discuss` VALUES (54, '小爱同学吖', '我只想约看电影', '\'./images/discuss-05.jpg\'', '2020-08-26 17:23:33', 821, 4, 72);
-INSERT INTO `discuss` VALUES (55, '百事可乐6688', '魅族么么哒', '\'./images/discuss-06.jpg\'', '2020-08-26 17:29:52', 263, 5, 96);
-INSERT INTO `discuss` VALUES (56, '魅友动力', '谁能告诉我这BUG存在多久了？', '\'./images/discuss-01.jpg\'', '2020-08-26 17:19:20', 123, 0, 10);
-INSERT INTO `discuss` VALUES (57, '青之风咒', '关于手机备份', '\'./images/discuss-02.jpg\'', '2020-08-25 17:19:59', 154, 1, 45);
-INSERT INTO `discuss` VALUES (58, '一网舞尽', '17pro的陶瓷壳耐摔吗？', '\'./images/discuss-03.jpg\'', '2020-08-26 13:20:55', 285, 2, 24);
-INSERT INTO `discuss` VALUES (59, '坤坤歌歌', '16p系统8怎么样', '\'./images/discuss-04.jpg\'', '2020-08-26 16:20:14', 167, 3, 23);
-INSERT INTO `discuss` VALUES (60, '小爱同学吖', '我只想约看电影', '\'./images/discuss-05.jpg\'', '2020-08-26 17:23:33', 821, 4, 72);
-INSERT INTO `discuss` VALUES (61, '百事可乐6688', '魅族么么哒', '\'./images/discuss-06.jpg\'', '2020-08-26 17:29:52', 263, 5, 96);
-INSERT INTO `discuss` VALUES (62, '魅友动力', '谁能告诉我这BUG存在多久了？', '\'./images/discuss-01.jpg\'', '2020-08-26 17:19:20', 123, 0, 10);
-INSERT INTO `discuss` VALUES (63, '青之风咒', '关于手机备份', '\'./images/discuss-02.jpg\'', '2020-08-25 17:19:59', 154, 1, 45);
-INSERT INTO `discuss` VALUES (64, '一网舞尽', '17pro的陶瓷壳耐摔吗？', '\'./images/discuss-03.jpg\'', '2020-08-26 13:20:55', 285, 2, 24);
-INSERT INTO `discuss` VALUES (65, '坤坤歌歌', '16p系统8怎么样', '\'./images/discuss-04.jpg\'', '2020-08-26 16:20:14', 167, 3, 23);
-INSERT INTO `discuss` VALUES (66, '小爱同学吖', '我只想约看电影', '\'./images/discuss-05.jpg\'', '2020-08-26 17:23:33', 821, 4, 72);
-INSERT INTO `discuss` VALUES (67, '百事可乐6688', '魅族么么哒', '\'./images/discuss-06.jpg\'', '2020-08-26 17:29:52', 263, 5, 96);
-INSERT INTO `discuss` VALUES (68, '魅友动力', '谁能告诉我这BUG存在多久了？', '\'./images/discuss-01.jpg\'', '2020-08-26 17:19:20', 123, 0, 10);
-INSERT INTO `discuss` VALUES (69, '青之风咒', '关于手机备份', '\'./images/discuss-02.jpg\'', '2020-08-25 17:19:59', 154, 1, 45);
-INSERT INTO `discuss` VALUES (70, '一网舞尽', '17pro的陶瓷壳耐摔吗？', '\'./images/discuss-03.jpg\'', '2020-08-26 13:20:55', 285, 2, 24);
-INSERT INTO `discuss` VALUES (71, '坤坤歌歌', '16p系统8怎么样', '\'./images/discuss-04.jpg\'', '2020-08-26 16:20:14', 167, 3, 23);
-INSERT INTO `discuss` VALUES (72, '小爱同学吖', '我只想约看电影', '\'./images/discuss-05.jpg\'', '2020-08-26 17:23:33', 821, 4, 72);
-INSERT INTO `discuss` VALUES (73, '百事可乐6688', '魅族么么哒', '\'./images/discuss-06.jpg\'', '2020-08-26 17:29:52', 263, 5, 96);
-INSERT INTO `discuss` VALUES (74, '魅友动力', '谁能告诉我这BUG存在多久了？', '\'./images/discuss-01.jpg\'', '2020-08-26 17:19:20', 123, 0, 10);
-INSERT INTO `discuss` VALUES (75, '青之风咒', '关于手机备份', '\'./images/discuss-02.jpg\'', '2020-08-25 17:19:59', 154, 1, 45);
-INSERT INTO `discuss` VALUES (76, '一网舞尽', '17pro的陶瓷壳耐摔吗？', '\'./images/discuss-03.jpg\'', '2020-08-26 13:20:55', 285, 2, 24);
-INSERT INTO `discuss` VALUES (77, '坤坤歌歌', '16p系统8怎么样', '\'./images/discuss-04.jpg\'', '2020-08-26 16:20:14', 167, 3, 23);
-INSERT INTO `discuss` VALUES (78, '小爱同学吖', '我只想约看电影', '\'./images/discuss-05.jpg\'', '2020-08-26 17:23:33', 821, 4, 72);
-INSERT INTO `discuss` VALUES (79, '百事可乐6688', '魅族么么哒', '\'./images/discuss-06.jpg\'', '2020-08-26 17:29:52', 263, 5, 96);
-INSERT INTO `discuss` VALUES (80, '魅友动力', '谁能告诉我这BUG存在多久了？', '\'./images/discuss-01.jpg\'', '2020-08-26 17:19:20', 123, 0, 10);
-INSERT INTO `discuss` VALUES (81, '青之风咒', '关于手机备份', '\'./images/discuss-02.jpg\'', '2020-08-25 17:19:59', 154, 1, 45);
-INSERT INTO `discuss` VALUES (82, '一网舞尽', '17pro的陶瓷壳耐摔吗？', '\'./images/discuss-03.jpg\'', '2020-08-26 13:20:55', 285, 2, 24);
-INSERT INTO `discuss` VALUES (83, '坤坤歌歌', '16p系统8怎么样', '\'./images/discuss-04.jpg\'', '2020-08-26 16:20:14', 167, 3, 23);
-INSERT INTO `discuss` VALUES (84, '小爱同学吖', '我只想约看电影', '\'./images/discuss-05.jpg\'', '2020-08-26 17:23:33', 821, 4, 72);
-INSERT INTO `discuss` VALUES (85, '百事可乐6688', '魅族么么哒', '\'./images/discuss-06.jpg\'', '2020-08-26 17:29:52', 263, 5, 96);
-INSERT INTO `discuss` VALUES (86, '魅友动力', '谁能告诉我这BUG存在多久了？', '\'./images/discuss-01.jpg\'', '2020-08-26 17:19:20', 123, 0, 10);
-INSERT INTO `discuss` VALUES (87, '青之风咒', '关于手机备份', '\'./images/discuss-02.jpg\'', '2020-08-25 17:19:59', 154, 1, 45);
-INSERT INTO `discuss` VALUES (88, '一网舞尽', '17pro的陶瓷壳耐摔吗？', '\'./images/discuss-03.jpg\'', '2020-08-26 13:20:55', 285, 2, 24);
-INSERT INTO `discuss` VALUES (89, '坤坤歌歌', '16p系统8怎么样', '\'./images/discuss-04.jpg\'', '2020-08-26 16:20:14', 167, 3, 23);
-INSERT INTO `discuss` VALUES (90, '小爱同学吖', '我只想约看电影', '\'./images/discuss-05.jpg\'', '2020-08-26 17:23:33', 821, 4, 72);
-INSERT INTO `discuss` VALUES (91, '百事可乐6688', '魅族么么哒', '\'./images/discuss-06.jpg\'', '2020-08-26 17:29:52', 263, 5, 96);
-INSERT INTO `discuss` VALUES (92, '魅友动力', '谁能告诉我这BUG存在多久了？', '\'./images/discuss-01.jpg\'', '2020-08-26 17:19:20', 123, 0, 10);
-INSERT INTO `discuss` VALUES (93, '青之风咒', '关于手机备份', '\'./images/discuss-02.jpg\'', '2020-08-25 17:19:59', 154, 1, 45);
-INSERT INTO `discuss` VALUES (94, '一网舞尽', '17pro的陶瓷壳耐摔吗？', '\'./images/discuss-03.jpg\'', '2020-08-26 13:20:55', 285, 2, 24);
-INSERT INTO `discuss` VALUES (95, '坤坤歌歌', '16p系统8怎么样', '\'./images/discuss-04.jpg\'', '2020-08-26 16:20:14', 167, 3, 23);
-INSERT INTO `discuss` VALUES (96, '小爱同学吖', '我只想约看电影', '\'./images/discuss-05.jpg\'', '2020-08-26 17:23:33', 821, 4, 72);
-INSERT INTO `discuss` VALUES (97, '百事可乐6688', '魅族么么哒', '\'./images/discuss-06.jpg\'', '2020-08-26 17:29:52', 263, 5, 96);
-INSERT INTO `discuss` VALUES (98, '魅友动力', '谁能告诉我这BUG存在多久了？', '\'./images/discuss-01.jpg\'', '2020-08-26 17:19:20', 123, 0, 10);
-INSERT INTO `discuss` VALUES (99, '青之风咒', '关于手机备份', '\'./images/discuss-02.jpg\'', '2020-08-25 17:19:59', 154, 1, 45);
-INSERT INTO `discuss` VALUES (100, '一网舞尽', '17pro的陶瓷壳耐摔吗？', '\'./images/discuss-03.jpg\'', '2020-08-26 13:20:55', 285, 2, 24);
-INSERT INTO `discuss` VALUES (101, '坤坤歌歌', '16p系统8怎么样', '\'./images/discuss-04.jpg\'', '2020-08-26 16:20:14', 167, 3, 23);
-INSERT INTO `discuss` VALUES (102, '小爱同学吖', '我只想约看电影', '\'./images/discuss-05.jpg\'', '2020-08-26 17:23:33', 821, 4, 72);
-INSERT INTO `discuss` VALUES (103, '百事可乐6688', '魅族么么哒', '\'./images/discuss-06.jpg\'', '2020-08-26 17:29:52', 263, 5, 96);
-INSERT INTO `discuss` VALUES (104, '魅友动力', '谁能告诉我这BUG存在多久了？', '\'./images/discuss-01.jpg\'', '2020-08-26 17:19:20', 123, 0, 10);
-INSERT INTO `discuss` VALUES (105, '青之风咒', '关于手机备份', '\'./images/discuss-02.jpg\'', '2020-08-25 17:19:59', 154, 1, 45);
-INSERT INTO `discuss` VALUES (106, '一网舞尽', '17pro的陶瓷壳耐摔吗？', '\'./images/discuss-03.jpg\'', '2020-08-26 13:20:55', 285, 2, 24);
-INSERT INTO `discuss` VALUES (107, '坤坤歌歌', '16p系统8怎么样', '\'./images/discuss-04.jpg\'', '2020-08-26 16:20:14', 167, 3, 23);
-INSERT INTO `discuss` VALUES (108, '小爱同学吖', '我只想约看电影', '\'./images/discuss-05.jpg\'', '2020-08-26 17:23:33', 821, 4, 72);
-INSERT INTO `discuss` VALUES (109, '百事可乐6688', '魅族么么哒', '\'./images/discuss-06.jpg\'', '2020-08-26 17:29:52', 263, 5, 96);
-INSERT INTO `discuss` VALUES (110, '魅友动力', '谁能告诉我这BUG存在多久了？', '\'./images/discuss-01.jpg\'', '2020-08-26 17:19:20', 123, 0, 10);
-INSERT INTO `discuss` VALUES (111, '青之风咒', '关于手机备份', '\'./images/discuss-02.jpg\'', '2020-08-25 17:19:59', 154, 1, 45);
-INSERT INTO `discuss` VALUES (112, '一网舞尽', '17pro的陶瓷壳耐摔吗？', '\'./images/discuss-03.jpg\'', '2020-08-26 13:20:55', 285, 2, 24);
-INSERT INTO `discuss` VALUES (113, '坤坤歌歌', '16p系统8怎么样', '\'./images/discuss-04.jpg\'', '2020-08-26 16:20:14', 167, 3, 23);
-INSERT INTO `discuss` VALUES (114, '小爱同学吖', '我只想约看电影', '\'./images/discuss-05.jpg\'', '2020-08-26 17:23:33', 821, 4, 72);
-INSERT INTO `discuss` VALUES (115, '百事可乐6688', '魅族么么哒', '\'./images/discuss-06.jpg\'', '2020-08-26 17:29:52', 263, 5, 96);
-INSERT INTO `discuss` VALUES (116, '魅友动力', '谁能告诉我这BUG存在多久了？', '\'./images/discuss-01.jpg\'', '2020-08-26 17:19:20', 123, 0, 10);
-INSERT INTO `discuss` VALUES (117, '青之风咒', '关于手机备份', '\'./images/discuss-02.jpg\'', '2020-08-25 17:19:59', 154, 1, 45);
-INSERT INTO `discuss` VALUES (118, '一网舞尽', '17pro的陶瓷壳耐摔吗？', '\'./images/discuss-03.jpg\'', '2020-08-26 13:20:55', 285, 2, 24);
-INSERT INTO `discuss` VALUES (119, '坤坤歌歌', '16p系统8怎么样', '\'./images/discuss-04.jpg\'', '2020-08-26 16:20:14', 167, 3, 23);
-INSERT INTO `discuss` VALUES (120, '小爱同学吖', '我只想约看电影', '\'./images/discuss-05.jpg\'', '2020-08-26 17:23:33', 821, 4, 72);
+INSERT INTO `discuss` VALUES (1, '捏胸王', '寻思自己拍当壁纸', 'https://image-res.mzres.com/img/download/uc/16/78/84/91/70/167884917/w50h50?t=1598876145', '2020-08-26 17:19:20', 123, 0, 10);
+INSERT INTO `discuss` VALUES (2, '蔡世伟大王', '及时行乐-「魅族超充USB-C移动电源」', 'https://image-res.mzres.com/img/download/uc/75/73/93/10/00/7573931/w50h50?t=1598876145', '2020-08-25 17:19:59', 154, 1, 45);
+INSERT INTO `discuss` VALUES (3, '我真心没钱', 'MX2的用户还有有活跃的吗？', 'https://image-res.mzres.com/img/download/uc/46/11/66/30/00/4611663/w50h50?t=1598876145', '2020-08-26 13:20:55', 285, 2, 24);
+INSERT INTO `discuss` VALUES (4, '营养丶不良', 'tb上有卖17清水壳吗？', 'https://image-res.mzres.com/img/download/uc/24/26/02/10/00/2426021/w50h50?t=1598876145', '2020-08-26 16:20:14', 167, 3, 23);
+INSERT INTO `discuss` VALUES (5, '六莲', 'NFC 所谓的无电刷卡等 公交刷卡使用交流', 'https://image-res.mzres.com/img/download/uc/13/41/41/88/20/134141882/w50h50?t=1598876145', '2020-08-26 17:23:33', 821, 4, 72);
+INSERT INTO `discuss` VALUES (6, '九尾波斯猫v', '「魅族 17Pro」老朋友，在路上', 'https://image-res.mzres.com/img/download/uc/37/23/20/00/00/37232/w50h50?t=1598876145', '2020-08-26 17:29:52', 263, 5, 96);
+INSERT INTO `discuss` VALUES (7, '鬼儿子6', '快手那个识别音乐什么时候来啊', 'https://image-res.mzres.com/img/download/uc/15/26/94/34/20/152694342/w50h50?t=1598876145', '2020-08-26 17:19:20', 123, 0, 10);
+INSERT INTO `discuss` VALUES (8, 'z小马猴', '有什么办法把里面的资料导出来', 'https://image-res.mzres.com/img/download/uc/12/70/19/17/50/127019175/w50h50?t=1598876145', '2020-08-25 17:19:59', 154, 1, 45);
+INSERT INTO `discuss` VALUES (9, '在路上3010', '魅族17', 'https://image-res.mzres.com/img/download/uc/15/15/05/11/10/151505111/w50h50?t=1598876145', '2020-08-26 13:20:55', 285, 2, 24);
+INSERT INTO `discuss` VALUES (10, '莫名其妙天亮了', '需要买手机有没有什么推荐', 'https://image-res.mzres.com/img/download/uc/10/89/78/57/00/10897857/w50h50?t=1598876145', '2020-08-26 16:20:14', 167, 3, 23);
+INSERT INTO `discuss` VALUES (11, 'Dearm.', '第一次自己开车去上学～', 'https://image-res.mzres.com/img/download/uc/13/06/60/38/30/130660383/w50h50?t=1598876145', '2020-08-26 17:23:33', 821, 4, 72);
+INSERT INTO `discuss` VALUES (12, '是你手机壳', '这电脑怎么样', 'https://image-res.mzres.com/img/download/uc/15/05/42/07/20/150542072/w50h50?t=1598876145', '2020-08-26 17:29:52', 263, 5, 96);
+INSERT INTO `discuss` VALUES (13, '济南魅友家俱乐部', '济南魅友家六周年活动回顾', 'https://image-res.mzres.com/img/download/uc/77/49/40/60/00/7749406/w50h50?t=1598876145', '2020-08-26 17:19:20', 123, 0, 10);
+INSERT INTO `discuss` VALUES (14, '征南', '摄像头进灰', 'https://image-res.mzres.com/img/download/uc/11/63/22/73/10/116322731/w50h50?t=1598876145', '2020-08-25 17:19:59', 154, 1, 45);
+INSERT INTO `discuss` VALUES (15, 'Lock12', '提前暴露了18？', 'https://image-res.mzres.com/img/download/uc/15/61/16/71/10/156116711/w50h50?t=1598876145', '2020-08-26 13:20:55', 285, 2, 24);
+INSERT INTO `discuss` VALUES (16, '水中玥', '小六支持PD快充吗？', 'https://image-res.mzres.com/img/download/uc/13/90/08/15/00/13900815/w50h50?t=1598876145', '2020-08-26 16:20:14', 167, 3, 23);
+INSERT INTO `discuss` VALUES (17, '_少少', '魅族音乐没有本地搜索功能吗？', 'https://image-res.mzres.com/img/download/uc/12/76/53/35/70/127653357/w50h50?t=1598876145', '2020-08-26 17:23:33', 821, 4, 72);
+INSERT INTO `discuss` VALUES (18, '还不是时辰', '快充看得见？！魅族超充USB-C移动电源上手', 'https://image-res.mzres.com/img/download/uc/11/98/62/10/00/119862100/w50h50?t=1598876145', '2020-08-26 17:29:52', 263, 5, 96);
+INSERT INTO `discuss` VALUES (19, '梦无际淡', 'p7更新来了', 'https://image-res.mzres.com/img/download/uc/13/07/20/93/00/130720930/w50h50?t=1598876145', '2020-08-26 17:19:20', 123, 0, 10);
+INSERT INTO `discuss` VALUES (20, '挚情忠仁', '各位大神，想换17pro，问个关于换机助手的问题', 'https://image-res.mzres.com/img/download/uc/13/04/65/00/00/13046500/w50h50?t=1598876145', '2020-08-25 17:19:59', 154, 1, 45);
+INSERT INTO `discuss` VALUES (21, '噜噜噜结', '这个音乐自启动到底能不能解决了？', 'https://image-res.mzres.com/img/download/uc/14/84/34/94/30/148434943/w50h50?t=1598876145', '2020-08-26 13:20:55', 285, 2, 24);
+INSERT INTO `discuss` VALUES (22, 'Diwen_g', '用网易云音乐的魅友有哪些？', 'https://image-res.mzres.com/img/download/uc/83/33/88/40/00/8333884/w50h50?t=1598876145', '2020-08-26 16:20:14', 167, 3, 23);
+INSERT INTO `discuss` VALUES (23, '皇城高尔夫', '魅族今年就一款17吗', 'https://image-res.mzres.com/img/download/uc/14/56/38/45/10/145638451/w50h50?t=1598876145', '2020-08-26 17:23:33', 821, 4, 72);
+INSERT INTO `discuss` VALUES (24, 'Fubuki丶', '有没有17用户开120刷新率啊', 'https://image-res.mzres.com/img/download/uc/14/60/13/12/50/146013125/w50h50?t=1598876145', '2020-08-26 17:29:52', 263, 5, 96);
+INSERT INTO `discuss` VALUES (25, 'ThinQ', '关于曲面屏的讨论', 'https://image-res.mzres.com/img/download/uc/13/99/81/85/50/139981855/w50h50?t=1598876145', '2020-08-26 17:19:20', 123, 0, 10);
+INSERT INTO `discuss` VALUES (26, '壹道成長', '16thp集合', 'https://image-res.mzres.com/img/download/uc/25/52/78/00/00/2552780/w50h50?t=1598876145', '2020-08-25 17:19:59', 154, 1, 45);
+INSERT INTO `discuss` VALUES (27, 'c小哥', '魅族手表', 'https://image-res.mzres.com/img/download/uc/19/33/72/65/00/19337265/w50h50?t=1598876145', '2020-08-26 13:20:55', 285, 2, 24);
+INSERT INTO `discuss` VALUES (28, '瞎扯淡嘿嘿', '魅族16x', 'https://image-res.mzres.com/img/download/uc/15/20/87/85/20/152087852/w50h50?t=1598876145', '2020-08-26 16:20:14', 167, 3, 23);
+INSERT INTO `discuss` VALUES (29, '疯子J', '求助大佬', 'https://image-res.mzres.com/img/download/uc/13/14/89/78/30/131489783/w50h50?t=1598876145', '2020-08-26 17:23:33', 821, 4, 72);
+INSERT INTO `discuss` VALUES (30, '用户638179264', '铁子们。这跑分什么水平？', 'https://image-res.mzres.com/img/download/uc/15/95/44/81/60/159544816/w50h50?t=1598876145', '2020-08-26 17:29:52', 263, 5, 96);
+INSERT INTO `discuss` VALUES (31, '绪宏呐', '安卓10稳定版来了', 'https://image-res.mzres.com/img/download/uc/16/84/15/65/30/168415653/w50h50?t=1598876145', '2020-08-26 17:19:20', 123, 0, 10);
+INSERT INTO `discuss` VALUES (32, '潇湘白离', '关于无线充支架3D打印免费', 'https://image-res.mzres.com/img/download/uc/14/44/48/82/10/144448821/w50h50?t=1598876145', '2020-08-25 17:19:59', 154, 1, 45);
+INSERT INTO `discuss` VALUES (33, '择木知幽鸟', '魅族17P 安装 超级壁纸', 'https://image-res.mzres.com/img/download/uc/42/38/14/70/00/4238147/w50h50?t=1598876145', '2020-08-26 13:20:55', 285, 2, 24);
+INSERT INTO `discuss` VALUES (34, 'l浮生l', '双双换新机，16th进化到16spro，爱了', 'https://image-res.mzres.com/img/download/uc/12/05/14/91/70/120514917/w50h50?t=1598876145', '2020-08-26 16:20:14', 167, 3, 23);
+INSERT INTO `discuss` VALUES (35, '易羞歌', '9月来了17热度已过，OTA还有惊喜吗？', 'https://image-res.mzres.com/img/download/uc/55/51/05/70/00/5551057/w50h50?t=1598876145', '2020-08-26 17:23:33', 821, 4, 72);
+INSERT INTO `discuss` VALUES (36, '大耳朵画画', '清除了one mind数据怎么手机振动没了', 'https://image-res.mzres.com/img/download/uc/13/86/74/42/30/138674423/w50h50?t=1598876145', '2020-08-26 17:29:52', 263, 5, 96);
+INSERT INTO `discuss` VALUES (37, '风雪凝冰', '16s pro支持哪些充电协议', 'https://image-res.mzres.com/img/download/uc/16/80/50/37/20/168050372/w50h50?t=1598876145', '2020-08-26 17:19:20', 123, 0, 10);
+INSERT INTO `discuss` VALUES (38, '随指尖而舞', '去年，今年', 'https://image-res.mzres.com/img/download/uc/13/83/18/57/60/138318576/w50h50?t=1598876145', '2020-08-25 17:19:59', 154, 1, 45);
+INSERT INTO `discuss` VALUES (39, 'beyond丶家駒', '今日随手', 'https://image-res.mzres.com/img/download/uc/13/15/03/54/70/131503547/w50h50?t=1598876145', '2020-08-26 13:20:55', 285, 2, 24);
+INSERT INTO `discuss` VALUES (40, '木兰花丶开', '太空杯收到', 'https://image-res.mzres.com/img/download/uc/12/54/90/45/00/12549045/w50h50?t=1598876145', '2020-08-26 16:20:14', 167, 3, 23);
+INSERT INTO `discuss` VALUES (41, '用户678117532', '魅友们梦寐以求的APP来了！', 'https://image-res.mzres.com/img/download/uc/16/95/29/38/30/169529383/w50h50?t=1598876145', '2020-08-26 17:23:33', 821, 4, 72);
+INSERT INTO `discuss` VALUES (42, '张同学某某', '明年屏下摄像头的真全面屏就会普及了', 'https://image-res.mzres.com/img/download/uc/76/75/57/40/00/7675574/w50h50?t=1598876145', '2020-08-26 17:29:52', 263, 5, 96);
+INSERT INTO `discuss` VALUES (44, '6到飞起的MX', '扎心了，铁子  hh不会套路的某族', 'https://image-res.mzres.com/img/download/uc/14/18/31/89/80/141831898/w50h50?t=1598876145', '2020-08-26 17:19:20', 123, 0, 10);
+INSERT INTO `discuss` VALUES (45, 'Id单', '贴了老爆的膜', 'https://image-res.mzres.com/img/download/uc/16/93/40/65/40/169340654/w50h50?t=1598876145', '2020-08-25 17:19:59', 154, 1, 45);
+INSERT INTO `discuss` VALUES (46, '雾里的猫', '魅族16spro老是卡顿', 'https://image-res.mzres.com/img/download/uc/16/70/61/59/30/167061593/w50h50?t=1598876145', '2020-08-26 13:20:55', 285, 2, 24);
+INSERT INTO `discuss` VALUES (47, 'HL梦荡', '光遇马赛克和画质问题', 'https://image-res.mzres.com/img/download/uc/16/33/79/26/60/163379266/w50h50?t=1598876145', '2020-08-26 16:20:14', 167, 3, 23);
+INSERT INTO `discuss` VALUES (48, 'ThinQ', '魅族为啥不考虑出个曲面屏手机呢', 'https://image-res.mzres.com/img/download/uc/13/99/81/85/50/139981855/w50h50?t=1598876145', '2020-08-26 17:23:33', 821, 4, 72);
+INSERT INTO `discuss` VALUES (49, '龙卷风极速', '魅族Pro7画屏没有音乐了', 'https://image-res.mzres.com/img/download/uc/24/72/31/24/00/24723124/w50h50?t=1598876145', '2020-08-26 17:29:52', 263, 5, 96);
+INSERT INTO `discuss` VALUES (50, '就叫白茶', '最近手机发热的有点严重啊', 'https://image-res.mzres.com/img/download/uc/11/65/20/40/50/116520405/w50h50?t=1598876145', '2020-08-26 17:19:20', 123, 0, 10);
+INSERT INTO `discuss` VALUES (51, '捏胸王', '寻思自己拍当壁纸', 'https://image-res.mzres.com/img/download/uc/16/78/84/91/70/167884917/w50h50?t=1598876145', '2020-08-25 17:19:59', 154, 1, 45);
+INSERT INTO `discuss` VALUES (52, '蔡世伟大王', '及时行乐-「魅族超充USB-C移动电源」', 'https://image-res.mzres.com/img/download/uc/75/73/93/10/00/7573931/w50h50?t=1598876145', '2020-08-26 13:20:55', 285, 2, 24);
+INSERT INTO `discuss` VALUES (53, '我真心没钱', 'MX2的用户还有有活跃的吗？', 'https://image-res.mzres.com/img/download/uc/46/11/66/30/00/4611663/w50h50?t=1598876145', '2020-08-26 16:20:14', 167, 3, 23);
+INSERT INTO `discuss` VALUES (54, '营养丶不良', 'tb上有卖17清水壳吗？', 'https://image-res.mzres.com/img/download/uc/24/26/02/10/00/2426021/w50h50?t=1598876145', '2020-08-26 17:23:33', 821, 4, 72);
+INSERT INTO `discuss` VALUES (55, '六莲', 'NFC 所谓的无电刷卡等 公交刷卡使用交流', 'https://image-res.mzres.com/img/download/uc/13/41/41/88/20/134141882/w50h50?t=1598876145', '2020-08-26 17:29:52', 263, 5, 96);
+INSERT INTO `discuss` VALUES (56, '九尾波斯猫v', '「魅族 17Pro」老朋友，在路上', 'https://image-res.mzres.com/img/download/uc/37/23/20/00/00/37232/w50h50?t=1598876145', '2020-08-26 17:19:20', 123, 0, 10);
+INSERT INTO `discuss` VALUES (57, '鬼儿子6', '快手那个识别音乐什么时候来啊', 'https://image-res.mzres.com/img/download/uc/15/26/94/34/20/152694342/w50h50?t=1598876145', '2020-08-25 17:19:59', 154, 1, 45);
+INSERT INTO `discuss` VALUES (58, 'z小马猴', '有什么办法把里面的资料导出来', 'https://image-res.mzres.com/img/download/uc/12/70/19/17/50/127019175/w50h50?t=1598876145', '2020-08-26 13:20:55', 285, 2, 24);
+INSERT INTO `discuss` VALUES (59, '在路上3010', '魅族17', 'https://image-res.mzres.com/img/download/uc/15/15/05/11/10/151505111/w50h50?t=1598876145', '2020-08-26 16:20:14', 167, 3, 23);
+INSERT INTO `discuss` VALUES (60, '莫名其妙天亮了', '需要买手机有没有什么推荐', 'https://image-res.mzres.com/img/download/uc/10/89/78/57/00/10897857/w50h50?t=1598876145', '2020-08-26 17:23:33', 821, 4, 72);
+INSERT INTO `discuss` VALUES (61, 'Dearm.', '第一次自己开车去上学～', 'https://image-res.mzres.com/img/download/uc/13/06/60/38/30/130660383/w50h50?t=1598876145', '2020-08-26 17:29:52', 263, 5, 96);
+INSERT INTO `discuss` VALUES (62, '是你手机壳', '这电脑怎么样', 'https://image-res.mzres.com/img/download/uc/15/05/42/07/20/150542072/w50h50?t=1598876145', '2020-08-26 17:19:20', 123, 0, 10);
+INSERT INTO `discuss` VALUES (63, '济南魅友家俱乐部', '济南魅友家六周年活动回顾', 'https://image-res.mzres.com/img/download/uc/77/49/40/60/00/7749406/w50h50?t=1598876145', '2020-08-25 17:19:59', 154, 1, 45);
+INSERT INTO `discuss` VALUES (64, '征南', '摄像头进灰', 'https://image-res.mzres.com/img/download/uc/11/63/22/73/10/116322731/w50h50?t=1598876145', '2020-08-26 13:20:55', 285, 2, 24);
+INSERT INTO `discuss` VALUES (65, 'Lock12', '提前暴露了18？', 'https://image-res.mzres.com/img/download/uc/15/61/16/71/10/156116711/w50h50?t=1598876145', '2020-08-26 16:20:14', 167, 3, 23);
+INSERT INTO `discuss` VALUES (66, '水中玥', '小六支持PD快充吗？', 'https://image-res.mzres.com/img/download/uc/13/90/08/15/00/13900815/w50h50?t=1598876145', '2020-08-26 17:23:33', 821, 4, 72);
+INSERT INTO `discuss` VALUES (67, '_少少', '魅族音乐没有本地搜索功能吗？', 'https://image-res.mzres.com/img/download/uc/12/76/53/35/70/127653357/w50h50?t=1598876145', '2020-08-26 17:29:52', 263, 5, 96);
+INSERT INTO `discuss` VALUES (68, '还不是时辰', '快充看得见？！魅族超充USB-C移动电源上手', 'https://image-res.mzres.com/img/download/uc/11/98/62/10/00/119862100/w50h50?t=1598876145', '2020-08-26 17:19:20', 123, 0, 10);
+INSERT INTO `discuss` VALUES (69, '梦无际淡', 'p7更新来了', 'https://image-res.mzres.com/img/download/uc/13/07/20/93/00/130720930/w50h50?t=1598876145', '2020-08-25 17:19:59', 154, 1, 45);
+INSERT INTO `discuss` VALUES (70, '挚情忠仁', '各位大神，想换17pro，问个关于换机助手的问题', 'https://image-res.mzres.com/img/download/uc/13/04/65/00/00/13046500/w50h50?t=1598876145', '2020-08-26 13:20:55', 285, 2, 24);
+INSERT INTO `discuss` VALUES (71, '噜噜噜结', '这个音乐自启动到底能不能解决了？', 'https://image-res.mzres.com/img/download/uc/14/84/34/94/30/148434943/w50h50?t=1598876145', '2020-08-26 16:20:14', 167, 3, 23);
+INSERT INTO `discuss` VALUES (72, 'Diwen_g', '用网易云音乐的魅友有哪些？', 'https://image-res.mzres.com/img/download/uc/83/33/88/40/00/8333884/w50h50?t=1598876145', '2020-08-26 17:23:33', 821, 4, 72);
+INSERT INTO `discuss` VALUES (73, '皇城高尔夫', '魅族今年就一款17吗', 'https://image-res.mzres.com/img/download/uc/14/56/38/45/10/145638451/w50h50?t=1598876145', '2020-08-26 17:29:52', 263, 5, 96);
+INSERT INTO `discuss` VALUES (74, 'Fubuki丶', '有没有17用户开120刷新率啊', 'https://image-res.mzres.com/img/download/uc/14/60/13/12/50/146013125/w50h50?t=1598876145', '2020-08-26 17:19:20', 123, 0, 10);
+INSERT INTO `discuss` VALUES (75, 'ThinQ', '关于曲面屏的讨论', 'https://image-res.mzres.com/img/download/uc/13/99/81/85/50/139981855/w50h50?t=1598876145', '2020-08-25 17:19:59', 154, 1, 45);
+INSERT INTO `discuss` VALUES (76, '壹道成長', '16thp集合', 'https://image-res.mzres.com/img/download/uc/25/52/78/00/00/2552780/w50h50?t=1598876145', '2020-08-26 13:20:55', 285, 2, 24);
+INSERT INTO `discuss` VALUES (77, 'c小哥', '魅族手表', 'https://image-res.mzres.com/img/download/uc/19/33/72/65/00/19337265/w50h50?t=1598876145', '2020-08-26 16:20:14', 167, 3, 23);
+INSERT INTO `discuss` VALUES (78, '瞎扯淡嘿嘿', '魅族16x', 'https://image-res.mzres.com/img/download/uc/15/20/87/85/20/152087852/w50h50?t=1598876145', '2020-08-26 17:23:33', 821, 4, 72);
+INSERT INTO `discuss` VALUES (79, '疯子J', '求助大佬', 'https://image-res.mzres.com/img/download/uc/13/14/89/78/30/131489783/w50h50?t=1598876145', '2020-08-26 17:29:52', 263, 5, 96);
+INSERT INTO `discuss` VALUES (80, '用户638179264', '铁子们。这跑分什么水平？', 'https://image-res.mzres.com/img/download/uc/15/95/44/81/60/159544816/w50h50?t=1598876145', '2020-08-26 17:19:20', 123, 0, 10);
+INSERT INTO `discuss` VALUES (81, '绪宏呐', '安卓10稳定版来了', 'https://image-res.mzres.com/img/download/uc/16/84/15/65/30/168415653/w50h50?t=1598876145', '2020-08-25 17:19:59', 154, 1, 45);
+INSERT INTO `discuss` VALUES (82, '潇湘白离', '关于无线充支架3D打印免费', 'https://image-res.mzres.com/img/download/uc/14/44/48/82/10/144448821/w50h50?t=1598876145', '2020-08-26 13:20:55', 285, 2, 24);
+INSERT INTO `discuss` VALUES (83, '择木知幽鸟', '魅族17P 安装 超级壁纸', 'https://image-res.mzres.com/img/download/uc/42/38/14/70/00/4238147/w50h50?t=1598876145', '2020-08-26 16:20:14', 167, 3, 23);
+INSERT INTO `discuss` VALUES (84, 'l浮生l', '双双换新机，16th进化到16spro，爱了', 'https://image-res.mzres.com/img/download/uc/12/05/14/91/70/120514917/w50h50?t=1598876145', '2020-08-26 17:23:33', 821, 4, 72);
+INSERT INTO `discuss` VALUES (85, '易羞歌', '9月来了17热度已过，OTA还有惊喜吗？', 'https://image-res.mzres.com/img/download/uc/55/51/05/70/00/5551057/w50h50?t=1598876145', '2020-08-26 17:29:52', 263, 5, 96);
+INSERT INTO `discuss` VALUES (86, '大耳朵画画', '清除了one mind数据怎么手机振动没了', 'https://image-res.mzres.com/img/download/uc/13/86/74/42/30/138674423/w50h50?t=1598876145', '2020-08-26 17:19:20', 123, 0, 10);
+INSERT INTO `discuss` VALUES (87, '风雪凝冰', '16s pro支持哪些充电协议', 'https://image-res.mzres.com/img/download/uc/16/80/50/37/20/168050372/w50h50?t=1598876145', '2020-08-25 17:19:59', 154, 1, 45);
+INSERT INTO `discuss` VALUES (88, '随指尖而舞', '去年，今年', 'https://image-res.mzres.com/img/download/uc/13/83/18/57/60/138318576/w50h50?t=1598876145', '2020-08-26 13:20:55', 285, 2, 24);
+INSERT INTO `discuss` VALUES (89, 'beyond丶家駒', '今日随手', 'https://image-res.mzres.com/img/download/uc/13/15/03/54/70/131503547/w50h50?t=1598876145', '2020-08-26 16:20:14', 167, 3, 23);
+INSERT INTO `discuss` VALUES (90, '木兰花丶开', '太空杯收到', 'https://image-res.mzres.com/img/download/uc/12/54/90/45/00/12549045/w50h50?t=1598876145', '2020-08-26 17:23:33', 821, 4, 72);
+INSERT INTO `discuss` VALUES (91, '用户678117532', '魅友们梦寐以求的APP来了！', 'https://image-res.mzres.com/img/download/uc/16/95/29/38/30/169529383/w50h50?t=1598876145', '2020-08-26 17:29:52', 263, 5, 96);
+INSERT INTO `discuss` VALUES (92, '张同学某某', '明年屏下摄像头的真全面屏就会普及了', 'https://image-res.mzres.com/img/download/uc/76/75/57/40/00/7675574/w50h50?t=1598876145', '2020-08-26 17:19:20', 123, 0, 10);
+INSERT INTO `discuss` VALUES (93, '6到飞起的MX', '扎心了，铁子  hh不会套路的某族', 'https://image-res.mzres.com/img/download/uc/14/18/31/89/80/141831898/w50h50?t=1598876145', '2020-08-25 17:19:59', 154, 1, 45);
+INSERT INTO `discuss` VALUES (94, 'Id单', '贴了老爆的膜', 'https://image-res.mzres.com/img/download/uc/16/93/40/65/40/169340654/w50h50?t=1598876145', '2020-08-26 13:20:55', 285, 2, 24);
+INSERT INTO `discuss` VALUES (95, '雾里的猫', '魅族16spro老是卡顿', 'https://image-res.mzres.com/img/download/uc/16/70/61/59/30/167061593/w50h50?t=1598876145', '2020-08-26 16:20:14', 167, 3, 23);
+INSERT INTO `discuss` VALUES (96, 'HL梦荡', '光遇马赛克和画质问题', 'https://image-res.mzres.com/img/download/uc/16/33/79/26/60/163379266/w50h50?t=1598876145', '2020-08-26 17:23:33', 821, 4, 72);
+INSERT INTO `discuss` VALUES (97, 'ThinQ', '魅族为啥不考虑出个曲面屏手机呢', 'https://image-res.mzres.com/img/download/uc/13/99/81/85/50/139981855/w50h50?t=1598876145', '2020-08-26 17:29:52', 263, 5, 96);
+INSERT INTO `discuss` VALUES (98, '龙卷风极速', '魅族Pro7画屏没有音乐了', 'https://image-res.mzres.com/img/download/uc/24/72/31/24/00/24723124/w50h50?t=1598876145', '2020-08-26 17:19:20', 123, 0, 10);
+INSERT INTO `discuss` VALUES (99, '就叫白茶', '最近手机发热的有点严重啊', 'https://image-res.mzres.com/img/download/uc/11/65/20/40/50/116520405/w50h50?t=1598876145', '2020-08-25 17:19:59', 154, 1, 45);
+INSERT INTO `discuss` VALUES (100, '捏胸王', '寻思自己拍当壁纸', 'https://image-res.mzres.com/img/download/uc/16/78/84/91/70/167884917/w50h50?t=1598876145', '2020-08-26 13:20:55', 285, 2, 24);
+INSERT INTO `discuss` VALUES (101, '蔡世伟大王', '及时行乐-「魅族超充USB-C移动电源」', 'https://image-res.mzres.com/img/download/uc/75/73/93/10/00/7573931/w50h50?t=1598876145', '2020-08-26 16:20:14', 167, 3, 23);
+INSERT INTO `discuss` VALUES (102, '我真心没钱', 'MX2的用户还有有活跃的吗？', 'https://image-res.mzres.com/img/download/uc/46/11/66/30/00/4611663/w50h50?t=1598876145', '2020-08-26 17:23:33', 821, 4, 72);
+INSERT INTO `discuss` VALUES (103, '营养丶不良', 'tb上有卖17清水壳吗？', 'https://image-res.mzres.com/img/download/uc/24/26/02/10/00/2426021/w50h50?t=1598876145', '2020-08-26 17:29:52', 263, 5, 96);
+INSERT INTO `discuss` VALUES (104, '六莲', 'NFC 所谓的无电刷卡等 公交刷卡使用交流', 'https://image-res.mzres.com/img/download/uc/13/41/41/88/20/134141882/w50h50?t=1598876145', '2020-08-26 17:19:20', 123, 0, 10);
+INSERT INTO `discuss` VALUES (105, '九尾波斯猫v', '「魅族 17Pro」老朋友，在路上', 'https://image-res.mzres.com/img/download/uc/37/23/20/00/00/37232/w50h50?t=1598876145', '2020-08-25 17:19:59', 154, 1, 45);
+INSERT INTO `discuss` VALUES (106, '鬼儿子6', '快手那个识别音乐什么时候来啊', 'https://image-res.mzres.com/img/download/uc/15/26/94/34/20/152694342/w50h50?t=1598876145', '2020-08-26 13:20:55', 285, 2, 24);
+INSERT INTO `discuss` VALUES (107, 'z小马猴', '有什么办法把里面的资料导出来', 'https://image-res.mzres.com/img/download/uc/12/70/19/17/50/127019175/w50h50?t=1598876145', '2020-08-26 16:20:14', 167, 3, 23);
+INSERT INTO `discuss` VALUES (108, '在路上3010', '魅族17', 'https://image-res.mzres.com/img/download/uc/15/15/05/11/10/151505111/w50h50?t=1598876145', '2020-08-26 17:23:33', 821, 4, 72);
+INSERT INTO `discuss` VALUES (109, '莫名其妙天亮了', '需要买手机有没有什么推荐', 'https://image-res.mzres.com/img/download/uc/10/89/78/57/00/10897857/w50h50?t=1598876145', '2020-08-26 17:29:52', 263, 5, 96);
+INSERT INTO `discuss` VALUES (110, 'Dearm.', '第一次自己开车去上学～', 'https://image-res.mzres.com/img/download/uc/13/06/60/38/30/130660383/w50h50?t=1598876145', '2020-08-26 17:19:20', 123, 0, 10);
+INSERT INTO `discuss` VALUES (111, '是你手机壳', '这电脑怎么样', 'https://image-res.mzres.com/img/download/uc/15/05/42/07/20/150542072/w50h50?t=1598876145', '2020-08-25 17:19:59', 154, 1, 45);
+INSERT INTO `discuss` VALUES (112, '济南魅友家俱乐部', '济南魅友家六周年活动回顾', 'https://image-res.mzres.com/img/download/uc/77/49/40/60/00/7749406/w50h50?t=1598876145', '2020-08-26 13:20:55', 285, 2, 24);
+INSERT INTO `discuss` VALUES (113, '征南', '摄像头进灰', 'https://image-res.mzres.com/img/download/uc/11/63/22/73/10/116322731/w50h50?t=1598876145', '2020-08-26 16:20:14', 167, 3, 23);
+INSERT INTO `discuss` VALUES (114, 'Lock12', '提前暴露了18？', 'https://image-res.mzres.com/img/download/uc/15/61/16/71/10/156116711/w50h50?t=1598876145', '2020-08-26 17:23:33', 821, 4, 72);
+INSERT INTO `discuss` VALUES (115, '水中玥', '小六支持PD快充吗？', 'https://image-res.mzres.com/img/download/uc/13/90/08/15/00/13900815/w50h50?t=1598876145', '2020-08-26 17:29:52', 263, 5, 96);
+INSERT INTO `discuss` VALUES (116, '_少少', '魅族音乐没有本地搜索功能吗？', 'https://image-res.mzres.com/img/download/uc/12/76/53/35/70/127653357/w50h50?t=1598876145', '2020-08-26 17:19:20', 123, 0, 10);
+INSERT INTO `discuss` VALUES (117, '还不是时辰', '快充看得见？！魅族超充USB-C移动电源上手', 'https://image-res.mzres.com/img/download/uc/11/98/62/10/00/119862100/w50h50?t=1598876145', '2020-08-25 17:19:59', 154, 1, 45);
+INSERT INTO `discuss` VALUES (118, '梦无际淡', 'p7更新来了', 'https://image-res.mzres.com/img/download/uc/13/07/20/93/00/130720930/w50h50?t=1598876145', '2020-08-26 13:20:55', 285, 2, 24);
+INSERT INTO `discuss` VALUES (119, '挚情忠仁', '各位大神，想换17pro，问个关于换机助手的问题', 'https://image-res.mzres.com/img/download/uc/13/04/65/00/00/13046500/w50h50?t=1598876145', '2020-08-26 16:20:14', 167, 3, 23);
+INSERT INTO `discuss` VALUES (120, '噜噜噜结', '这个音乐自启动到底能不能解决了？', 'https://image-res.mzres.com/img/download/uc/14/84/34/94/30/148434943/w50h50?t=1598876145', '2020-08-26 17:23:33', 821, 4, 72);
 
 -- ----------------------------
 -- Table structure for essay
@@ -192,27 +313,24 @@ CREATE TABLE `invitations`  (
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `pageView` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `discussion` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `posts` decimal(10, 0) NULL DEFAULT NULL COMMENT '帖子数量',
-  `listen` decimal(10, 0) NULL DEFAULT NULL COMMENT '收听',
-  `audience` decimal(10, 0) NULL DEFAULT NULL COMMENT '听众',
   PRIMARY KEY (`serialNumber`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of invitations
 -- ----------------------------
-INSERT INTO `invitations` VALUES (1, 'https://image-res.mzres.com/img/download/uc/12/82/47/52/70/128247527/w100h100?t=1598236801', '啊这', '似梦·非梦', '3009', '140', 6544, 1, 31);
-INSERT INTO `invitations` VALUES (2, 'https://image-res.mzres.com/img/download/uc/25/17/50/73/00/25175073/w100h100?t=1598236801', '亲爱的p6p', '铭时sama', '2482', '160', 4763, 5, 64);
-INSERT INTO `invitations` VALUES (3, 'https://image-res.mzres.com/img/download/uc/20/55/01/03/00/20550103/w100h100?t=1598236801', '17PR0~超广角带来的惊喜', '天地人和1978', '2054', '143', 6767, 5, 32);
-INSERT INTO `invitations` VALUES (4, 'https://image-res.mzres.com/img/download/uc/12/69/63/59/00/12696359/w100h100?t=1598236801', '17pro', '木林森', '2069', '96', 2312, 3, 64);
-INSERT INTO `invitations` VALUES (5, 'https://image-res.mzres.com/img/download/uc/42/62/31/20/00/4262312/w100h100?t=1598236801', '一个方法让手机不卡', 'misswell', '2773', '57', 4536, 2, 92);
-INSERT INTO `invitations` VALUES (6, 'https://image-res.mzres.com/img/download/uc/14/40/04/57/40/144004574/w100h100?t=1598236801', 'Aicy识曲，流弊了！', '奔跑吧奶瓶', '2594', '52', 4445, 4, 83);
-INSERT INTO `invitations` VALUES (7, 'https://image-res.mzres.com/img/download/uc/15/83/36/37/00/158336370/w100h100?t=1598236801', '不懂就问，来看看至尊。', '阿甘乐金口', '2148', '53', 8854, 5, 35);
-INSERT INTO `invitations` VALUES (8, 'https://image-res.mzres.com/img/download/uc/11/86/92/89/60/118692896/w100h100?t=1598236801', '生日提早过', '老王当自强', '1158', '92', 9954, 5, 81);
-INSERT INTO `invitations` VALUES (9, 'https://image-res.mzres.com/img/download/uc/12/21/62/30/30/122162303/w100h100?t=1598236801', 'mi10至尊版怎么有这么大的缝隙？', '侯十一', '1885', '61', 4343, 9, 36);
-INSERT INTO `invitations` VALUES (10, 'https://image-res.mzres.com/img/download/uc/14/40/04/57/40/144004574/w100h100?t=1598236801', '刚发现一个小功能', '奔跑吧奶瓶', '1771', '54', 7865, 3, 75);
-INSERT INTO `invitations` VALUES (11, 'https://image-res.mzres.com/img/download/uc/14/34/35/40/40/143435404/w100h100?t=1598236801', '稳定版推送了', '初见落霞', '2296', '22', 4347, 2, 95);
-INSERT INTO `invitations` VALUES (12, 'https://image-res.mzres.com/img/download/uc/21/75/93/80/00/2175938/w100h100?t=1598236801', '17，你让我错过了升职加薪的机会', '爱情傻气', '1802', '34', 7431, 8, 11);
+INSERT INTO `invitations` VALUES (1, 'https://image-res.mzres.com/img/download/uc/12/82/47/52/70/128247527/w100h100?t=1598236801', '啊这', '似梦·非梦', '3009', '140');
+INSERT INTO `invitations` VALUES (2, 'https://image-res.mzres.com/img/download/uc/25/17/50/73/00/25175073/w100h100?t=1598236801', '亲爱的p6p', '铭时sama', '2482', '160');
+INSERT INTO `invitations` VALUES (3, 'https://image-res.mzres.com/img/download/uc/20/55/01/03/00/20550103/w100h100?t=1598236801', '17PR0~超广角带来的惊喜', '天地人和1978', '2054', '143');
+INSERT INTO `invitations` VALUES (4, 'https://image-res.mzres.com/img/download/uc/12/69/63/59/00/12696359/w100h100?t=1598236801', '17pro', '木林森', '2069', '96');
+INSERT INTO `invitations` VALUES (5, 'https://image-res.mzres.com/img/download/uc/42/62/31/20/00/4262312/w100h100?t=1598236801', '一个方法让手机不卡', 'misswell', '2773', '57');
+INSERT INTO `invitations` VALUES (6, 'https://image-res.mzres.com/img/download/uc/14/40/04/57/40/144004574/w100h100?t=1598236801', 'Aicy识曲，流弊了！', '奔跑吧奶瓶', '2594', '52');
+INSERT INTO `invitations` VALUES (7, 'https://image-res.mzres.com/img/download/uc/15/83/36/37/00/158336370/w100h100?t=1598236801', '不懂就问，来看看至尊。', '阿甘乐金口', '2148', '53');
+INSERT INTO `invitations` VALUES (8, 'https://image-res.mzres.com/img/download/uc/11/86/92/89/60/118692896/w100h100?t=1598236801', '生日提早过', '老王当自强', '1158', '92');
+INSERT INTO `invitations` VALUES (9, 'https://image-res.mzres.com/img/download/uc/12/21/62/30/30/122162303/w100h100?t=1598236801', 'mi10至尊版怎么有这么大的缝隙？', '侯十一', '1885', '61');
+INSERT INTO `invitations` VALUES (10, 'https://image-res.mzres.com/img/download/uc/14/40/04/57/40/144004574/w100h100?t=1598236801', '刚发现一个小功能', '奔跑吧奶瓶', '1771', '54');
+INSERT INTO `invitations` VALUES (11, 'https://image-res.mzres.com/img/download/uc/14/34/35/40/40/143435404/w100h100?t=1598236801', '稳定版推送了', '初见落霞', '2296', '22');
+INSERT INTO `invitations` VALUES (12, 'https://image-res.mzres.com/img/download/uc/21/75/93/80/00/2175938/w100h100?t=1598236801', '17，你让我错过了升职加薪的机会', '爱情傻气', '1802', '34');
 
 -- ----------------------------
 -- Table structure for products
@@ -230,7 +348,7 @@ CREATE TABLE `products`  (
   `price` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '价格',
   `tabImg` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '切换图片路径',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 61 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 88 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of products
@@ -269,32 +387,277 @@ INSERT INTO `products` VALUES (31, '魅族中国红 Type-C 金属编织线', NUL
 INSERT INTO `products` VALUES (32, '魅族移动电源3', NULL, NULL, NULL, NULL, '[\'./images/handlb6.png@480x480.jpg\']', 'commend', '79.00', NULL);
 INSERT INTO `products` VALUES (33, '魅族 EP3C 耳机', NULL, NULL, NULL, NULL, '[\'./images/handlb7.png@480x480.jpg\']', 'commend', '129.00', NULL);
 INSERT INTO `products` VALUES (34, '魅族 HIFI 解码耳放', NULL, NULL, NULL, NULL, '[\'./images/handlb8.png@480x480.jpg\']', 'commend', '169.00', NULL);
-INSERT INTO `products` VALUES (35, '魅族 HD60 降噪耳机', NULL, '【夏日限时特惠999元】索尼主动降噪芯片 | 40mm镀铍振膜 | 触控操作 | USB - C 快充 | 轻奢品质', '[\'雾银黑\']', NULL, '[\'./images/muc1-1.png@480x480.jpg\']', 'music', '1099.00', '[\'./images/ninghei.png\']');
-INSERT INTO `products` VALUES (36, '魅族 POP2 真无线蓝牙耳机', NULL, '蓝牙5.0 | 单次8H续航 | 石墨烯振膜 | 双耳通话 | 轻触操作 | 轻盈舒适', '[\'皓月白\']', NULL, '[\'./images/muc2-1.png@480x480.jpg\']', 'music', '399.00', '[\'./images/bai.png\']');
-INSERT INTO `products` VALUES (37, '魅族 HIFI 解码耳放', NULL, '【夏日限时特惠119元】高性能DAC芯片 | 纯净HiFi音质 | 600Ω高阻抗推力 | Type-C 转接线 | 音乐发烧友必备', '[\'黑色\']', NULL, '[\'./images/muc3-1.png@480x480.jpg\']', 'music', '169.00', '[\'./images/ninghei.png\']');
-INSERT INTO `products` VALUES (38, '魅族 EP3C 耳机', NULL, '【夏日限时特惠99元】Hi-Res 认证高解析音质 | Type-C数字接口 | 高保真生物纤维振膜', '[\'白色\']', NULL, '[\'./images/muc4-1.png@480x480.jpg\']', 'music', '129.00', '[\'./images/bai.png\']');
-INSERT INTO `products` VALUES (39, '魅族 EP63NC 无线降噪耳机', NULL, '【夏日限时特惠299元】AMS 芯片智能降噪 | Qualcomm apt-X™ 高清音质 | 蓝牙一拖二连接 | 11小时超长续航 | 快充15分钟畅听3小时', '[\'玄武灰\']', NULL, '[\'./images/muc5-1.png@480x480.jpg\']', 'music', '399.00', '[\'./images/aghui.png\']');
-INSERT INTO `products` VALUES (40, '魅族 HD60 头戴式蓝牙耳机', NULL, '【夏日特惠429元】40mm生物振膜  | Type-C充电 | 触控操作 | 蓝牙5.0 | 轻奢品质', '[\'雾银黑色\',\'热带橙色\']', NULL, '[\'./images/muc6-1.png@480x480.jpg\',\'./images/muc6-2.png@480x480.jpg\']', 'music', '499.00', '[\'./images/ninghei.png\',\'./images/riguangcheng.png\']');
-INSERT INTO `products` VALUES (41, '魅族 POP2 真无线蓝牙耳机', NULL, '蓝牙5.0 | 单次8H续航 | 石墨烯振膜 | 双耳通话 | 轻触操作 | 轻盈舒适', '[\'皓月白\']', NULL, '[\'./images/muc2-1.png@480x480.jpg\']', 'music', '399.00', '[\'./images/bai.png\']');
-INSERT INTO `products` VALUES (42, '魅族 HD60 降噪耳机', NULL, '【夏日限时特惠999元】索尼主动降噪芯片 | 40mm镀铍振膜 | 触控操作 | USB - C 快充 | 轻奢品质', '[\'雾银黑\']', NULL, '[\'./images/muc1-1.png@480x480.jpg\']', 'music', '1099.00', '[\'./images/ninghei.png\']');
-INSERT INTO `products` VALUES (43, '魅族 HD60 头戴式蓝牙耳机', NULL, '【夏日特惠429元】40mm生物振膜  | Type-C充电 | 触控操作 | 蓝牙5.0 | 轻奢品质', '[\'雾银黑色\',\'热带橙色\']', NULL, '[\'./images/muc6-1.png@480x480.jpg\',\'./images/muc6-2.png@480x480.jpg\']', 'music', '499.00', '[\'./images/ninghei.png\',\'./images/riguangcheng.png\']');
-INSERT INTO `products` VALUES (44, '魅族 POP2 真无线蓝牙耳机', NULL, '蓝牙5.0 | 单次8H续航 | 石墨烯振膜 | 双耳通话 | 轻触操作 | 轻盈舒适', '[\'皓月白\']', NULL, '[\'./images/muc2-1.png@480x480.jpg\']', 'music', '399.00', '[\'./images/bai.png\']');
-INSERT INTO `products` VALUES (45, '魅族 HIFI 解码耳放', NULL, '【夏日限时特惠119元】高性能DAC芯片 | 纯净HiFi音质 | 600Ω高阻抗推力 | Type-C 转接线 | 音乐发烧友必备', '[\'黑色\']', NULL, '[\'./images/muc3-1.png@480x480.jpg\']', 'music', '169.00', '[\'./images/ninghei.png\']');
-INSERT INTO `products` VALUES (46, '魅族 HD60 降噪耳机', NULL, '【夏日限时特惠999元】索尼主动降噪芯片 | 40mm镀铍振膜 | 触控操作 | USB - C 快充 | 轻奢品质', '[\'雾银黑\']', NULL, '[\'./images/muc1-1.png@480x480.jpg\']', 'music', '1099.00', '[\'./images/ninghei.png\']');
-INSERT INTO `products` VALUES (47, '魅族 HD60 头戴式蓝牙耳机', NULL, '【夏日特惠429元】40mm生物振膜  | Type-C充电 | 触控操作 | 蓝牙5.0 | 轻奢品质', '[\'雾银黑色\',\'热带橙色\']', NULL, '[\'./images/muc6-1.png@480x480.jpg\',\'./images/muc6-2.png@480x480.jpg\']', 'music', '499.00', '[\'./images/ninghei.png\',\'./images/riguangcheng.png\']');
-INSERT INTO `products` VALUES (48, '魅族 HD60 降噪耳机', NULL, '【夏日限时特惠999元】索尼主动降噪芯片 | 40mm镀铍振膜 | 触控操作 | USB - C 快充 | 轻奢品质', '[\'雾银黑\']', NULL, '[\'./images/muc1-1.png@480x480.jpg\']', 'music', '1099.00', '[\'./images/ninghei.png\']');
-INSERT INTO `products` VALUES (49, '魅族 POP2 真无线蓝牙耳机', NULL, '蓝牙5.0 | 单次8H续航 | 石墨烯振膜 | 双耳通话 | 轻触操作 | 轻盈舒适', '[\'皓月白\']', NULL, '[\'./images/muc2-1.png@480x480.jpg\']', 'music', '399.00', '[\'./images/bai.png\']');
-INSERT INTO `products` VALUES (50, '魅族 HD60 头戴式蓝牙耳机', NULL, '【夏日特惠429元】40mm生物振膜  | Type-C充电 | 触控操作 | 蓝牙5.0 | 轻奢品质', '[\'雾银黑色\',\'热带橙色\']', NULL, '[\'./images/muc6-1.png@480x480.jpg\',\'./images/muc6-2.png@480x480.jpg\']', 'music', '499.00', '[\'./images/ninghei.png\',\'./images/riguangcheng.png\']');
-INSERT INTO `products` VALUES (51, '魅族 HD60 头戴式蓝牙耳机', NULL, '【夏日特惠429元】40mm生物振膜  | Type-C充电 | 触控操作 | 蓝牙5.0 | 轻奢品质', '[\'雾银黑色\',\'热带橙色\']', NULL, '[\'./images/muc6-1.png@480x480.jpg\',\'./images/muc6-2.png@480x480.jpg\']', 'music', '499.00', '[\'./images/ninghei.png\',\'./images/riguangcheng.png\']');
-INSERT INTO `products` VALUES (52, '魅族 HIFI 解码耳放', NULL, '【夏日限时特惠119元】高性能DAC芯片 | 纯净HiFi音质 | 600Ω高阻抗推力 | Type-C 转接线 | 音乐发烧友必备', '[\'黑色\']', NULL, '[\'./images/muc3-1.png@480x480.jpg\']', 'music', '169.00', '[\'./images/ninghei.png\']');
-INSERT INTO `products` VALUES (53, '魅族 HD60 头戴式蓝牙耳机', NULL, '【夏日特惠429元】40mm生物振膜  | Type-C充电 | 触控操作 | 蓝牙5.0 | 轻奢品质', '[\'雾银黑色\',\'热带橙色\']', NULL, '[\'./images/muc6-1.png@480x480.jpg\',\'./images/muc6-2.png@480x480.jpg\']', 'music', '499.00', '[\'./images/ninghei.png\',\'./images/riguangcheng.png\']');
-INSERT INTO `products` VALUES (54, '魅族 EP63NC 无线降噪耳机', NULL, '【夏日限时特惠299元】AMS 芯片智能降噪 | Qualcomm apt-X™ 高清音质 | 蓝牙一拖二连接 | 11小时超长续航 | 快充15分钟畅听3小时', '[\'玄武灰\']', NULL, '[\'./images/muc5-1.png@480x480.jpg\']', 'music', '399.00', '[\'./images/aghui.png\']');
-INSERT INTO `products` VALUES (55, '魅族 POP2 真无线蓝牙耳机', NULL, '蓝牙5.0 | 单次8H续航 | 石墨烯振膜 | 双耳通话 | 轻触操作 | 轻盈舒适', '[\'皓月白\']', NULL, '[\'./images/muc2-1.png@480x480.jpg\']', 'music', '399.00', '[\'./images/bai.png\']');
-INSERT INTO `products` VALUES (56, '魅族 HIFI 解码耳放', NULL, '【夏日限时特惠119元】高性能DAC芯片 | 纯净HiFi音质 | 600Ω高阻抗推力 | Type-C 转接线 | 音乐发烧友必备', '[\'黑色\']', NULL, '[\'./images/muc3-1.png@480x480.jpg\']', 'music', '169.00', '[\'./images/ninghei.png\']');
-INSERT INTO `products` VALUES (57, '魅族 HD60 头戴式蓝牙耳机', NULL, '【夏日特惠429元】40mm生物振膜  | Type-C充电 | 触控操作 | 蓝牙5.0 | 轻奢品质', '[\'雾银黑色\',\'热带橙色\']', NULL, '[\'./images/muc6-1.png@480x480.jpg\',\'./images/muc6-2.png@480x480.jpg\']', 'music', '499.00', '[\'./images/ninghei.png\',\'./images/riguangcheng.png\']');
-INSERT INTO `products` VALUES (58, '魅族 POP2 真无线蓝牙耳机', NULL, '蓝牙5.0 | 单次8H续航 | 石墨烯振膜 | 双耳通话 | 轻触操作 | 轻盈舒适', '[\'皓月白\']', NULL, '[\'./images/muc2-1.png@480x480.jpg\']', 'music', '399.00', '[\'./images/bai.png\']');
-INSERT INTO `products` VALUES (59, '魅族 EP63NC 无线降噪耳机', NULL, '【夏日限时特惠299元】AMS 芯片智能降噪 | Qualcomm apt-X™ 高清音质 | 蓝牙一拖二连接 | 11小时超长续航 | 快充15分钟畅听3小时', '[\'玄武灰\']', NULL, '[\'./images/muc5-1.png@480x480.jpg\']', 'music', '399.00', '[\'./images/aghui.png\']');
-INSERT INTO `products` VALUES (60, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `products` VALUES (35, '魅族 HD60 降噪耳机', NULL, '【开学聚惠限时999元】索尼主动降噪芯片 | 40mm镀铍振膜 | 触控操作 | USB - C 快充 | 轻奢品质', '[\'雾银黑\']', NULL, '[\'./imges/muc1-1.png@480x480.jpg\']', 'music', '1099.00', '[\'./imges/huanyezi.png\']');
+INSERT INTO `products` VALUES (36, '魅族 POP2 真无线蓝牙耳机', NULL, '蓝牙5.0 | 单次8H续航 | 石墨烯振膜 | 双耳通话 | 轻触操作 | 轻盈舒适', '[\'亮白\']', NULL, '[\'./imges/muc2-1.png@480x480.jpg\']', 'music', '399.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (37, '魅族 HIFI 解码耳放', NULL, '【开学聚惠限时119元】高性能DAC芯片 | 纯净HiFi音质 | 600Ω高阻抗推力 | Type-C 转接线 | 音乐发烧友必备', '[\'黑色\']', NULL, '[\'./imges/muc3-1.png@480x480.jpg\']', 'music', '169.00', '[\'./imges/huanhei.png\']');
+INSERT INTO `products` VALUES (38, '魅族 EP3C 耳机', NULL, '【开学聚惠限时99元】Hi-Res 认证高解析音质 | Type-C数字接口 | 高保真生物纤维振膜', '[\'白色\']', NULL, '[\'./imges/muc4-1.png@480x480.jpg\']', 'music', '129.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (39, '魅族 EP63NC 无线降噪耳机', NULL, '【开学聚惠限时299元】AMS 芯片智能降噪 | Qualcomm apt-X™ 高清音质 | 蓝牙一拖二连接 | 11小时超长续航 | 快充15分钟畅听3小时', '[\'玄武灰\']', NULL, '[\'./imges/muc5-1.png@480x480.jpg\']', 'music', '399.00', '[\'./imges/jianhei.png\']');
+INSERT INTO `products` VALUES (40, '魅族 HD60 头戴式蓝牙耳机', NULL, '【开学聚惠限时429元】40mm生物振膜  | Type-C充电 | 触控操作 | 蓝牙5.0 | 轻奢品质', '[\'热带橙色\',\'雾银黑色\']', NULL, '[\'./imges/muc6-1.png@480x480.jpg\',\'./imges/muc6-2.png@480x480.jpg\']', 'music', '499.00', '[\'./imges/riguangcheng.png\',\'./imges/huanyezi.png\']');
+INSERT INTO `products` VALUES (41, '魅族 EP21耳机', NULL, '三键一体式线控 | 3.5mm接口 ', '[\'白色\']', NULL, '[\'./imges/muc7-1.png@480x480.jpg\']', 'music', '89.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (42, '魅族 HALO 激光蓝牙耳机', NULL, '炫酷夜跑神器 随性张扬', '[\'蓝色\',\'红色\']', NULL, '[\'./imges/muc8-1.png@480x480.jpg\',\'./imges/muc8-2.png@480x480.jpg\']', 'music', '499.00', '[\'./imges/yatelan.png\',\'./imges/yanhong.png\']');
+INSERT INTO `products` VALUES (43, '魅族 EP52 Lite 蓝牙耳机', NULL, '【开学聚惠限时109元】轻巧亲肤 | 生物纤维振膜 | 8小时续航 | IPX5级防水', '[\'月白\',\'深蓝\',\'云灰\']', NULL, '[\'./imges/muc9-1.png@480x480.jpg\',\'./imges/muc9-2.png@480x480.jpg\',\'./imges/muc9-3.png@480x480.jpg\']', 'music', '129.00', '[\'./imges/bai.png\',\'./imges/xingyaolan.png\',\'./imges/jianhei.png\']');
+INSERT INTO `products` VALUES (44, '魅族 HiFi 解码耳放 PRO', NULL, '性能DAC芯片 | 超强二级运放 | Hi-Res 认证高解析音质 | 高阻抗推力 | Type-C转接线', '[\'黑色\']', NULL, '[\'./imges/muc10-1.png@480x480.jpg\']', 'music', '269.00', '[\'./imges/huanhei.png\']');
+INSERT INTO `products` VALUES (45, '魅族 LIVE 四单元动铁耳机', NULL, '【开学聚惠限时999元】Knowles四动铁 双通道导音系统 现场级音乐表现', '[\'灰色\']', NULL, '[\'./imges/muc11-1.png@480x480.jpg\']', 'music', '1099.00', '[\'./imges/yin.png\']');
+INSERT INTO `products` VALUES (46, 'MEIZU UR 高端定制耳机  预约', NULL, '【预约专用】私人定制，为你而声', '[\'定制\']', NULL, '[\'./imges/muc12-1.png@480x480.jpg\']', 'music', '200.00', '[]');
+INSERT INTO `products` VALUES (47, '魅族 EP2X 耳机', NULL, '一体式线控 | 3.5mm接口 | 流线设计', '[\'珍珠黑\',\'皓月白\']', NULL, '[\'./imges/muc13-1.png@480x480.jpg\',\'./imges/muc13-2.png@480x480.jpg\']', 'music', '69.00', '[\'./imges/huanhei.png\',\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (48, '【老用户专享】魅族 HD60 头戴式蓝牙耳机', NULL, '【1元换购价值69元数据线】40mm生物振膜  | Type-C充电 | 触控操作 | 蓝牙5.0 | 轻奢品质', '[\'热带橙色\',\'雾银黑色\']', NULL, '[\'./imges/muc14-1.png@480x480.jpg\',\'./imges/muc14-2.png@480x480.jpg\']', 'music', '429.00', '[\'./imges/riguangcheng.png\',\'./imges/huanyezi.png\']');
+INSERT INTO `products` VALUES (49, '【老用户专享】-魅族 HD60 降噪耳机', NULL, '【129元换购价值299元电动牙刷】索尼主动降噪芯片 | 40mm镀铍振膜 | 触控操作 | USB - C 快充 | 轻奢品质', '[\'雾银黑\']', NULL, '[\'./imges/muc15-1.png@480x480.jpg\']', 'music', '999.00', '[\'./imges/huanyezi.png\']');
+INSERT INTO `products` VALUES (50, '【老用户专享】-魅族 HIFI 解码耳放', NULL, '【1元换购价值39元数据线】高性能DAC芯片 | 纯净HiFi音质 | 600Ω高阻抗推力 | Type-C 转接线 | 音乐发烧友必备', '[\'黑色\']', NULL, '[\'./imges/muc16-1.png@480x480.jpg\']', 'music', '119.00', '[\'./imges/wujin.png\']');
+INSERT INTO `products` VALUES (51, '【开学聚惠】魅族 LIVE 四单元动铁耳机', NULL, 'Knowles四动铁 双通道导音系统 现场级音乐表现', '[\'银色\']', NULL, '[\'./imges/muc17-1.png@480x480.jpg\']', 'music', '1299.00', '[\'./imges/yin.png\']');
+INSERT INTO `products` VALUES (52, '【开学聚惠】-魅族 EP52 Lite 蓝牙耳机', NULL, '轻巧亲肤 | 生物纤维振膜 | 8小时续航 | IPX5级防水', '[\'月白\',\'深蓝\',\'云灰\']', NULL, '[\'./imges/muc18-1.png@480x480.jpg\',\'./imges/muc18-2.png@480x480.jpg\',\'./imges/muc18-3.png@480x480.jpg\']', 'music', '109.00', '[\'./imges/bai.png\',\'./imges/xingyaolan.png\',\'./imges/jianhei.png\']');
+INSERT INTO `products` VALUES (53, '【开学聚惠】魅族 HD60 头戴式蓝牙耳机', NULL, '【限时12期免息】40mm生物振膜  | Type-C充电 | 触控操作 | 蓝牙5.0 | 轻奢品质', '[\'热带橙色\',\'雾银黑色\']', NULL, '[\'./imges/muc19-1.png@480x480.jpg\',\'./imges/muc19-2.png@480x480.jpg\']', 'music', '429.00', '[\'./imges/riguangcheng.png\',\'./imges/huanyezi.png\']');
+INSERT INTO `products` VALUES (54, '【开学聚惠】-魅族 EP3C 耳机', NULL, 'Hi-Res 认证高解析音质 | Type-C数字接口 | 高保真生物纤维振膜', '[\'白色\']', NULL, '[\'./imges/muc20-1.png@480x480.jpg\']', 'music', '99.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (55, '【开学聚惠】-魅族 HIFI 解码耳放', NULL, '高性能DAC芯片 | 纯净HiFi音质 | 600Ω高阻抗推力 | Type-C 转接线 | 音乐发烧友必备', '[\'黑色\']', NULL, '[\'./imges/muc21-1.png@480x480.jpg\']', 'music', '119.00', '[\'./imges/wujin.png\']');
+INSERT INTO `products` VALUES (56, '【开学聚惠】魅族 EP63NC 无线降噪耳机', NULL, 'AMS 芯片智能降噪 | Qualcomm apt-X™ 高清音质 | 蓝牙一拖二连接 | 11小时超长续航 | 快充15分钟畅听3小时', '[\'玄武灰\']', NULL, '[\'./imges/muc22-1.png@480x480.jpg\']', 'music', '299.00', '[\'./imges/jianhei.png\']');
+INSERT INTO `products` VALUES (57, '【开学聚惠】-魅族 HD60 降噪耳机', NULL, '【限时12期免息】索尼主动降噪芯片 | 40mm镀铍振膜 | 触控操作 | USB - C 快充 | 轻奢品质', '[\'雾银黑\']', NULL, '[\'./imges/muc23-1.png@480x480.jpg\']', 'music', '999.00', '[\'./imges/huanyezi.png\']');
+INSERT INTO `products` VALUES (58, '魅族 POP2 真无线蓝牙耳机', NULL, '蓝牙5.0 | 单次8H续航 | 石墨烯振膜 | 双耳通话 | 轻触操作 | 轻盈舒适', '[\'皓月白\']', NULL, '[\'./imges/muc24-1.png@480x480.jpg\']', 'music', '399.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (59, 'POP 真无线蓝牙耳机', NULL, '双无线 零设限', '[\'皓月白\']', NULL, '[\'./imges/muc25-1.png@480x480.jpg\']', 'music', '499.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (60, '魅族蓝牙音频接收器', NULL, '独立音频芯片 | 一键控制 | 6小时续航 | 轻巧设计', '[\'钢琴黑\']', NULL, '[\'./imges/muc26-1.png@480x480.jpg\']', 'music', '89.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (61, '魅族无线超充板', NULL, '【8.31 APP限时抢购149元 | 前往魅族商城APP抢购专区选购】魅族 17 Pro 适用 | 27W 无线快充 | 主动散热 | 智能静音 | 玉润设计', NULL, NULL, '[\'./imges/par1-1.png@480x480.jpg\']', 'parts', '169.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (62, 'Pandaer 「17」系列 手机壳', NULL, '【APP积分兑换10元优惠券】魅族 17 / 魅族 17 Pro 适用 | Pandaer 家族 | 潮趣个性 | 官方适配', NULL, NULL, '[\'./imges/par2-1.png@480x480.jpg\',\'./imges/par2-2.png@480x480.jpg\',\'./imges/par2-3.png@480x480.jpg\',\'./imges/par2-4.png@480x480.jpg\']', 'parts', '49.00', '[\'./imges/par2-1.png@480x480.jpg\',\'./imges/par2-2.png@480x480.jpg\',\'./imges/par2-3.png@480x480.jpg\',\'./imges/par2-4.png@480x480.jpg\']');
+INSERT INTO `products` VALUES (63, '魅族 17 系列 液态硅胶壳', NULL, '魅族 17 / 魅族 17 Pro 适用 | 官方适配 | 魅族手感 | 柔韧保护', NULL, NULL, '[\'./imges/par3-1.png@480x480.jpg\',\'./imges/par3-2.png@480x480.jpg\']', 'parts', '89.00', '[\'./imges/bai.png\',\'./imges/wujin.png\']');
+INSERT INTO `products` VALUES (64, '魅族 Type-C 数据线', NULL, '5A 大电流 | Type-C 接口 | 更快更方便', NULL, NULL, '[\'./imges/par4-1.png@480x480.jpg\']', 'parts', '49.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (65, '魅族 Type-C 游戏专用线', NULL, 'Type-C 接口 | 5A大电流 | 弯头专为游戏设计 | 耐磨编织材料', NULL, NULL, '[\'./imges/par5-1.png@480x480.jpg\']', 'parts', '49.00', '[\'./imges/yanhong.png\']');
+INSERT INTO `products` VALUES (66, '魅族中国红 Type-C 金属编织线', NULL, 'Type-C 接口 | 3A大电流 | 耐磨编织材料', NULL, NULL, '[\'./imges/par6-1.png@480x480.jpg\']', 'parts', '39.00', '[\'./imges/yanhong.png\']');
+INSERT INTO `products` VALUES (67, '魅族移动电源3', NULL, '10000mAh | 18W双向快充 | 12重安全防护', NULL, NULL, '[\'./imges/par7-1.png@480x480.jpg\',\'./imges/par7-2.png@480x480.jpg\']', 'parts', '79.00', '[\'./imges/wujin.png\',\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (68, '快充电源适配器（UP0830S）', NULL, '快速充电 安全无忧', NULL, NULL, '[\'./imges/par8-1.png@480x480.jpg\']', 'parts', '89.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (69, '魅族无线充电器', NULL, '10W快速充电 无线即放即充', NULL, NULL, '[\'./imges/par9-1.png@480x480.jpg\']', 'parts', '99.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (70, '魅族 Micro USB 数据线', NULL, '广泛兼容各大品牌Micro USB接口手机 | 经久耐用 ', NULL, NULL, '[\'./imges/par10-1.png@480x480.jpg\']', 'parts', '29.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (71, '【老用户专享】魅族无线超充板', NULL, '【1元换购价值39元数据线】魅族 17 Pro 适用 | 27W 无线快充 | 主动散热 | 智能静音 | 玉润设计', NULL, NULL, '[\'./imges/par11-1.png@480x480.jpg\']', 'parts', '169.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (72, '【老用户专享】-魅族超充 GaN 三口充电器', NULL, '【1元换购价值39元数据线】65W MAX功率输出 | GaN 芯片 | 安全小巧 | 三口输出', NULL, NULL, '[\'./imges/par12-1.png@480x480.jpg\']', 'parts', '199.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (73, 'Pandaer 「17」夏日系列 壳膜套装', NULL, '【咨询客服 | 老用户尊享价49元】魅族 17 / 魅族 17 Pro 适用 | 手机壳 + PET 高透膜', NULL, NULL, '[\'./imges/par13-1.png@480x480.jpg\',\'./imges/par13-2.png@480x480.jpg\',\'./imges/par13-3.png@480x480.jpg\',\'./imges/par13-4.png@480x480.jpg\']', 'parts', '69.00', '[\'./imges/par13-1.png@480x480.jpg\',\'./imges/par13-2.png@480x480.jpg\',\'./imges/par13-3.png@480x480.jpg\',\'./imges/par13-4.png@480x480.jpg\']');
+INSERT INTO `products` VALUES (74, '魅族双 USB-C 快充线', NULL, '双 USB-C 接口 | 5A 大电流 | 耐磨编织材料 | E-Marker 芯片', NULL, NULL, '[\'./imges/par14-1.png@480x480.jpg\']', 'parts', '49.00', '[\'./imges/yanhong.png\']');
+INSERT INTO `products` VALUES (75, 'Lifeme PD 快充线', NULL, 'USB-C 转 Lightning | MFi 认证 | 3A 大电流 | PD 快充 | 兼容大部分苹果设备', NULL, NULL, '[\'./imges/par15-1.png@480x480.jpg\']', 'parts', '69.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (76, '魅族超充 USB-C 移动电源', NULL, '【新品上市 | 现货发售】USB-C 双向快充 | 22.5W 大功率 | 数字电量显示 | 多快充协议支持', NULL, NULL, '[\'./imges/par16-1.png@480x480.jpg\']', 'parts', '169.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (77, '魅族超充 GaN 三口充电器', NULL, '【8.31 开学聚惠限时领30元券】65W MAX功率输出 | GaN 芯片 | 安全小巧 | 三口输出', NULL, NULL, '[\'./imges/par17-1.png@480x480.jpg\']', 'parts', '199.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (78, '【秒杀】Pandaer「17」夏日系列壳膜套装', NULL, '魅族 17 / 魅族 17 Pro 适用 | 手机壳 + PET 高透膜', NULL, NULL, '[\'./imges/par18-1.png@480x480.jpg\']', 'parts', '34.5.00', '[\'./imges/par18-1.png@480x480.jpg\']');
+INSERT INTO `products` VALUES (79, '【砍价】-Lifeme PD 快充线', NULL, 'USB-C 转 Lightning | MFi 认证 | 3A 大电流 | PD 快充 | 兼容大部分苹果设备', NULL, NULL, '[\'./imges/par19-1.png@480x480.jpg\']', 'parts', '69.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (80, '魅族 V8 高配版高透保护膜', NULL, '高透光率 助双眼捕捉每一颗像素的色彩', NULL, NULL, '[\'./imges/par20-1.png@480x480.jpg\']', 'parts', '19.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (81, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `products` VALUES (82, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `products` VALUES (83, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `products` VALUES (84, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `products` VALUES (85, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `products` VALUES (86, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `products` VALUES (87, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- ----------------------------
+-- Table structure for province
+-- ----------------------------
+DROP TABLE IF EXISTS `province`;
+CREATE TABLE `province`  (
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '省份名称',
+  `rid` int(11) NULL DEFAULT NULL COMMENT '省份编码'
+) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of province
+-- ----------------------------
+INSERT INTO `province` VALUES ('北京', 110000);
+INSERT INTO `province` VALUES ('天津', 120000);
+INSERT INTO `province` VALUES ('河北省', 130000);
+INSERT INTO `province` VALUES ('山西省', 140000);
+INSERT INTO `province` VALUES ('内蒙古自治区', 150000);
+INSERT INTO `province` VALUES ('辽宁省', 210000);
+INSERT INTO `province` VALUES ('黑龙江省', 230000);
+INSERT INTO `province` VALUES ('上海', 310000);
+INSERT INTO `province` VALUES ('江苏省', 320000);
+INSERT INTO `province` VALUES ('浙江省', 330000);
+INSERT INTO `province` VALUES ('安徽省', 340000);
+INSERT INTO `province` VALUES ('福建省', 350000);
+INSERT INTO `province` VALUES ('江西省', 360000);
+INSERT INTO `province` VALUES ('山东省', 370000);
+INSERT INTO `province` VALUES ('河南省', 410000);
+INSERT INTO `province` VALUES ('湖北省', 420000);
+INSERT INTO `province` VALUES ('湖南省', 430000);
+INSERT INTO `province` VALUES ('广东省', 440000);
+INSERT INTO `province` VALUES ('广西壮族自治区', 450000);
+INSERT INTO `province` VALUES ('重庆', 500000);
+INSERT INTO `province` VALUES ('四川省', 510000);
+INSERT INTO `province` VALUES ('贵州省', 520000);
+INSERT INTO `province` VALUES ('云南省', 530000);
+INSERT INTO `province` VALUES ('陕西省', 610000);
+INSERT INTO `province` VALUES ('甘肃省', 620000);
+INSERT INTO `province` VALUES ('青海省', 630000);
+INSERT INTO `province` VALUES ('宁夏回族自治区', 640000);
+INSERT INTO `province` VALUES ('香港特别行政区', 810000);
+
+-- ----------------------------
+-- Table structure for store
+-- ----------------------------
+DROP TABLE IF EXISTS `store`;
+CREATE TABLE `store`  (
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '专卖店名称',
+  `address` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '专卖店地址',
+  `addRemark` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '专卖店详细地址',
+  `tel` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '专卖店电话',
+  `cityRid` int(11) NULL DEFAULT NULL COMMENT '专卖店所在城市编码'
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of store
+-- ----------------------------
+INSERT INTO `store` VALUES ('北京市东城区磁器口授权专卖店', '北京市东城区珠市口东大街万商汇赛格数码城底商2-13号', '磁器口地铁站D出口向西200米', '15011311669', 110100);
+INSERT INTO `store` VALUES ('北京市通州区万达广场授权专卖店', '北京市通州区万达广场金街B3-111', '', '13718164387', 110100);
+INSERT INTO `store` VALUES ('天津市南开鞍山西道授权专卖店', '天津市南开区鞍山西道时代数码广场2楼J09室', '', '13370379008', 120100);
+INSERT INTO `store` VALUES ('石家庄市中山东路图书大厦授权专卖店', '石家庄市长安区中山东路199号图书大厦一楼', '北国商城斜对面', '13730122597', 130100);
+INSERT INTO `store` VALUES ('石家庄元氏县商贸城认证店', '石家庄市元氏县人民路106号', '万家福对面原小白数码', '18733122039', 130100);
+INSERT INTO `store` VALUES ('石家庄市赵县自强路授权专卖店', '石家庄市赵县自强路信誉楼东临', '', '18531124158', 130100);
+INSERT INTO `store` VALUES ('石家庄无极光明南街认证店', '石家庄市无极县光明南街26号', '（光明街与红绿灯交叉口南行200米路东）', '15830691748', 130100);
+INSERT INTO `store` VALUES ('石家庄晋州市中兴路认证店', '石家庄市晋州市中兴路386号', '', '15076400003', 130100);
+INSERT INTO `store` VALUES ('石家庄市华强电子通讯城授权专卖店', '石家庄市新华区民族路华强电子通讯城西南角1F-36号', '', '0311-85335628', 130100);
+INSERT INTO `store` VALUES ('唐山市路北裕华道51号授权专卖店', '唐山市路北区裕华道51号底商', '', '18733333071', 130200);
+INSERT INTO `store` VALUES ('邯郸市光明大街授权专卖店', '邯郸市邯山区光明南大街92号', '移动大厦十字路口北10米路东', '15033005156', 130400);
+INSERT INTO `store` VALUES ('邯郸临漳县建安路认证店', '邯郸市临漳县建安路中段', '联通西则', '13754400918', 130400);
+INSERT INTO `store` VALUES ('邯郸市大名县大名府路授权专卖店', '邯郸市大名县大名府路288号', '', '15031025525', 130400);
+INSERT INTO `store` VALUES ('邯郸成安寇公路新认证店', '邯郸市成安县城青云街与寇公路交叉口(西关口)西南角', '', '15033858596', 130400);
+INSERT INTO `store` VALUES ('邯郸馆陶县新华街认证店', '邯郸市馆陶县新华街华都酒店北100米路西', '', '15188908111 ，0310-2811268', 130400);
+INSERT INTO `store` VALUES ('邢台市中兴西大街授权专卖店', '邢台市中兴西大街30号', '中兴路地道桥西口，中桥商场对过', '18730995252', 130500);
+INSERT INTO `store` VALUES ('邢台市南宫青年街授权专卖店', '邢台市南宫市青年街泰隆广场', '', '0319-5189985', 130500);
+INSERT INTO `store` VALUES ('邢台临西玉兰西路认证店', '邢台市临西县玉兰西路联通公司楼下', '', '15630916696', 130500);
+INSERT INTO `store` VALUES ('邢台巨鹿县新华北街认证店', '邢台巨鹿县新华北街81号北斗通讯', '', '15373199966', 130500);
+INSERT INTO `store` VALUES ('邢台新河县振堂路认证店', '邢台市新河县振堂路移动公司东临魅族专卖店', '', '13930934999', 130500);
+INSERT INTO `store` VALUES ('保定雄县温泉路水利局认证店', '保定市雄县温泉路水利局楼下', '万信通通讯', '13722271877', 130600);
+INSERT INTO `store` VALUES ('保定市裕华路授权专卖店', '保定市裕华西路285号', '直隶总督署东侧10米，颐高数码广场正对面', '15903326080', 130600);
+INSERT INTO `store` VALUES ('保定市十方商贸城二店授权专卖店', '保定市十方商贸城十方路与西下关街交口西行10米路南魅族专卖店', '', '13091220176', 130600);
+INSERT INTO `store` VALUES ('太原市南内环阳光科技大厦认证店', '太原市南内环阳光科技大厦4层4098', '', '15698575559', 140100);
+INSERT INTO `store` VALUES ('大同恒安区认证店', '大同矿务局富卓商城7号', '', '15735255588', 140200);
+INSERT INTO `store` VALUES ('晋城阳城县凤凰西街认证店', '晋城市阳城县凤凰东街11号', '', '17735674888', 140500);
+INSERT INTO `store` VALUES ('运城临猗县双塔南路认证店', '运城市临猗县双塔南路汽车站对面魅族专卖店', '', '15303599808', 140800);
+INSERT INTO `store` VALUES ('运城市红旗东街授权专卖店', '运城市红旗东街红旗中学对面东20米魅族专卖店', '', '0359-8763966', 140800);
+INSERT INTO `store` VALUES ('原平市前进西街文化馆一楼魅族认证店', '原平市前进西街文化馆一楼魅族专卖店', '', '13546119986', 140900);
+INSERT INTO `store` VALUES ('临汾尧都区平阳中街认证店', '平阳中街11号', '', '0357-3928288/15735705666', 141000);
+INSERT INTO `store` VALUES ('吕梁市离石区永宁中路认证店', '吕梁市离石区永宁中路114号(联通公司对面)', '', '13994820610', 141100);
+INSERT INTO `store` VALUES ('赤峰林东镇认证店', '赤峰市巴林左旗林东镇城建小区楼下', '', '15049680202', 150400);
+INSERT INTO `store` VALUES ('巴彦淖尔市临河区胜利北路授权专卖店', '巴彦淖尔市临河区胜利北路东方珀丽南门底店A17号', '', '13948391797', 150800);
+INSERT INTO `store` VALUES ('乌兰浩特兴安南大路认证店', '兴安盟乌兰浩特市兴安南大路2号长丰宾馆楼下西侧门市东数第三家门市', '', '18748218883', 152200);
+INSERT INTO `store` VALUES ('锦州市和平路授权专卖店', '锦州市古塔区和平路35-3号', '和平路联通营业大厅东侧爱博通讯隔壁', '15694161101', 210700);
+INSERT INTO `store` VALUES ('凌源东街认证店', '凌源市市府路东段', '移动公司对面', '0421-6760777', 211300);
+INSERT INTO `store` VALUES ('哈尔滨市道里区魅族授权专卖店', '黑龙江省哈尔滨市道里区顾乡大街114号', '', '15104517669', 230100);
+INSERT INTO `store` VALUES ('北安龙江路认证店', '北安市龙江路凤凰尊品115号', '', '13942188808', 231100);
+INSERT INTO `store` VALUES ('上海虹口区宝山路授权专卖店', '上海市虹口区宝山路778号海伦国际2楼205室', '', '56356051/18621313802', 310100);
+INSERT INTO `store` VALUES ('南京市新街口授权专卖店', '南京市新街口中山东路9号天时国际大厦一楼新街口地铁站7号出口向东50米', '南京市新街口中山东路9号天时国际大厦一楼新街口地铁站7号出口向东50米', '025-86883220', 320100);
+INSERT INTO `store` VALUES ('南京市仙林东城汇授权专卖店', '南京市仙林文苑路8号东城汇一楼153席东城汇东北角', '东城汇东北角', '025-82224429', 320100);
+INSERT INTO `store` VALUES ('徐州市中山南路授权专卖店', '徐州市中山南路101-4中山饭店对面魅族手机专卖店', '中山饭店-巴西烤肉对面', '13913479120', 320300);
+INSERT INTO `store` VALUES ('常州市新北万达太湖路授权专卖店', '常州市通江中路府西花园2-103号', '新区万达广场喜来登酒店十字路口往东20米', '0519-69815100', 320400);
+INSERT INTO `store` VALUES ('常州市湖塘吾悦广场授权专卖店', '常州市武进区武宜北路218号', '吾悦广场东门对面，BRT站台侧面', '0519-85616779', 320400);
+INSERT INTO `store` VALUES ('南通市如东华荣上海城授权专卖店', '南通市如东县掘港镇幸福路2号华荣上海城1-2号', '', '18362130147', 320600);
+INSERT INTO `store` VALUES ('连云港灌云胜利中路认证店', '连云港灌云县胜利中路345号', '', '13225208999', 320700);
+INSERT INTO `store` VALUES ('淮安市承德北路认证店', '淮安市清江浦区承德北路81-24号', '', '0517-83558578/15061219689', 320800);
+INSERT INTO `store` VALUES ('大丰市幸福东大街授权专卖店', '大丰市幸福东大街52号', '大润发超市对面', '0515-83993789', 320900);
+INSERT INTO `store` VALUES ('盐城市射阳朝阳街授权专卖店', '盐城市射阳县朝阳街81号', '邮电巷对面', '0515-82311800', 320900);
+INSERT INTO `store` VALUES ('扬州市四望亭授权专卖店', '扬州市四望亭路68号', '苏宁电器西侧邮政储蓄对面', '13013735588', 321000);
+INSERT INTO `store` VALUES ('泰兴市鼓楼南路授权专卖店', '泰兴市鼓楼南路143号', '', '13236173308', 321200);
+INSERT INTO `store` VALUES ('泰州市东进西路授权认证店', '泰州市海陵区东进西路9-8号', '', '0523-86225557/18651177717', 321200);
+INSERT INTO `store` VALUES ('宿迁市宿城区楚街南门授权专卖店', '宿迁市宿城区楚街三区101号', '', '13913479120', 321300);
+INSERT INTO `store` VALUES ('沭阳南京东路授权专卖店', '江苏省宿迁市沭阳县南街东路186号', '', '15371383336/0527-89997663', 321300);
+INSERT INTO `store` VALUES ('杭州市文三路授权专卖店', '杭州市西湖区文三路348－12号', '高新数码城对面', '0571-56889708', 330100);
+INSERT INTO `store` VALUES ('魅族杭州市颐高旗舰广场授权专卖店', '浙江省杭州市西湖区黄姑山路29号颐高数码旗舰店A座J1002 号', '', '0571-56769766', 330100);
+INSERT INTO `store` VALUES ('杭州市富阳玉长城商业广场授权专卖店', '富阳市春秋北路271号玉长城商业广场步行街N1002铺位', '', '18057177907', 330100);
+INSERT INTO `store` VALUES ('温州市人民东路江南大厦授权专卖店', '温州市人民东路33-35号', '', '0577-88658333', 330300);
+INSERT INTO `store` VALUES ('温州市苍南灵溪塘南一街授权专卖店', '温州市苍南县灵溪镇塘南一街31号', '', '0577-68756688', 330300);
+INSERT INTO `store` VALUES ('湖州市颐高数码广场授权专卖店', '湖州市吴兴区北街颐高数码广场A126号', '苏宁电器旁，颐高数码广场正大门旁', '13957281608', 330500);
+INSERT INTO `store` VALUES ('台州市温岭北门街授权专卖店', '台州市温岭北门街8号', '', '0576-89787771', 331000);
+INSERT INTO `store` VALUES ('台州市椒江区白云街授权店', '台州市椒江区中山西路140号', '', '0576-88808006/13088636677', 331000);
+INSERT INTO `store` VALUES ('合肥市新银河通讯授权专卖店', '合肥市包河区徽州大道218号', '和平国际大酒店对面、一千零一夜旁', '0551-65529385 18919604745', 340100);
+INSERT INTO `store` VALUES ('芜湖市北京西路授权专卖店', '芜湖市北京西路路口鸠江饭店门面房', '', '0553-3820669 / 15385877092', 340200);
+INSERT INTO `store` VALUES ('魅族蚌埠市宝龙广场授权专卖店', '安徽省蚌埠市经开区宝龙城市广场B座B3号门(横店影视城一楼)宝龙电脑城一楼1100号', '', '0552-3713208', 340300);
+INSERT INTO `store` VALUES ('马鞍山市湖东中路授权专卖店', '马鞍山市花山区湖东中路173号', '中国电信大楼对面，湖东中路第三小学隔壁', '0555-2343531', 340500);
+INSERT INTO `store` VALUES ('安庆市龙门口街授权专卖店', '安庆市大观区龙门口路25号', '安庆一中对面，优美滋食品隔壁', '05565527127', 340800);
+INSERT INTO `store` VALUES ('安庆龙山路认证店', '安庆市迎江区龙山路176号', '（招商银行正对面）', '15055478886', 340800);
+INSERT INTO `store` VALUES ('阜阳临泉县光明北路认证店', '阜阳市临泉县光明北路42号', '', '15255810036', 341200);
+INSERT INTO `store` VALUES ('魅族阜阳巨川广场授权专卖店', '安徽省阜阳市颍泉区颍州路8号巨川广场A座1405室', '', '0558-2282258 18009689007', 341200);
+INSERT INTO `store` VALUES ('宿州市胜利路授权专卖店', '宿州市埇桥区胜利路496号', '宿州市百货大楼对面', '15105577205', 341300);
+INSERT INTO `store` VALUES ('六安市皖西路授权专卖店', '六安市金安区皖西路111/112/113号商铺', '', '0564-3686520', 341500);
+INSERT INTO `store` VALUES ('亳州市谯城新华南路授权专卖店', '亳州市谯城区新华南路15号', '', '18119988690', 341600);
+INSERT INTO `store` VALUES ('魅族福州中央第五街授权专卖店', '福建省福州市台江区中央第五街一号楼19层1906', '', '0591-83943558/83700336', 350100);
+INSERT INTO `store` VALUES ('厦门市文化宫授权专卖店', '厦门市思明区仙岳路425号之21（文化宫或公交大厦站）', '', '0592-5075019 / 18205961665', 350200);
+INSERT INTO `store` VALUES ('莆田仙游世纪星通信认证店', '莆田市仙游县龙宫娱乐城底楼世纪星通', '', '13850226577', 350300);
+INSERT INTO `store` VALUES ('泉州市宝洲路万达广场魅族专卖店', '泉州市浦西万达广场金街S122号（宝星路27号）', '', '0595-22999976', 350500);
+INSERT INTO `store` VALUES ('泉州市九一街授权专卖店', '泉州市鲤城区九一街中段177号', '鲤城交警大队对面', '0595-22910222', 350500);
+INSERT INTO `store` VALUES ('瑞昌赤乌大道认证店', '瑞昌市赤乌东路58号', '', '13755220266', 360400);
+INSERT INTO `store` VALUES ('赣州市环城路新授权专卖店', '赣州市章贡区环城路7-1号', '', '0797-8458888', 360700);
+INSERT INTO `store` VALUES ('赣州市定南县建设东路认证店', '赣州市定南县建设东路41-1魅族手机专卖店（城乡建设局旁）', '', '18370976656', 360700);
+INSERT INTO `store` VALUES ('青岛市辽宁路颐高数码广场授权专卖店', '青岛市市北区辽宁路167号颐高数码广场一楼A1010号', '', '0532-80918593', 370200);
+INSERT INTO `store` VALUES ('东营市天成恒信授权专卖店', '东营市西三路17号奥达商务入口南邻', '招商银行北200米路西', '0546-8788928', 370500);
+INSERT INTO `store` VALUES ('济宁市建设南路授权专卖店', '济宁市建设南路63号', '世纪联华东门正对面，济宁饭店向南50米', '0537--2086887 / 13258001011', 370800);
+INSERT INTO `store` VALUES ('临沂沂蒙路认证店', '临沂市沂蒙路155号', '', '0539-8183999', 371300);
+INSERT INTO `store` VALUES ('德州市东风路新远大厦授权专卖店', '德州市德城区东风路新远大厦1号楼13-14号', '', '0534-2608308', 371400);
+INSERT INTO `store` VALUES ('菏泽郓城金河路认证店', '菏泽市郓城县金河路中段汽车站南门对过8号门市', '', '17806051858', 371700);
+INSERT INTO `store` VALUES ('新乡市红旗平原路授权专卖店', '新乡市红旗区平原路162号', '平原路大商百货对面小北街口', '0373-2039278', 410700);
+INSERT INTO `store` VALUES ('商丘市凯旋路凯旋商城授权专卖店', '商丘市梁园区凯旋商城南一百米（魅族专卖店）', '', '13353627535', 411400);
+INSERT INTO `store` VALUES ('武汉市珞瑜路授权专卖店', '武汉市洪山区珞瑜路131号', '广八路口、地铁二号线广埠屯站K出口', '027-87870176', 420100);
+INSERT INTO `store` VALUES ('十堰市邮电街授权专卖店', '十堰市邮电街3-6号', '邮电街和信销品贸对面索尼专卖店旁', '0719-8683048 / 13477988992', 420300);
+INSERT INTO `store` VALUES ('宜昌市东山大道授权专卖店', '宜昌市西陵区东山大道113号', '宜昌饭店旁', '0717-6456648', 420500);
+INSERT INTO `store` VALUES ('宜昌市卓悦通信广场授权专卖店', '宜昌市东山大道109号卓悦广场一楼', '', '0717-6975975', 420500);
+INSERT INTO `store` VALUES ('襄阳市长虹路授权专卖店', '襄阳市樊城区长虹路再尔广场南139号', '', '07103253955、13972235588', 420600);
+INSERT INTO `store` VALUES ('长沙市韶山南路林科大授权专卖店', '湖南省长沙市天心区韶山南路456号魅族专卖店', '', '0731-82258848', 430100);
+INSERT INTO `store` VALUES ('长沙市韶山北路东塘授权专卖店', '长沙市韶山北路418号东上一品前1号门面', '中国电信东塘营业厅正对面，东塘北下车即可', '0731-85221812 / 13973122055', 430100);
+INSERT INTO `store` VALUES ('长沙市解放东路华海3C广场授权专卖店', '长沙市芙蓉区解放东路89号华海3C广场一楼58号铺面', '', '0731-85785016、18627581116', 430100);
+INSERT INTO `store` VALUES ('株洲市芦淞区金三角授权专卖店', '株洲市芦淞区芦淞路1053号中国联通旁', '金三角智成合赢营业厅旁', '18692606669/18673318881', 430200);
+INSERT INTO `store` VALUES ('株洲市芦淞区家润多广场授权专卖店', '株洲市芦淞区建设中路108号（中心广场）家润多一楼2号通道', '', '0731-28600169 / 18627330009', 430200);
+INSERT INTO `store` VALUES ('衡阳市解放路授权专卖店', '衡阳市解放路', '大洋百货肯德基斜对面,明雅通讯隔壁', '0734-8239239 / 13575281699', 430400);
+INSERT INTO `store` VALUES ('衡阳市鸿运数码广场授权专卖店', '衡阳市蒸湘区解放路306号鸿运数码广场1楼170号', '裕鑫假日酒店正对面', '0734-8126670/18674798040', 430400);
+INSERT INTO `store` VALUES ('韶关市浈江风采授权专卖店', '韶关市浈江区风采路14号风采广场', '', '13713797122', 440200);
+INSERT INTO `store` VALUES ('深圳市宝安金龙华广场授权专卖店', '深圳市宝安区龙华街道龙观大道金龙华广场009号', '龙华天虹斜对面，苏宁电器旁', '0755-28062706', 440300);
+INSERT INTO `store` VALUES ('深圳市华强电子世界授权专卖店', '深圳市福田区华强北路华强电子世界3号楼E3-06号', '赛格广场正对面，大运会服务U站旁', '0755-83170611', 440300);
+INSERT INTO `store` VALUES ('深圳市宝安沙井上南大街授权专卖店', '深圳市宝安区广深路沙井段114号102-2（上南人行天桥旁边）', '上南大街', '17301936663/17301938096', 440300);
+INSERT INTO `store` VALUES ('深圳市南山区蛇口授权专卖店', '深圳市南山区蛇口公园南路17号', '蛇口线水湾地铁站C，公园南路站台对面', '0755-26690996', 440300);
+INSERT INTO `store` VALUES ('深圳市龙岗区天虹授权专卖店', '深圳市龙岗区天虹商场1楼143号双龙地铁站B出口面点王左侧', '', '0755-89386656', 440300);
+INSERT INTO `store` VALUES ('深圳市宝安西乡授权专卖店', '西乡街道西乡大门富成路98号（肯德基斜对面）', '', '18664988771 /15217069743', 440300);
+INSERT INTO `store` VALUES ('深圳市坪山新区坪山授权专卖店', '深圳市坪山新区坪山镇深汕路121-4号', '坪山围公交车站旁', '0755-23999535', 440300);
+INSERT INTO `store` VALUES ('珠海魅族科技直营店', '广东省珠海市科技创新海岸魅族科技楼', '珠海魅族科技大楼一楼', '0756-6121446/13302874844', 440400);
+INSERT INTO `store` VALUES ('珠海香洲唐家湾高新区认证店', '珠海市唐家湾高新区留诗路2号厂房1楼魅力科技有限公司前台', '', '0756-6120728 / 0756-6120519', 440400);
+INSERT INTO `store` VALUES ('佛山市顺德振华大道千禧授权专卖店', '佛山市顺德区容桂镇振华路81号', '千禧广场斜对面', '0757-22136555/18666557755', 440600);
+INSERT INTO `store` VALUES ('江门蓬江区蓬莱路授权专卖店', '江门市蓬江区蓬莱路1号15-17轴', '', '0750-3093351', 440700);
+INSERT INTO `store` VALUES ('惠州市麦地路授权专卖店', '惠州市惠城区麦地路75号龙珠楼9号魅族手机专卖店', '女人世界斜对面，苏宁电器正对面', '0752-2081802/13360889955', 441300);
+INSERT INTO `store` VALUES ('东莞市向阳路授权专卖店', '东莞市莞城区西城楼大街209号铺', '（向阳路公交站斜对面，沟通100营业厅旁边）', '18938165705', 441900);
+INSERT INTO `store` VALUES ('东莞市黄江江南路授权专卖店', '东莞市黄江镇江南路104号', '港华门诊部对面，南康百货往公明方向直走大约300米左右合路路口旁边', '0769-82118503/ 18316834605', 441900);
+INSERT INTO `store` VALUES ('潮州彩塘潮汕公路认证店', '潮州市潮安县彩塘镇潮汕公路374号（彩塘车站旁）', '', '0768-6756373', 445100);
+INSERT INTO `store` VALUES ('揭阳市普宁流沙大道授权专卖店', '揭阳市普宁市流沙大道西79号（市公安局旁）', '中华新城斜对面', '0663-2253636/18922840442', 445200);
+INSERT INTO `store` VALUES ('南宁市共和路授权专卖店', '南宁市共和路124-3号', '万达电影院斜对面，中国电信正面旁', '0771-2639126', 450100);
+INSERT INTO `store` VALUES ('桂林市中山中路授权专卖店', '桂林市中山中路大世界智能大厦一楼9号', '盛业大夏对面，大世界智能广场内', '0773 2862028', 450300);
+INSERT INTO `store` VALUES ('重庆市歇台子授权专卖店', '重庆市九龙坡区渝州路156号1-7号（地铁一号线歇台子站3B出口直行100米）', '重庆市九龙坡区渝州路156号1-7号（地铁一号线歇台子站3B出口直行100米）', '023-68180916', 500100);
+INSERT INTO `store` VALUES ('成都市太升南路51号授权专卖店', '成都市青羊区太升南路51号认证店', '', '13881790458', 510100);
+INSERT INTO `store` VALUES ('德阳市长江西路授权专卖店', '德阳市长江西路156号', '', '0838-2220778', 510600);
+INSERT INTO `store` VALUES ('遂宁市德胜路授权专卖店', '遂宁市船山区德胜东路299号', '邮政储蓄银行正对面', '0825- 2226493', 510900);
+INSERT INTO `store` VALUES ('南充市顺庆区涪江路授权专卖店', '南充市涪江路53-57号', '涪江路小学正对面', '0817-2237333', 511300);
+INSERT INTO `store` VALUES ('广安市金安大道市粮食局授权专卖店', '广安市金安大道1段51号重百商场往天府饭店上行150米', '市粮食局正对面，广宁市场站台旁', '0826-2222499', 511600);
+INSERT INTO `store` VALUES ('资阳市建设北路授权专卖店', '资阳市雁江区建设北路二段72号', '家乐福公交站正对面', '13547277027', 512000);
+INSERT INTO `store` VALUES ('贵阳市中华南路授权专卖店', '贵阳市南明区中华南路67号（农业银行左侧，台湾大厦对面）', '', '85868820、18188114421', 520100);
+INSERT INTO `store` VALUES ('铜仁清水大道北门认证店', '铜仁市碧江区清水大道环北街道办事处对面', '', '15329062963', 522200);
+INSERT INTO `store` VALUES ('毕节黔西县莲城大道认证店', '毕节市黔西县莲城大道起至崇文路第三间门店', '', '0857-4847789', 522400);
+INSERT INTO `store` VALUES ('毕节织金县大斧头广场认证店', '毕节市织金县大斧头广场金源街爱家超市门口', '', '0857-7631299', 522400);
+INSERT INTO `store` VALUES ('毕节清毕路认证店', '毕节市清毕路北路邮政银行旁边', '', '0857-8236656', 522400);
+INSERT INTO `store` VALUES ('毕节金沙长安街认证店', '毕节市金沙县长安街转盘处', '(中国建设银行对面)', '15685476110', 522400);
+INSERT INTO `store` VALUES ('昆明晋城晋东路认证店', '昆明市晋宁县晋城镇进江路公路五处8号铺面', '', '15912576189', 530100);
+INSERT INTO `store` VALUES ('昆明宜良环城西路认证店', '昆明市宜良县环城西路妇幼保健院斜对面', '（广福苑小区商铺正对面）', '0871-67519118', 530100);
+INSERT INTO `store` VALUES ('曲靖师宗县认证店', '曲靖市师宗县漾月西路十佳快捷酒店1楼', '', '0874-6206666', 530300);
+INSERT INTO `store` VALUES ('曲靖罗平县认证店', '曲靖市罗平县振兴街42号', '', '0874-6137666', 530300);
+INSERT INTO `store` VALUES ('保山隆阳区认证店', '保山市隆阳区九龙路75号', '九龙路与下巷街T字路口，女人大世界旁', '13888515232', 530500);
+INSERT INTO `store` VALUES ('红河州蒙自人民中路授权专卖店', '红河州蒙自市人民中路78号', '', '0873-8888858', 532500);
+INSERT INTO `store` VALUES ('西安市雁塔路授权专卖店', '西安市雁塔路中段天成大厦1层55号', '西安科技大学对面，雁塔路鲁家村车站', '18591937275', 610100);
+INSERT INTO `store` VALUES ('西安西北大学认证店', '西安市碑林区太白北路316号', '西北大学西门对面', '13519197691', 610100);
+INSERT INTO `store` VALUES ('咸阳市人民东路认证店', '咸阳市人民东路41号 （国棉一厂正门建行东侧）', '', '029-33214629/18609201100', 610400);
+INSERT INTO `store` VALUES ('渭南白水白港认证店', '渭南市白水县白港大厦南100米路东', '', '15291938355', 610500);
+INSERT INTO `store` VALUES ('渭南市中心广场南路授权专卖店', '渭南市临渭区广场南路6号渭南市政协附近', '', '0913-202331118049595888', 610500);
+INSERT INTO `store` VALUES ('汉中市人民路授权专卖店', '汉中市汉台区人民路18号', '人民路鸿宾楼下', '0916—2611234 / 18909161234', 610700);
+INSERT INTO `store` VALUES ('靖边县北大街认证店', '榆林市靖边县北大街店与新西街十字', '', '18681901988', 610800);
+INSERT INTO `store` VALUES ('兰州榆中和平镇认证店', '兰州市榆中县和平镇和平大道193号', '', '18609355222', 620100);
+INSERT INTO `store` VALUES ('兰州市城关区金昌路华洋授权专卖店', '兰州市金昌北路92-94号', '', '0931-8721600', 620100);
+INSERT INTO `store` VALUES ('嘉峪关新华南路认证店', '嘉峪关市新华南路11号楼房一层', '', '15009471699', 620200);
+INSERT INTO `store` VALUES ('白银白银区人民路认证店', '白银市白银区人民路138号1-06铺', '人民路与五一街交界处，铜城商厦公交站50米', '18516123197', 620400);
+INSERT INTO `store` VALUES ('武威凉州区共和街认证店', '武威市凉州区翔达房地产1-1号商铺', '', '18298766532', 620600);
+INSERT INTO `store` VALUES ('张掖山丹浙宁商厦认证店', '张掖市山丹县艾黎大道与仁和大道十字浙宁福润购物广场', '', '15379719989', 620700);
+INSERT INTO `store` VALUES ('平凉崆峒区西大街南门什字认证店', '平凉市崆峒区西大街南门什字沿街2号', '博爱商场门口西侧', '13830307788', 620800);
+INSERT INTO `store` VALUES ('平凉庄浪移动公司认证店', '平凉市庄浪县东关街56号移动公司楼下', '', '15193323839', 620800);
+INSERT INTO `store` VALUES ('酒泉肃州区大明步行街认证店', '酒泉市肃州区大明步行街', '', '0937-5929268', 620900);
+INSERT INTO `store` VALUES ('陇南宕昌人民街认证店', '甘肃省陇南市宕昌县人民街17号（民生广场对面）', '', '15349398753', 621200);
+INSERT INTO `store` VALUES ('西宁海湖新华联购物中心授权专卖店', '西宁市海湖新区新华联购物中心一楼', '(五号门口)', '15500553300', 630100);
+INSERT INTO `store` VALUES ('格尔木昆仑广场认证店', '格尔木市八一中路昆仑南广场', '（邮政储蓄银行隔壁）', '18697891888', 632800);
+INSERT INTO `store` VALUES ('银川市新华东街授权专卖店', '银川市兴庆区新华东街214号', '新华东街和中山南街十字东南角', '0951-6025766', 640100);
+INSERT INTO `store` VALUES ('中卫沙坡头鼓楼西街认证店', '中卫市沙坡头区鼓楼西街41号', '（宁夏银行对面）', '0955-6553665', 640500);
+INSERT INTO `store` VALUES ('魅族香港九龍旺角專門店', '九龍旺角彌敦道610號 ,荷李活商業中心1901室', '', '(852) 2388 2033', 810100);
 
 -- ----------------------------
 -- Table structure for users

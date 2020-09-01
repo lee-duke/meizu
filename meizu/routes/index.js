@@ -96,4 +96,44 @@ router.get('/discuss', function(req, res, next) {
   });
 });
 
+// 专卖店
+router.get('/address', function(req, res, next) {
+  var sql = `select * from province`;
+  db.query(sql, function(err, data) {
+    if(err){
+      console.log(err)
+    }else {
+      res.send(data)
+    }
+  })
+});
+router.get('/city', function(req, res, next) {
+  // console.log(req.query)
+  var sql = `select * from city where provinceRid='${req.query.provinceRid}'`;
+  db.query(sql, function(err, data) {
+    if(err) {
+      console.log(err)
+    }else {
+      res.send(data)
+    }
+  })
+});
+
+// 插入数据
+router.get('/intodata', function(req, res, next) {
+
+
+  var obj = req.query.obj
+  for(let item in obj) {
+    var sql = `insert into store values ('${obj[item].name}', '${obj[item].address}', '${obj[item].addRemark}', '${obj[item].tel}', '${obj[item].cityId}')`;
+    db.query(sql, function(err, data) {
+      if(err) {
+        console.log(err)
+      }else {
+        // console.log(data)
+      }
+    });
+  }
+  
+});
 module.exports = router;
