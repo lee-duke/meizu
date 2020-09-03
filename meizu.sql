@@ -11,7 +11,7 @@
  Target Server Version : 50527
  File Encoding         : 65001
 
- Date: 31/08/2020 17:55:19
+ Date: 03/09/2020 19:22:04
 */
 
 SET NAMES utf8mb4;
@@ -102,7 +102,7 @@ CREATE TABLE `products`  (
   `price` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '价格',
   `tabImg` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '切换图片路径',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 88 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 105 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of products
@@ -187,13 +187,30 @@ INSERT INTO `products` VALUES (77, '魅族超充 GaN 三口充电器', NULL, '�
 INSERT INTO `products` VALUES (78, '【秒杀】Pandaer「17」夏日系列壳膜套装', NULL, '魅族 17 / 魅族 17 Pro 适用 | 手机壳 + PET 高透膜', NULL, NULL, '[\'./imges/par18-1.png@480x480.jpg\']', 'parts', '34.5.00', '[\'./imges/par18-1.png@480x480.jpg\']');
 INSERT INTO `products` VALUES (79, '【砍价】-Lifeme PD 快充线', NULL, 'USB-C 转 Lightning | MFi 认证 | 3A 大电流 | PD 快充 | 兼容大部分苹果设备', NULL, NULL, '[\'./imges/par19-1.png@480x480.jpg\']', 'parts', '69.00', '[\'./imges/bai.png\']');
 INSERT INTO `products` VALUES (80, '魅族 V8 高配版高透保护膜', NULL, '高透光率 助双眼捕捉每一颗像素的色彩', NULL, NULL, '[\'./imges/par20-1.png@480x480.jpg\']', 'parts', '19.00', '[\'./imges/bai.png\']');
-INSERT INTO `products` VALUES (81, NULL, NULL, NULL, NULL, NULL, '', '', NULL, NULL);
-INSERT INTO `products` VALUES (82, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL);
-INSERT INTO `products` VALUES (83, NULL, NULL, NULL, NULL, NULL, '', '', NULL, NULL);
-INSERT INTO `products` VALUES (84, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL);
-INSERT INTO `products` VALUES (85, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL);
-INSERT INTO `products` VALUES (86, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL);
-INSERT INTO `products` VALUES (87, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL);
+INSERT INTO `products` VALUES (81, 'Lifeme 双肩包', NULL, '【开学聚惠限时239元】创新外观设计 | 扩容超大容量 | 人体工学背负 | 轻盈减负重量 | 颜值安全插扣 | 相机包新搭配', NULL, NULL, '[\'./imges/life1-1.png@480x480.jpg\']', 'life', '299.00', '[]');
+INSERT INTO `products` VALUES (82, 'Pandaer 「17」系列 T恤', NULL, '【开学限时特惠149元 | 前200名限量赠果冻包】潮酷印花 | 丝绸手感 | 100％长绒棉', NULL, NULL, '[\'./imges/life2-1.png@480x480.jpg\',\'./imges/life2-2.png@480x480.jpg\',\'./imges/life2-3.png@480x480.jpg\']', 'life', '269.00', '[\'./imges/life2-1.png@480x480.jpg\',\'./imges/life2-2.png@480x480.jpg\',\'./imges/life2-3.png@480x480.jpg\']');
+INSERT INTO `products` VALUES (83, 'Pandaer 「17」系列 果冻包', NULL, '【开学聚惠限时领40元券】潮酷印花 | 超大容量 | 透亮设计', NULL, NULL, '[\'./imges/life3-1.png@480x480.jpg\',\'./imges/life3-2.png@480x480.jpg\']', 'life', '99.00', '[\'./imges/jiguanglan.png\',\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (84, 'Lifeme 相机包', NULL, '【开学聚惠限时119元】相机包新搭配 | 一机两镜超大容量 | 加厚防冲击材料', NULL, NULL, '[\'./imges/life4-1.png@480x480.jpg\']', 'life', '129.00', '[\'./imges/ninghei.png\']');
+INSERT INTO `products` VALUES (85, '魅族防飞溅声波电动牙刷', NULL, '【开学限时特惠229元 | 前200名限量赠刷头】智能压感防飞溅 | 超强震动清洁 | FDA 杜邦软毛 | 30天超长续航  | IPX7 级防水全身防霉防污垢 | 四种模式全面呵护', NULL, NULL, '[\'./imges/life5-1.png@480x480.jpg\']', 'life', '299.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (86, '魅族极简都市双肩包', NULL, '【开学聚惠限时129元】650D高耐磨牛津布 | 人体工学减负设计 | 大容量多功能收纳 | 生活防泼溅', NULL, NULL, '[\'./imges/life6-1.png@480x480.jpg\']', 'life', '179.00', '[]');
+INSERT INTO `products` VALUES (87, 'Pandaer readnap T恤', NULL, '潮趣设计 | 100％精织纯棉 | 多重潮流工艺 | Mixcolor混色搭配 | 情侣装', NULL, NULL, '[\'./imges/life7-1.png@480x480.jpg\']', 'life', '199.00', '[\'./imges/ninghei.png\']');
+INSERT INTO `products` VALUES (88, 'Pandaer 魔术师帽衫', NULL, 'Magic Pandaer前卫设计 | 100％精梳棉纱 | 潮流款式 挺括有型 | 亲肤内衬 柔顺舒适 | 情侣装', NULL, NULL, '[\'./imges/life8-1.png@480x480.jpg\']', 'life', '399.00', '[\'./imges/huanyezi.png\']');
+INSERT INTO `products` VALUES (89, 'Flyme 8 暗夜流光卫衣', NULL, 'Flyme原创 | 镭射材料 | 随光而动 | 暗夜微光 | 点亮梦想 |  情侣装', NULL, NULL, '[\'./imges/life9-1.png@480x480.jpg\']', 'life', '269.00', '[\'./imges/ninghei.png\']');
+INSERT INTO `products` VALUES (90, 'Lifeme 梨木伞', NULL, '【夏日限时特惠449元】高定时装压花伞布 | 隔绝99% UV | 进口环保拒水涂层 | 8骨静音防风伞架 | 千足纯银徽章 | 优质花梨木伞柄', NULL, NULL, '[\'./imges/life10-1.png@480x480.jpg\']', 'life', '499.00', '[\'./imges/ninghei.png\']');
+INSERT INTO `products` VALUES (91, '【秒杀】-Lifeme 相机包', NULL, '相机包新搭配 | 一机两镜超大容量 | 加厚防冲击材料', NULL, NULL, '[\'./imges/life4-1.png@480x480.jpg\']', 'life', '129.00', '[\'./imges/ninghei.png\']');
+INSERT INTO `products` VALUES (92, '【开学聚惠】-Lifeme 梨木伞', NULL, '高定时装压花伞布 | 隔绝99% UV | 进口环保拒水涂层 | 8骨静音防风伞架 | 千足纯银徽章 | 优质花梨木伞柄', NULL, NULL, '[\'./imges/life12-1.png@480x480.jpg\']', 'life', '449.00', '[\'./imges/ninghei.png\']');
+INSERT INTO `products` VALUES (93, '【开学聚惠】-魅族极简都市双肩包', NULL, '650D高耐磨牛津布 | 人体工学减负设计 | 大容量多功能收纳 | 生活防泼溅', NULL, NULL, '[\'./imges/life13-1.png@480x480.jpg\']', 'life', '129.00', '[]');
+INSERT INTO `products` VALUES (94, '【开学聚惠】魅族防飞溅声波电动牙刷', NULL, '【开学限时特惠229元 | 前200名限量赠刷头】智能压感防飞溅 | 超强震动清洁 | FDA 杜邦软毛 | 30天超长续航  | IPX7 级防水全身防霉防污垢 | 四种模式全面呵护 ', NULL, NULL, '[\'./imges/life14-1.png@480x480.jpg\']', 'life', '229.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (95, '【开学聚惠】-Lifeme 双肩包', NULL, '创新外观设计 | 扩容超大容量 | 人体工学背负 | 轻盈减负重量 | 颜值安全插扣 | 相机包新搭配', NULL, NULL, '[\'./imges/life16-1.png@480x480.jpg\']', 'life', '239.00', '[]');
+INSERT INTO `products` VALUES (96, '【开学聚惠】-Pandaer 「17」系列 T恤', NULL, '【开学限时特惠149元 | 前200名限量赠果冻包】潮酷印花 | 丝绸手感 | 100％长绒棉', NULL, NULL, '[\'./imges/life17-1.png@480x480.jpg\',\'./imges/life17-2.png@480x480.jpg\',\'./imges/life17-3.png@480x480.jpg\']', 'life', '149.00', '[\'./imges/life17-1.png@480x480.jpg\',\'./imges/life17-2.png@480x480.jpg\',\'./imges/life17-3.png@480x480.jpg\']');
+INSERT INTO `products` VALUES (97, 'Pandaer 鼠年圆领卫衣', NULL, '【珍稀现货】金鼠限定/ 优质棉料 / 挺括亲肤 / 保暖舒适 / 情侣装', NULL, NULL, '[\'./imges/life19-1.png@480x480.jpg\',\'./imges/life19-2.png@480x480.jpg\']', 'life', '199.00', '[\'./imges/yanhong.png\',\'./imges/huanyezi.png\']');
+INSERT INTO `products` VALUES (98, '2020福来我发新春大礼盒', NULL, 'Flyme 原创设计/ 鼠年春节套装 / 复古潮流 / 棒球衫 / 怀旧礼包 / 情侣装', NULL, NULL, '[\'./imges/life20-2.png@480x480.jpg\']', 'life', '399.00', '[\'./imges/ninghei.png\']');
+INSERT INTO `products` VALUES (99, '【砍价】-Lifeme 双肩包', NULL, '创新外观设计 | 扩容超大容量 | 人体工学背负 | 轻盈减负重量 | 颜值安全插扣 | 相机包新搭配', NULL, NULL, '[\'./imges/life18-1.png@480x480.jpg\']', 'life', '299.00', '[]');
+INSERT INTO `products` VALUES (100, '魅族星球探索 帆布袋', NULL, '星球无限 追求不止', NULL, NULL, '[\'./imges/life21-1.png@480x480.jpg\']', 'life', '69.00', '[\'./imges/ninghei.png\',\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (101, '魅族 Mini 线控自拍杆', NULL, '轻巧迷你 自在随心', NULL, NULL, '[\'./imges/life23-1.png@480x480.jpg\']', 'life', '59.00', '[\'./imges/yanhong.png\']');
+INSERT INTO `products` VALUES (102, '魅族路由器 极速版', NULL, '天生不凡 快狠稳', NULL, NULL, '[\'./imges/life24-1.png@480x480.jpg\']', 'life', '199.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (103, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL);
+INSERT INTO `products` VALUES (104, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL);
 
 -- ----------------------------
 -- Table structure for users
