@@ -141,9 +141,6 @@
   font-size: 22px;
 }
 .main-wrap .wrap-content li .goods-price i {
-  position: absolute;
-  left: 0;
-  bottom: 3px;
   font-size: 14px;
   font-style: normal;
 }

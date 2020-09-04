@@ -132,15 +132,13 @@
                     type: 'post',
                     data: `account=${accountValue}&password=${passwordtValue}`,
                     success(data) {
-                        // console.log('请求成功', data)
-                        if(data.length === 0){
+                        console.log(data)
+                        if(data === '账号密码不存在'){
                             $('.form-warn').css('opacity', 1);
                             $('.err-info').text('账号或密码错误');
-                        }else {
-                            // console.log('登录成功');
-                            // console.log(data)
-                            localStorage.setItem('users', data[0].account)
-                            $(window).attr('location','./index.html');
+                        }else if(data === '登录成功'){
+                            localStorage.setItem('users', accountValue)
+                            window.history.back()
                         }
                     }
                 });

@@ -3,7 +3,7 @@ $(function () {
     var users = localStorage.getItem('users');
     // console.log(users);
     // 判断用户是否登录
-    if (user === null) {
+    if (users === null) {
         // 没有登录，默认页面
         $('.cart .content').removeClass('login');
     }else {

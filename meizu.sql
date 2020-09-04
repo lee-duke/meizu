@@ -11,7 +11,7 @@
  Target Server Version : 50527
  File Encoding         : 65001
 
- Date: 01/09/2020 19:53:45
+ Date: 04/09/2020 15:23:50
 */
 
 SET NAMES utf8mb4;
@@ -303,6 +303,64 @@ INSERT INTO `essay` VALUES ('全局振感，指尖回响', 'Flyme', 'https://bbs
 INSERT INTO `essay` VALUES ('2020 魅族年度影像大赛 邀请函抢先看', '综合讨论', 'https://bbsimage.res.meizu.com/recommend/2020/08/20/205521epo53q3oo7ulz1zp.png', 11124, 370, 'JIE2015', '5天前', '今年的「One Moment Awards」—— 2020 魅族年度影像大赛已经拉开了序幕，在短视频');
 
 -- ----------------------------
+-- Table structure for flyme
+-- ----------------------------
+DROP TABLE IF EXISTS `flyme`;
+CREATE TABLE `flyme`  (
+  `index-img-url` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `index-title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of flyme
+-- ----------------------------
+INSERT INTO `flyme` VALUES ('https://fms.res.meizu.com/dms/2020/05/27/2432d698-30a2-44ab-9ad7-e2a8d7fed254.png', NULL);
+INSERT INTO `flyme` VALUES ('https://fms.res.meizu.com/dms/2020/08/31/32e963d3-61a2-44ca-94fe-bb314e93c017.jpg', '跨越使用小障碍');
+INSERT INTO `flyme` VALUES ('https://fms.res.meizu.com/dms/2020/08/25/b93b2b7a-227c-4db7-86f6-e7439c8dd8d6.jpg', '全局振感，指尖回响');
+INSERT INTO `flyme` VALUES ('https://fms.res.meizu.com/dms/2020/05/27/9195db7f-9958-4ae0-90ea-740e8d024989.png', '全面提升续航能力');
+INSERT INTO `flyme` VALUES ('https://fms.res.meizu.com/dms/2020/07/27/9e3ff75a-cc9c-441b-951f-4f01c0ca0237.png', '全新导入滤镜');
+INSERT INTO `flyme` VALUES ('https://fms.res.meizu.com/dms/2020/07/29/c78851c5-96e9-44c2-b617-f9b15f916178.jpg', '快速挽救手机数据');
+INSERT INTO `flyme` VALUES ('https://fms.res.meizu.com/dms/2020/05/29/9b7b5115-0377-4847-a5d3-af72ffed96e3.jpg', '产品建议解答');
+
+-- ----------------------------
+-- Table structure for handset
+-- ----------------------------
+DROP TABLE IF EXISTS `handset`;
+CREATE TABLE `handset`  (
+  `src` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `coin` decimal(10, 2) NULL DEFAULT NULL
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of handset
+-- ----------------------------
+INSERT INTO `handset` VALUES ('ada', 0.00);
+
+-- ----------------------------
+-- Table structure for hot
+-- ----------------------------
+DROP TABLE IF EXISTS `hot`;
+CREATE TABLE `hot`  (
+  `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '用户名',
+  `userurl` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '用户头像',
+  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '标题',
+  `titleurl` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '标题图片',
+  `type` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '用户手机类型'
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of hot
+-- ----------------------------
+INSERT INTO `hot` VALUES ('frankm8fans', 'https://img-res.mzres.com/img/download/uc/12/46/00/30/00/1246003/w100h100?t=1599126037', '魅族 17Pro 定白率先上手体验，第一感觉就是，这很魅族！', 'https://fms.res.meizu.com/dms/2020/05/28/fda8c8cb-6dd5-4fca-8c64-fdc6a07123a8.png', '魅族 17Pro');
+INSERT INTO `hot` VALUES ('小宇先森08', 'https://img-res.mzres.com/img/download/uc/13/28/97/03/00/13289703/w100h100?t=1599126037', '不只是颜值出众，可谓是秀外慧中。', 'https://fms.res.meizu.com/dms/2020/05/28/42b2c0bf-f5b0-4f0f-9023-3df3d10a0662.png', '魅族 17');
+INSERT INTO `hot` VALUES ('grayfox77', 'https://img-res.mzres.com/img/download/uc/58/35/18/00/00/583518/w100h100?t=1599126037', '现在大家对手机拍照质量的需求越来越高，最受关注的就是焦段与画质。', 'https://fms.res.meizu.com/dms/2020/05/28/40f14166-72e1-40c3-a816-1b44a05ca270.png', '魅族 17Pro 摄影作品');
+INSERT INTO `hot` VALUES ('明日之新', 'https://img-res.mzres.com/img/download/uc/14/52/97/69/00/14529769/w100h100?t=1599126037', '魅族 17 Pro 6400W 全场景 AR 专业影像系统体验。', 'https://fms.res.meizu.com/dms/2020/05/28/97540b0b-9fb2-45e1-bbec-2a250c64a696.png', '魅族 17 Pro 摄影作品');
+INSERT INTO `hot` VALUES ('一叶一会', 'https://img-res.mzres.com/img/download/uc/96/59/85/50/00/9659855/w100h100?t=1599126037', '魅族 17 微距摄影，灵动绚烂。', 'https://fms.res.meizu.com/dms/2020/05/28/444b1da7-072a-4a3a-9fc5-8bafb630ccfd.png', '魅族 17 摄影作品');
+INSERT INTO `hot` VALUES ('明日之新', 'https://img-res.mzres.com/img/download/uc/14/52/97/69/00/14529769/w100h100?t=1599126037', '多一点耐心，多一点发现，多一点想象，去留意身边风景。', 'https://fms.res.meizu.com/dms/2020/05/28/d5ad3a0d-ead8-4c65-a517-84de313c1b4e.png', '魅族 17 Pro 摄影作品');
+INSERT INTO `hot` VALUES ('我是魅之神', 'https://img-res.mzres.com/img/download/uc/11/90/25/05/60/119025056/w100h100?t=1599126037', '魅族 17 Pro手持超级夜景实拍，镜头里的夜色如此美妙。', 'https://fms.res.meizu.com/dms/2020/05/28/ab66ca73-8431-4ba4-9189-e4708f88eda3.png', '魅族 17Pro 摄影作品');
+INSERT INTO `hot` VALUES ('frankm8fans', 'https://img-res.mzres.com/img/download/uc/12/46/00/30/00/1246003/w100h100?t=1599126037', '陪你一路风光 陪你一起风光！', 'https://fms.res.meizu.com/dms/2020/05/28/17ce9018-4516-494c-a112-cd0529249396.png', '魅族情怀');
+
+-- ----------------------------
 -- Table structure for invitations
 -- ----------------------------
 DROP TABLE IF EXISTS `invitations`;
@@ -348,45 +406,45 @@ CREATE TABLE `products`  (
   `price` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '价格',
   `tabImg` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '切换图片路径',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 88 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 105 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of products
 -- ----------------------------
 INSERT INTO `products` VALUES (1, 'banner', '', NULL, NULL, '', '[\'./images/han1.jpg\']', 'handset', NULL, NULL);
-INSERT INTO `products` VALUES (2, '魅族 17 Pro', '全网通公开版 ', '【限时领券至高立省200】【购17Pro赠全新壳膜套装】【学生购机享精美礼品】高通骁龙 865 + UFS 3.1 + LPDDR5 | 6400W 全场景 AR 专业影像系统 ', '[\'乌金\',\'定白\',\'天青\',\'月白天青\']', '[\'8 + 128GB\',\'12 + 256GB\']', '[\'./images/hand1-1.png@480x480.jpg\',\'./images/hand1-2.png@480x480.jpg\',\'./images/hand1-3.png@480x480.jpg\',\'./images/hand1-4.png@480x480.jpg\']', 'handset', '[\'4299.00\',\'4699.00\']', '[\'./images/wujin.png\',\'./images/bai.png\',\'./images/tianqing.png\',\'./images/yuebaitianqing.png\',]');
-INSERT INTO `products` VALUES (3, '魅族 17', '全网通公开版', '【限时领券立省200】【购魅族17赠全新壳膜套装】【学生购机享精美礼品】高通骁龙 865 + UFS 3.1 高速闪存', '[\'AG梦幻独角兽\',\'松深入墨\',\'十七度灰\',\'AG星际灰\',\'AG原野绿\',]', '[\'8 + 128GB\',\'12 + 256GB\']', '[\'./images/hand2-1.png@480x480.jpg\',\'./images/hand2-2.png@480x480.jpg\',\'./images/hand2-3.png@480x480.jpg\',\'./images/hand2-4.png@480x480.jpg\',\'./images/hand2-5.png@480x480.jpg\']', 'handset', '[\'3699.00\',\'3999.00\']', '[\'./images/menghuan.png\',\'./images/songlan.png\',\'./images/17duhei.png\',\'./images/huanhei.png\',\'./images/aglv.png\']');
-INSERT INTO `products` VALUES (4, '魅族 17 Pro 晓芳窑艺术典藏版', '全网通公开版', '这艺术 科技极了', '[\'天青\']', '[\'12 + 256GB\']', '[\'./images/hand3-1.png@480x480.jpg\']', 'handset', '[\'9999.00\']', '[\'./images/tianqing.png\']');
-INSERT INTO `products` VALUES (5, '魅族 16T', '全网通公开版', '6.5英寸极边全面屏 | 骁龙855旗舰处理器 | 4500mAh续航怪兽 | UFS 3.0 高速闪存 | 「双」·立体声扬声器 | 超广角 AI 三摄 | 线性振动马达 | 全球频段', '[\'鲸跃蓝\',\'湖光绿\',\'日光橙\']', '[\'6 + 128GB\',\'8 + 128GB\',\'8 + 256GB\']', '[\'./images/hand4-1.png@480x480.jpg\',\'./images/hand4-2.png@480x480.jpg\',\'./images/hand4-3.png@480x480.jpg\']', 'handset', '[\'1999.00\',\'2299.00\',\'2499.00\']', '[\'./images/huanyezi.png\',\'./images/huguanglv.png\',\'./images/riguangcheng.png\']');
-INSERT INTO `products` VALUES (6, '魅族 16s Pro', '全网通公开版', '高通骁龙 855 Plus  | 索尼 4800W 像素超广角 AI 三摄 | 极边全面屏 | Flyme8 尝鲜体验 | 极速屏下指纹 | 全功能NFC', '[\'黑之谧镜\',\'梦幻独角兽\',\'暮光森林\',\'白色物语\']', '[\'6 + 128GB\',\'8 + 128GB\',\'8 + 256GB\']', '[\'./images/hand5-1.png@480x480.jpg\',\'./images/hand5-2.png@480x480.jpg\',\'./images/hand5-3.png@480x480.jpg\',\'./images/hand5-4.png@480x480.jpg\']', 'handset', '[\'2699.00\',\'2999.00\',\'3299.00\']', '[\'./images/heizhijing.png\',\'./images/menghuan.png\',\'./images/muguangshenlin.png\',\'./images/bai.png\']');
-INSERT INTO `products` VALUES (7, '魅族 16Xs', '全网通公开版', '极边全面屏 | 4800W AI三摄 | 疾速屏下指纹 | 4000mAh大电池 | 高通骁龙675 | Onemind 3.0 | 绚丽多彩新色系', '[\'骑士黑\',\'亚特兰蒂斯\',\'珊瑚橙\',\'冰丝白\']', '[\'6 + 64GB\',\'8 + 128GB\']', '[\'./images/hand6-1.png@480x480.jpg\',\'./images/hand6-2.png@480x480.jpg\',\'./images/hand6-3.png@480x480.jpg\',\'./images/hand6-4.png@480x480.jpg\']', 'handset', '[\'1499.00\',\'1699.00\']', '[\'./images/qishihei.png\',\'./images/yatelan.png\',\'./images/shanhucheng.png@50x50.png\',\'./images/bai.png\']');
-INSERT INTO `products` VALUES (8, '魅族 17 航母限定版', '全网通公开版', '高通骁龙 865 + UFS 3.1 高速闪存 | 6400W 全场景影像系统 | 定制三星 Super AMOLED 90 帧直屏 | 4500mAh 超大电池 + 30W 快充 | 智能全功能 NFC', '[\'舰灰\']', '[\'8 + 256GB\']', '[\'./images/hand8-1.png@480x480.jpg\']', 'handset', '[\'4299.00\']', '[\'./images/jianhei.png\']');
-INSERT INTO `products` VALUES (9, '魅族 16s 白夜童话限量礼盒', '全网通公开版', '以梦为马 乘风破浪', '[\'凝光白\']', '[\'6 + 128GB\']', '[\'./images/hand9-1.png@480x480.jpg\']', 'handset', '[\'3099.00\']', '[\'./images/bai.png\']');
-INSERT INTO `products` VALUES (10, '魅族 16s', '全网通公开版', '高通骁龙855 | 4800W光学防抖 | 对称式AMOLED全面屏 | 极速屏下指纹 | 全功能NFC ', '[\'碳纤黑\',\'凝光白\',\'幻影蓝\']', '[\'6 + 128GB\',\'8 + 128GB\',\'8 + 256GB\']', '[\'./images/hand7-1.png@480x480.jpg\',\'./images/hand7-2.png@480x480.jpg\',\'./images/hand7-3.png@480x480.jpg\']', 'handset', '[\'2699.00\',\'2999.00\',\'3299.00\']', '[\'./images/ninghei.png\',\'./images/bai.png\',\'./images/huanyinglan.png\']');
-INSERT INTO `products` VALUES (11, '魅族 Note9', '全网通公开版', '骁龙675 | 后置4800万 | 前置2000万 | 独家定制水滴设计全面屏 | 4000mAh大容量电池 | 18W mCharge快充 ', '[\'幻黑\',\'皓白\',\'星耀蓝\']', '[\'4 + 64GB\',\'6 + 64GB\',\'4 + 128GB\']', '[\'./images/hand10-1.png@480x480.jpg\',\'./images/hand10-2.png@480x480.jpg\',\'./images/hand10-3.png@480x480.jpg\']', 'handset', '[\'1199.00\',\'1299.00\',\'1299.00\']', '[\'./images/ninghei.png\',\'./images/bai.png\',\'./images/xingyaolan.png\']');
-INSERT INTO `products` VALUES (12, '魅族 Note8', '全网通公开版', '骁龙632 | 6.0 英寸全面屏 | 3600mAh 大电池 | mCharge 快充加持 | Dual PD 全像素双核对焦 |人脸指纹双解锁', '[\'曜黑\',\'灰蓝\',\'烟紫\',\'焰红\']', '[\'4 + 32GB\',\'4 + 64GB\']', '[\'./images/hand11-1.png@480x480.jpg\',\'./images/hand11-2.png@480x480.jpg\',\'./images/hand11-3.png@480x480.jpg\',\'./images/hand11-4.png@480x480.jpg\']', 'handset', '[\'899.00\',\'1198.00\']', '[\'./images/ninghei.png\',\'./images/huanyinglan.png\',\'./images/yanzi.png\',\'./images/yanhong.png\']');
-INSERT INTO `products` VALUES (13, '魅族 X8', '全网通公开版', '骁龙710 | 6.2寸定制浅刘海屏 | 89.6%屏占比 | 旗舰双摄 | 人脸+指纹双解锁', '[\'亮黑\',\'玉白\',\'幻蓝\']', '[\'4 + 64GB\',\'6 + 64GB\',\'6 + 128GB\']', '[\'./images/hand12-1.png@480x480.jpg\',\'./images/hand12-2.png@480x480.jpg\',\'./images/hand12-3.png@480x480.jpg\']', 'handset', '[\'1298.00\',\'1498.00\',\'1698.00\']', '[\'./images/ninghei.png\',\'./images/bai.png\',\'./images/huanyinglan.png\']');
-INSERT INTO `products` VALUES (14, '魅族 V8 标配版', '全网通公开版', '5.7英寸HD+全面屏 智能美颜', '[\'磨砂黑\',\'纯白\']', '[\'3 + 32GB\']', '[\'./images/hand13-1.png@480x480.jpg\',\'./images/hand13-2.png@480x480.jpg\']', 'handset', '[\'799.00\']', '[\'./images/ninghei.png\',\'./images/bai.png\']');
-INSERT INTO `products` VALUES (15, '魅族 V8 高配版', '全网通公开版', 'Helio P22 处理器 | 5.7 英寸全面屏 | 后置双摄组合 | 双色温双闪光灯 | 人脸+指纹双解锁', '[\'雅金\',\'曜黑\',\'灰蓝\',\'烟紫\']', '[\'4 + 64GB\']', '[\'./images/hand14-1.png@480x480.jpg\',\'./images/hand14-2.png@480x480.jpg\',\'./images/hand14-3.png@480x480.jpg\',\'./images/hand14-4.png@480x480.jpg\']', 'handset', '[\'898.00\']', '[\'./images/yajin.png\',\'./images/ninghei.png\',\'./images/huanyinglan.png\',\'./images/huanyinglan.png\']');
-INSERT INTO `products` VALUES (16, '魅族 16 X', '全网通公开版', '骁龙710 | 屏幕下指纹 | 对称式全面屏 | 前置2000万像素 + AI人脸识别 | 后置索尼2000万像素双摄 + 光学防抖', '[\'汝窑白\',\'晨曦金\',\'砚墨黑\',\'云山蓝\',\'烟晶紫\']', '[\'6 + 64GB\',\'6 + 128GB\']', '[\'./images/hand15-1.png@480x480.jpg\',\'./images/hand15-2.png@480x480.jpg\',\'./images/hand15-3.png@480x480.jpg\',\'./images/hand15-4.png@480x480.jpg\',\'./images/hand15-5.png@480x480.jpg\']', 'handset', '[\'1598.00\',\'1898.00\']', '[\'./images/bai.png\',\'./images/yajin.png\',\'./images/ninghei.png\',\'./images/xingyaolan.png\',\'./images/yanzi.png\']');
-INSERT INTO `products` VALUES (17, '魅族 16th Plus', '全网通公开版', '骁龙845 | 屏幕下指纹 | 前后2000万像素摄像头 | 6.5英寸屏幕 | 4×4 MIMO 天线 | mEngine | 超线性双扬声器', '[\'静夜黑\',\'远山白\',\'极光蓝\']', '[\'6 + 128GB\',\'8 + 128GB\',\'8 + 256GB\']', '[\'./images/hand16-1.png@480x480.jpg\',\'./images/hand16-2.png@480x480.jpg\',\'./images/hand16-3.png@480x480.jpg\']', 'handset', '[\'2098.00\',\'2198.00\',\'2298.00\']', '[\'./images/ninghei.png\',\'./images/bai.png\',\'./images/jiguanglan.png\']');
-INSERT INTO `products` VALUES (18, '魅族 16th', '全网通公开版', '骁龙845 | 屏幕下指纹 | 前后2000万像素摄像头 | 6.0英寸屏幕 | mEngine | 超线性双扬声器 |  铜管散热', '[\'静夜黑\',\'远山白\',\'极光蓝\']', '[\'6 + 64GB\',\'6 + 128GB\',\'8 + 128GB\']', '[\'./images/hand17-1.png@480x480.jpg\',\'./images/hand17-2.png@480x480.jpg\',\'./images/hand17-3.png@480x480.jpg\']', 'handset', '[\'1898.00\',\'1998.00\',\'2098.00\']', '[\'./images/ninghei.png\',\'./images/bai.png\',\'./images/jiguanglan.png\']');
-INSERT INTO `products` VALUES (19, '魅蓝 6T', '全网通公开版', '双摄全面屏，游戏长续航', '[\'香槟金\',\'曜石黑\',\'珊瑚红\']', '[\'3 + 32GB\',\'4 + 32GB\',4 + 64GB\']', '[\'./images/hand18-1.png@480x480.jpg\',\'./images/hand18-2.png@480x480.jpg\',\'./images/hand18-3.png@480x480.jpg\']', 'handset', '[\'799.00\',\'999.00\',\'1099.00\']', '[\'./images/yajin.png\',\'./images/ninghei.png\',\'./images/yanhong.png\']');
-INSERT INTO `products` VALUES (20, '魅族 15 Plus', '全网通公开版', '三星8895处理器 2000万暗光双摄', '[\'雅金\',\'砚墨\',\'玄武灰\']', '[\'6 + 64GB\',\'6 + 128GB\']', '[\'./images/hand19-1.png@480x480.jpg\',\'./images/hand19-2.png@480x480.jpg\',\'./images/hand19-3.png@480x480.jpg\']', 'handset', '[\'1798.00\',\'1998.00\']', '[\'./images/yajin.png\',\'./images/ninghei.png\',\'./images/jianhei.png\']');
-INSERT INTO `products` VALUES (21, '魅族 M15', '全网通公开版', '骁龙626 前置2000万AI智能美颜', '[\'曜岩黑\',\'砂砾金\',\'朱雀红\']', '[\'4 + 64GB\']', '[\'./images/hand20-1.png@480x480.jpg\',\'./images/hand20-2.png@480x480.jpg\',\'./images/hand20-3.png@480x480.jpg\']', 'handset', '[\'1398.00\']', '[\'./images/jianhei.png\',\'./images/yajin.png\',\'./images/yanhong.png\']');
-INSERT INTO `products` VALUES (22, '魅族 15', '全网通公开版', '骁龙660 | 2000万暗光双摄 | 3倍无损变焦 | mEngine触感引擎 | 立体声扬声器', '[\'雅金\',\'砚墨\',\'黛蓝\',\'汝窑白\']', '[\'4 + 64GB\',\'4 + 128GB\']', '[\'./images/hand21-1.png@480x480.jpg\',\'./images/hand21-2.png@480x480.jpg\',\'./images/hand21-3.png@480x480.jpg\',\'./images/hand21-4.png@480x480.jpg\']', 'handset', '[\'1498.00\',\'1698.00\']', '[\'./images/yajin.png\',\'./images/ninghei.png\',\'./images/yatelan.png\',\'./images/bai.png\']');
-INSERT INTO `products` VALUES (23, '魅蓝 E3', '全网通公开版', '骁龙636处理器 全系6G大运存', '[\'香槟金\',\'曜石黑\',\'丹青\']', '[\'6 + 64GB\',\'6 + 128GB\']', '[\'./images/hand22-1.png@480x480.jpg\',\'./images/hand22-2.png@480x480.jpg\',\'./images/hand22-3.png@480x480.jpg\']', 'handset', '[\'1799.00\',\'1999.00\']', '[\'./images/yajin.png\',\'./images/ninghei.png\',\'./images/huguanglv.png\']');
-INSERT INTO `products` VALUES (24, '魅蓝 S6', '全网通公开版', 'Exynos 7872疾速游戏芯片 侧面指纹解锁', '[\'香槟金\',\'磨砂黑\',\'月光银\',\'淡钴蓝\']', '[\'3 + 32GB\',\'3 + 64GB\']', '[\'./images/hand23-1.png@480x480.jpg\',\'./images/hand23-2.png@480x480.jpg\',\'./images/hand23-3.png@480x480.jpg\',\'./images/hand23-4.png@480x480.jpg\']', 'handset', '[\'999.00\',\'1199.00\']', '[\'./images/yajin.png\',\'./images/ninghei.png\',\'./images/yin.png\',\'./images/yatelan.png\']');
-INSERT INTO `products` VALUES (25, '魅族 17 Pro【限时福利】', '全网通公开版', '【魅族17Pro指定版本专享6期免息+领券立省150】高通骁龙 865 + UFS 3.1 + LPDDR5 | 6400W 全场景 AR 专业影像系统 ', '[\'乌金\']', '[\'8 + 128GB\',\'12 + 256GB\']', '[\'./images/hand24-1.png@480x480.jpg\']', 'handset', '[\'4299.00\',\'4699.00\']', '[\' ./images/wujin.png\']');
+INSERT INTO `products` VALUES (2, '魅族 17 Pro', '全网通公开版 ', '【限时领券至高立省200】【购17Pro赠全新壳膜套装】【学生购机享精美礼品】高通骁龙 865 + UFS 3.1 + LPDDR5 | 6400W 全场景 AR 专业影像系统 ', '[\'乌金\',\'定白\',\'天青\',\'月白天青\']', '[\'8 + 128GB\',\'12 + 256GB\']', '[\'./images/hand1-1.png@480x480.jpg\',\'./images/hand1-2.png@480x480.jpg\',\'./images/hand1-3.png@480x480.jpg\',\'./images/hand1-4.png@480x480.jpg\']', 'handset', '[\'4299.00\',4699.00\']', NULL);
+INSERT INTO `products` VALUES (3, '魅族 17', '全网通公开版', '【限时领券立省200】【购魅族17赠全新壳膜套装】【学生购机享精美礼品】高通骁龙 865 + UFS 3.1 高速闪存', '[\'AG梦幻独角兽\',\'松深入墨\',\'十七度灰\',\'AG星际灰\',\'AG原野绿\',]', '[\'8 + 128GB\',\'12 + 256GB\']', '[\'./images/hand2-1.png@480x480.jpg\',\'./images/hand2-2.png@480x480.jpg\',\'./images/hand2-3.png@480x480.jpg\',\'./images/hand2-4.png@480x480.jpg\',\'./images/hand2-5.png@480x480.jpg\']', 'handset', '[\'3699.00\',\'3999.00\']', NULL);
+INSERT INTO `products` VALUES (4, '魅族 17 Pro 晓芳窑艺术典藏版', '全网通公开版', '这艺术 科技极了', '[\'天青\']', '[\'12 + 256GB\']', '[\'/images/hand3-1.png@480x480.jpg\']', 'handset', '[\'9999.00\']', NULL);
+INSERT INTO `products` VALUES (5, '魅族 16T', '全网通公开版', '6.5英寸极边全面屏 | 骁龙855旗舰处理器 | 4500mAh续航怪兽 | UFS 3.0 高速闪存 | 「双」·立体声扬声器 | 超广角 AI 三摄 | 线性振动马达 | 全球频段', '[\'鲸跃蓝\',\'湖光绿\',\'日光橙\']', '[\'6 + 128GB\',\'8 + 128GB\',\'8 + 256GB\']', '[\'./images/hand4-1.png@480x480.jpg\',\'./images/hand4-2.png@480x480.jpg\',\'./images/hand4-3.png@480x480.jpg\']', 'handset', '[\'1999.00\',\'2299.00\',\'2499.00\']', NULL);
+INSERT INTO `products` VALUES (6, '魅族 16s Pro', '全网通公开版', '高通骁龙 855 Plus  | 索尼 4800W 像素超广角 AI 三摄 | 极边全面屏 | Flyme8 尝鲜体验 | 极速屏下指纹 | 全功能NFC', '[\'黑之谧镜\',\'梦幻独角兽\',\'暮光森林\',\'白色物语\']', '[\'6 + 128GB\',\'8 + 128GB\',\'8 + 256GB\']', '[\'./images/hand5-1.png@480x480.jpg\',\'./images/hand5-2.png@480x480.jpg\',\'./images/hand5-3.png@480x480.jpg\',\'./images/hand5-4.png@480x480.jpg\']', 'handset', '[\'2699.00\',\'2999.00\',\'3299.00\']', NULL);
+INSERT INTO `products` VALUES (7, '魅族 16Xs', '全网通公开版', '极边全面屏 | 4800W AI三摄 | 疾速屏下指纹 | 4000mAh大电池 | 高通骁龙675 | Onemind 3.0 | 绚丽多彩新色系', '[\'骑士黑\',\'亚特兰蒂斯\',\'珊瑚橙\',\'冰丝白\']', '[\'6 + 64GB\',\'8 + 128GB\']', '[\'./images/hand6-1.png@480x480.jpg\',\'./images/hand6-2.png@480x480.jpg\',\'./images/hand6-3.png@480x480.jpg\',\'./images/hand6-4.png@480x480.jpg\']', 'handset', '[\'1499.00\',1699.00\']', NULL);
+INSERT INTO `products` VALUES (8, '魅族 17 航母限定版', '全网通公开版', '高通骁龙 865 + UFS 3.1 高速闪存 | 6400W 全场景影像系统 | 定制三星 Super AMOLED 90 帧直屏 | 4500mAh 超大电池 + 30W 快充 | 智能全功能 NFC', '[\'舰灰\']', '[\'8 + 256GB\']', '[\'./images/hand8-1.png@480x480.jpg\']', 'handset', '[\'4299.00\']', NULL);
+INSERT INTO `products` VALUES (9, '魅族 16s 白夜童话限量礼盒', '全网通公开版', '以梦为马 乘风破浪', '[\'凝光白\']', '[\'6 + 128GB\']', '[\'./images/hand9-1.png@480x480.jpg\']', 'handset', '[\'3099.00\']', NULL);
+INSERT INTO `products` VALUES (10, '魅族 16s', '全网通公开版', '高通骁龙855 | 4800W光学防抖 | 对称式AMOLED全面屏 | 极速屏下指纹 | 全功能NFC ', '[\'碳纤黑\',\'凝光白\',\'幻影蓝\']', '[\'6 + 128GB\',\'8 + 128GB\',\'8 + 256GB\']', '[\'./images/hand7-1.png@480x480.jpg\',\'./images/hand7-2.png@480x480.jpg\',\'./images/hand7-3.png@480x480.jpg\']', 'handset', '[\'2699.00\',\'2999.00\',\'3299.00\']', NULL);
+INSERT INTO `products` VALUES (11, '魅族 Note9', '全网通公开版', '骁龙675 | 后置4800万 | 前置2000万 | 独家定制水滴设计全面屏 | 4000mAh大容量电池 | 18W mCharge快充 ', '[\'幻黑\',\'皓白\',\'星耀蓝\']', '[\'4 + 64GB\',\'6 + 64GB\',\'4 + 128GB\']', '[\'./images/hand10-1.png@480x480.jpg\',\'./images/hand10-2.png@480x480.jpg\',\'./images/hand10-3.png@480x480.jpg\']', 'handset', '[\'1199.00\',\'1299.00\',\'1299.00\']', NULL);
+INSERT INTO `products` VALUES (12, '魅族 Note8', '全网通公开版', '骁龙632 | 6.0 英寸全面屏 | 3600mAh 大电池 | mCharge 快充加持 | Dual PD 全像素双核对焦 |人脸指纹双解锁', '[\'曜黑\',\'灰蓝\',\'烟紫\',\'焰红\']', '[\'4 + 32GB\',\'4 + 64GB\']', '[\'./images/hand11-1.png@480x480.jpg\',\'./images/hand11-2.png@480x480.jpg\',\'./images/hand11-3.png@480x480.jpg\',\'./images/hand11-4.png@480x480.jpg\']', 'handset', '[\'899.00\',\'1198.00\']', NULL);
+INSERT INTO `products` VALUES (13, '魅族 X8', '全网通公开版', '骁龙710 | 6.2寸定制浅刘海屏 | 89.6%屏占比 | 旗舰双摄 | 人脸+指纹双解锁', '[\'亮黑\',\'玉白\',\'幻蓝\']', '[\'4 + 64GB\',\'6 + 64GB\',\'6 + 128GB\']', '[\'./images/hand12-1.png@480x480.jpg\',\'./images/hand12-2.png@480x480.jpg\',\'./images/hand12-3.png@480x480.jpg\']', 'handset', '[\'1298.00\',\'1498.00\',\'1698.00\']', NULL);
+INSERT INTO `products` VALUES (14, '魅族 V8 标配版', '全网通公开版', '5.7英寸HD+全面屏 智能美颜', '[\'磨砂黑\',\'纯白\']', '[\'3 + 32GB\']', '[\'./images/hand13-1.png@480x480.jpg\',\'./images/hand13-2.png@480x480.jpg\']', 'handset', '[\'799.00\']', NULL);
+INSERT INTO `products` VALUES (15, '魅族 V8 高配版', '全网通公开版', 'Helio P22 处理器 | 5.7 英寸全面屏 | 后置双摄组合 | 双色温双闪光灯 | 人脸+指纹双解锁', '[\'雅金\',\'曜黑\',\'灰蓝\',\'烟紫\']', '[\'4 + 64GB\']', '[\'./images/hand14-1.png@480x480.jpg\',\'./images/hand14-2.png@480x480.jpg\',\'./images/hand14-3.png@480x480.jpg\',\'./images/hand14-4.png@480x480.jpg\']', 'handset', '[\'898.00\']', NULL);
+INSERT INTO `products` VALUES (16, '魅族 16 X', '全网通公开版', '骁龙710 | 屏幕下指纹 | 对称式全面屏 | 前置2000万像素 + AI人脸识别 | 后置索尼2000万像素双摄 + 光学防抖', '[\'汝窑白\',\'晨曦金\',\'砚墨黑\',\'云山蓝\',\'烟晶紫\']', '[\'6 + 64GB\',\'6 + 128GB\']', '[\'./images/hand15-1.png@480x480.jpg\',\'./images/hand15-2.png@480x480.jpg\',\'./images/hand15-3.png@480x480.jpg\',\'./images/hand15-4.png@480x480.jpg\',\'./images/hand15-5.png@480x480.jpg\']', 'handset', '[\'1598.00\',1898.00\']', NULL);
+INSERT INTO `products` VALUES (17, '魅族 16th Plus', '全网通公开版', '骁龙845 | 屏幕下指纹 | 前后2000万像素摄像头 | 6.5英寸屏幕 | 4×4 MIMO 天线 | mEngine | 超线性双扬声器', '[\'静夜黑\',\'远山白\',\'极光蓝\']', '[\'6 + 128GB\',\'8 + 128GB\',\'8 + 256GB\']', '[\'./images/hand16-1.png@480x480.jpg\',\'./images/hand16-2.png@480x480.jpg\',\'./images/hand16-3.png@480x480.jpg\']', 'handset', '[\'2098.00\',\'2198.00\',\'2298.00\']', NULL);
+INSERT INTO `products` VALUES (18, '魅族 16th', '全网通公开版', '骁龙845 | 屏幕下指纹 | 前后2000万像素摄像头 | 6.0英寸屏幕 | mEngine | 超线性双扬声器 |  铜管散热', '[\'静夜黑\',\'远山白\',\'极光蓝\']', '[\'6 + 64GB\',\'6 + 128GB\',\'8 + 128GB\']', '[\'./images/hand17-1.png@480x480.jpg\',\'./images/hand17-2.png@480x480.jpg\',\'./images/hand17-3.png@480x480.jpg\']', 'handset', '[\'1898.00\',\'1998.00\',\'2098.00\']', NULL);
+INSERT INTO `products` VALUES (19, '魅蓝 6T', '全网通公开版', '双摄全面屏，游戏长续航', '[\'香槟金\',\'曜石黑\',\'珊瑚红\']', '[\'3 + 32GB\',\'4 + 32GB\',4 + 64GB\']', '[\'./images/hand18-1.png@480x480.jpg\',\'./images/hand18-2.png@480x480.jpg\',\'./images/hand18-3.png@480x480.jpg\']', 'handset', '[\'799.00\',\'999.00\',\'1099.00\']', NULL);
+INSERT INTO `products` VALUES (20, '魅族 15 Plus', '全网通公开版', '三星8895处理器 2000万暗光双摄', '[\'雅金\',\'砚墨\',\'玄武灰\']', '[\'6 + 64GB\',\'6 + 128GB\']', '[\'./images/hand19-1.png@480x480.jpg\',\'./images/hand19-2.png@480x480.jpg\',\'./images/hand19-3.png@480x480.jpg\']', 'handset', '[\'1798.00\',\'1998.00\']', NULL);
+INSERT INTO `products` VALUES (21, '魅族 M15', '全网通公开版', '骁龙626 前置2000万AI智能美颜', '[\'曜岩黑\',\'砂砾金\',\'朱雀红\']', '[\'4 + 64GB\']', '[\'./images/hand20-1.png@480x480.jpg\',\'./images/hand20-2.png@480x480.jpg\',\'./images/hand20-3.png@480x480.jpg\']', 'handset', '[\'1398.00\']', NULL);
+INSERT INTO `products` VALUES (22, '魅族 15', '全网通公开版', '骁龙660 | 2000万暗光双摄 | 3倍无损变焦 | mEngine触感引擎 | 立体声扬声器', '[\'雅金\',\'砚墨\',\'黛蓝\',\'汝窑白\']', '[\'4 + 64GB\',\'4 + 128GB\']', '[\'./images/hand21-1.png@480x480.jpg\',\'./images/hand21-2.png@480x480.jpg\',\'./images/hand21-3.png@480x480.jpg\',\'./images/hand21-4.png@480x480.jpg\']', 'handset', '[\'1498.00\',\'1698.00\']', NULL);
+INSERT INTO `products` VALUES (23, '魅蓝 E3', '全网通公开版', '骁龙636处理器 全系6G大运存', '[\'香槟金\',\'曜石黑\',\'丹青\']', '[\'6 + 64GB\',\'6 + 128GB\']', '[\'./images/hand22-1.png@480x480.jpg\',\'./images/hand22-2.png@480x480.jpg\',\'./images/hand22-3.png@480x480.jpg\']', 'handset', '[\'1799.00\',\'1999.00\']', NULL);
+INSERT INTO `products` VALUES (24, '魅蓝 S6', '全网通公开版', 'Exynos 7872疾速游戏芯片 侧面指纹解锁', '[\'香槟金\',\'磨砂黑\',\'月光银\',\'淡钴蓝\']', '[\'3 + 32GB\',\'3 + 64GB\']', '[\'./images/hand23-1.png@480x480.jpg\',\'./images/hand23-2.png@480x480.jpg\',\'./images/hand23-3.png@480x480.jpg\',\'./images/hand23-4.png@480x480.jpg\']', 'handset', '[\'999.00\',\'1199.00\']', NULL);
+INSERT INTO `products` VALUES (25, '魅族 17 Pro【限时福利】', '全网通公开版', '【魅族17Pro指定版本专享6期免息+领券立省150】高通骁龙 865 + UFS 3.1 + LPDDR5 | 6400W 全场景 AR 专业影像系统 ', '[\'乌金\']', '[\'8 + 128GB\',\'12 + 256GB\']', '[\'./images/hand24-1.png@480x480.jpg\']', 'handset', '[\'4299.00\',\'4699.00\']', NULL);
 INSERT INTO `products` VALUES (26, 'banner02', '', NULL, NULL, NULL, '[\'./images/handbg2.jpg\']', 'commend', NULL, NULL);
-INSERT INTO `products` VALUES (27, '魅族 17', NULL, NULL, NULL, NULL, '[\'./images/hand2-1.png@480x480.jpg\']', 'commend', '3699.00', NULL);
-INSERT INTO `products` VALUES (28, '魅族 17 Pro', NULL, NULL, NULL, NULL, '[\'./images/hand1-1.png@480x480.jpg\']', 'commend', '4299.00', NULL);
-INSERT INTO `products` VALUES (29, '魅族 16T', NULL, NULL, NULL, NULL, '[\'./images/handlb4.png@480x480.jpg\']', 'commend', '1999.00', NULL);
-INSERT INTO `products` VALUES (30, '魅族 POP2 真无线蓝牙耳机', NULL, NULL, NULL, NULL, '[\'./images/muc1-1.png@480x480.jpg\']', 'commend', '399.00', NULL);
-INSERT INTO `products` VALUES (31, '魅族中国红 Type-C 金属编织线', NULL, NULL, NULL, NULL, '[\'./images/handlb5.png@480x480.jpg\']', 'commend', '39.00', NULL);
-INSERT INTO `products` VALUES (32, '魅族移动电源3', NULL, NULL, NULL, NULL, '[\'./images/handlb6.png@480x480.jpg\']', 'commend', '79.00', NULL);
-INSERT INTO `products` VALUES (33, '魅族 EP3C 耳机', NULL, NULL, NULL, NULL, '[\'./images/handlb7.png@480x480.jpg\']', 'commend', '129.00', NULL);
-INSERT INTO `products` VALUES (34, '魅族 HIFI 解码耳放', NULL, NULL, NULL, NULL, '[\'./images/handlb8.png@480x480.jpg\']', 'commend', '169.00', NULL);
+INSERT INTO `products` VALUES (27, '魅族 17', NULL, NULL, NULL, NULL, '[\'./images/hand2-1.png@480x480.jpg\',\'./images/hand2-2.png@480x480.jpg\',\'./images/hand2-3.png@480x480.jpg\']', 'commend', '3699.00', NULL);
+INSERT INTO `products` VALUES (28, '魅族 17 Pro', NULL, NULL, NULL, NULL, '[\'./images/hand1-4.png@480x480.jpg\']', 'commend', '4299.00', NULL);
+INSERT INTO `products` VALUES (29, '魅族 16T', NULL, NULL, NULL, NULL, '[\'./images/hand4-1.png@480x480.jpg\',\'./images/hand4-2.png@480x480.jpg\',\'./images/hand4-3.png@480x480.jpg\']', 'commend', '1999.00', NULL);
+INSERT INTO `products` VALUES (30, '魅族 POP2 真无线蓝牙耳机', NULL, NULL, NULL, NULL, '[\'./imges/muc2-1.png@480x480.jpg\']', 'commend', '399.00', NULL);
+INSERT INTO `products` VALUES (31, '魅族中国红 Type-C 金属编织线', NULL, NULL, NULL, NULL, '[\'./imges/par5-1.png@480x480.jpg\']', 'commend', '39.00', NULL);
+INSERT INTO `products` VALUES (32, '魅族移动电源3', NULL, NULL, NULL, NULL, '[\'./imges/handlb6.png@480x480.jpg\']', 'commend', '79.00', NULL);
+INSERT INTO `products` VALUES (33, '魅族 EP3C 耳机', NULL, NULL, NULL, NULL, '[\'./imges/handlb7.png@480x480.jpg\']', 'commend', '129.00', NULL);
+INSERT INTO `products` VALUES (34, '魅族 HIFI 解码耳放', NULL, NULL, NULL, NULL, '[\'./imges/handlb8.png@480x480.jpg\']', 'commend', '169.00', NULL);
 INSERT INTO `products` VALUES (35, '魅族 HD60 降噪耳机', NULL, '【开学聚惠限时999元】索尼主动降噪芯片 | 40mm镀铍振膜 | 触控操作 | USB - C 快充 | 轻奢品质', '[\'雾银黑\']', NULL, '[\'./imges/muc1-1.png@480x480.jpg\']', 'music', '1099.00', '[\'./imges/huanyezi.png\']');
 INSERT INTO `products` VALUES (36, '魅族 POP2 真无线蓝牙耳机', NULL, '蓝牙5.0 | 单次8H续航 | 石墨烯振膜 | 双耳通话 | 轻触操作 | 轻盈舒适', '[\'亮白\']', NULL, '[\'./imges/muc2-1.png@480x480.jpg\']', 'music', '399.00', '[\'./imges/bai.png\']');
 INSERT INTO `products` VALUES (37, '魅族 HIFI 解码耳放', NULL, '【开学聚惠限时119元】高性能DAC芯片 | 纯净HiFi音质 | 600Ω高阻抗推力 | Type-C 转接线 | 音乐发烧友必备', '[\'黑色\']', NULL, '[\'./imges/muc3-1.png@480x480.jpg\']', 'music', '169.00', '[\'./imges/huanhei.png\']');
@@ -433,13 +491,30 @@ INSERT INTO `products` VALUES (77, '魅族超充 GaN 三口充电器', NULL, '�
 INSERT INTO `products` VALUES (78, '【秒杀】Pandaer「17」夏日系列壳膜套装', NULL, '魅族 17 / 魅族 17 Pro 适用 | 手机壳 + PET 高透膜', NULL, NULL, '[\'./imges/par18-1.png@480x480.jpg\']', 'parts', '34.5.00', '[\'./imges/par18-1.png@480x480.jpg\']');
 INSERT INTO `products` VALUES (79, '【砍价】-Lifeme PD 快充线', NULL, 'USB-C 转 Lightning | MFi 认证 | 3A 大电流 | PD 快充 | 兼容大部分苹果设备', NULL, NULL, '[\'./imges/par19-1.png@480x480.jpg\']', 'parts', '69.00', '[\'./imges/bai.png\']');
 INSERT INTO `products` VALUES (80, '魅族 V8 高配版高透保护膜', NULL, '高透光率 助双眼捕捉每一颗像素的色彩', NULL, NULL, '[\'./imges/par20-1.png@480x480.jpg\']', 'parts', '19.00', '[\'./imges/bai.png\']');
-INSERT INTO `products` VALUES (81, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `products` VALUES (82, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `products` VALUES (83, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `products` VALUES (84, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `products` VALUES (85, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `products` VALUES (86, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `products` VALUES (87, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `products` VALUES (81, 'Lifeme 双肩包', NULL, '【开学聚惠限时239元】创新外观设计 | 扩容超大容量 | 人体工学背负 | 轻盈减负重量 | 颜值安全插扣 | 相机包新搭配', NULL, NULL, '[\'./imges/life1-1.png@480x480.jpg\']', 'life', '299.00', '[]');
+INSERT INTO `products` VALUES (82, 'Pandaer 「17」系列 T恤', NULL, '【开学限时特惠149元 | 前200名限量赠果冻包】潮酷印花 | 丝绸手感 | 100％长绒棉', NULL, NULL, '[\'./imges/life2-1.png@480x480.jpg\',\'./imges/life2-2.png@480x480.jpg\',\'./imges/life2-3.png@480x480.jpg\']', 'life', '269.00', '[\'./imges/life2-1.png@480x480.jpg\',\'./imges/life2-2.png@480x480.jpg\',\'./imges/life2-3.png@480x480.jpg\']');
+INSERT INTO `products` VALUES (83, 'Pandaer 「17」系列 果冻包', NULL, '【开学聚惠限时领40元券】潮酷印花 | 超大容量 | 透亮设计', NULL, NULL, '[\'./imges/life3-1.png@480x480.jpg\',\'./imges/life3-2.png@480x480.jpg\']', 'life', '99.00', '[\'./imges/jiguanglan.png\',\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (84, 'Lifeme 相机包', NULL, '【开学聚惠限时119元】相机包新搭配 | 一机两镜超大容量 | 加厚防冲击材料', NULL, NULL, '[\'./imges/life4-1.png@480x480.jpg\']', 'life', '129.00', '[\'./imges/ninghei.png\']');
+INSERT INTO `products` VALUES (85, '魅族防飞溅声波电动牙刷', NULL, '【开学限时特惠229元 | 前200名限量赠刷头】智能压感防飞溅 | 超强震动清洁 | FDA 杜邦软毛 | 30天超长续航  | IPX7 级防水全身防霉防污垢 | 四种模式全面呵护', NULL, NULL, '[\'./imges/life5-1.png@480x480.jpg\']', 'life', '299.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (86, '魅族极简都市双肩包', NULL, '【开学聚惠限时129元】650D高耐磨牛津布 | 人体工学减负设计 | 大容量多功能收纳 | 生活防泼溅', NULL, NULL, '[\'./imges/life6-1.png@480x480.jpg\']', 'life', '179.00', '[]');
+INSERT INTO `products` VALUES (87, 'Pandaer readnap T恤', NULL, '潮趣设计 | 100％精织纯棉 | 多重潮流工艺 | Mixcolor混色搭配 | 情侣装', NULL, NULL, '[\'./imges/life7-1.png@480x480.jpg\']', 'life', '199.00', '[\'./imges/ninghei.png\']');
+INSERT INTO `products` VALUES (88, 'Pandaer 魔术师帽衫', NULL, 'Magic Pandaer前卫设计 | 100％精梳棉纱 | 潮流款式 挺括有型 | 亲肤内衬 柔顺舒适 | 情侣装', NULL, NULL, '[\'./imges/life8-1.png@480x480.jpg\']', 'life', '399.00', '[\'./imges/huanyezi.png\']');
+INSERT INTO `products` VALUES (89, 'Flyme 8 暗夜流光卫衣', NULL, 'Flyme原创 | 镭射材料 | 随光而动 | 暗夜微光 | 点亮梦想 |  情侣装', NULL, NULL, '[\'./imges/life9-1.png@480x480.jpg\']', 'life', '269.00', '[\'./imges/ninghei.png\']');
+INSERT INTO `products` VALUES (90, 'Lifeme 梨木伞', NULL, '【夏日限时特惠449元】高定时装压花伞布 | 隔绝99% UV | 进口环保拒水涂层 | 8骨静音防风伞架 | 千足纯银徽章 | 优质花梨木伞柄', NULL, NULL, '[\'./imges/life10-1.png@480x480.jpg\']', 'life', '499.00', '[\'./imges/ninghei.png\']');
+INSERT INTO `products` VALUES (91, '【秒杀】-Lifeme 相机包', NULL, '相机包新搭配 | 一机两镜超大容量 | 加厚防冲击材料', NULL, NULL, '[\'./imges/life4-1.png@480x480.jpg\']', 'life', '129.00', '[\'./imges/ninghei.png\']');
+INSERT INTO `products` VALUES (92, '【开学聚惠】-Lifeme 梨木伞', NULL, '高定时装压花伞布 | 隔绝99% UV | 进口环保拒水涂层 | 8骨静音防风伞架 | 千足纯银徽章 | 优质花梨木伞柄', NULL, NULL, '[\'./imges/life12-1.png@480x480.jpg\']', 'life', '449.00', '[\'./imges/ninghei.png\']');
+INSERT INTO `products` VALUES (93, '【开学聚惠】-魅族极简都市双肩包', NULL, '650D高耐磨牛津布 | 人体工学减负设计 | 大容量多功能收纳 | 生活防泼溅', NULL, NULL, '[\'./imges/life13-1.png@480x480.jpg\']', 'life', '129.00', '[]');
+INSERT INTO `products` VALUES (94, '【开学聚惠】魅族防飞溅声波电动牙刷', NULL, '【开学限时特惠229元 | 前200名限量赠刷头】智能压感防飞溅 | 超强震动清洁 | FDA 杜邦软毛 | 30天超长续航  | IPX7 级防水全身防霉防污垢 | 四种模式全面呵护 ', NULL, NULL, '[\'./imges/life14-1.png@480x480.jpg\']', 'life', '229.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (95, '【开学聚惠】-Lifeme 双肩包', NULL, '创新外观设计 | 扩容超大容量 | 人体工学背负 | 轻盈减负重量 | 颜值安全插扣 | 相机包新搭配', NULL, NULL, '[\'./imges/life16-1.png@480x480.jpg\']', 'life', '239.00', '[]');
+INSERT INTO `products` VALUES (96, '【开学聚惠】-Pandaer 「17」系列 T恤', NULL, '【开学限时特惠149元 | 前200名限量赠果冻包】潮酷印花 | 丝绸手感 | 100％长绒棉', NULL, NULL, '[\'./imges/life17-1.png@480x480.jpg\',\'./imges/life17-2.png@480x480.jpg\',\'./imges/life17-3.png@480x480.jpg\']', 'life', '149.00', '[\'./imges/life17-1.png@480x480.jpg\',\'./imges/life17-2.png@480x480.jpg\',\'./imges/life17-3.png@480x480.jpg\']');
+INSERT INTO `products` VALUES (97, 'Pandaer 鼠年圆领卫衣', NULL, '【珍稀现货】金鼠限定/ 优质棉料 / 挺括亲肤 / 保暖舒适 / 情侣装', NULL, NULL, '[\'./imges/life19-1.png@480x480.jpg\',\'./imges/life19-2.png@480x480.jpg\']', 'life', '199.00', '[\'./imges/yanhong.png\',\'./imges/huanyezi.png\']');
+INSERT INTO `products` VALUES (98, '2020福来我发新春大礼盒', NULL, 'Flyme 原创设计/ 鼠年春节套装 / 复古潮流 / 棒球衫 / 怀旧礼包 / 情侣装', NULL, NULL, '[\'./imges/life20-2.png@480x480.jpg\']', 'life', '399.00', '[\'./imges/ninghei.png\']');
+INSERT INTO `products` VALUES (99, '【砍价】-Lifeme 双肩包', NULL, '创新外观设计 | 扩容超大容量 | 人体工学背负 | 轻盈减负重量 | 颜值安全插扣 | 相机包新搭配', NULL, NULL, '[\'./imges/life18-1.png@480x480.jpg\']', 'life', '299.00', '[]');
+INSERT INTO `products` VALUES (100, '魅族星球探索 帆布袋', NULL, '星球无限 追求不止', NULL, NULL, '[\'./imges/life21-1.png@480x480.jpg\']', 'life', '69.00', '[\'./imges/ninghei.png\',\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (101, '魅族 Mini 线控自拍杆', NULL, '轻巧迷你 自在随心', NULL, NULL, '[\'./imges/life23-1.png@480x480.jpg\']', 'life', '59.00', '[\'./imges/yanhong.png\']');
+INSERT INTO `products` VALUES (102, '魅族路由器 极速版', NULL, '天生不凡 快狠稳', NULL, NULL, '[\'./imges/life24-1.png@480x480.jpg\']', 'life', '199.00', '[\'./imges/bai.png\']');
+INSERT INTO `products` VALUES (103, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL);
+INSERT INTO `products` VALUES (104, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL);
 
 -- ----------------------------
 -- Table structure for province
@@ -674,6 +749,27 @@ CREATE TABLE `users`  (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES (1, 'lifeng', '123456', '[{id: 3,quantity: 3}]');
+INSERT INTO `users` VALUES (1, 'lifeng', '123456', '[\"id\":1]');
+
+-- ----------------------------
+-- Table structure for video
+-- ----------------------------
+DROP TABLE IF EXISTS `video`;
+CREATE TABLE `video`  (
+  `video-url` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `video-title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of video
+-- ----------------------------
+INSERT INTO `video` VALUES ('https://fms.res.meizu.com/dms/2020/05/08/cfbb2d92-8c02-43ca-b91e-fb90d8c2b57d.jpg', '以梦为舰，热爱起航：魅族 17 航母限定版重构热血旗舰');
+INSERT INTO `video` VALUES ('https://fms.res.meizu.com/dms/2020/05/08/726e64a2-e5ea-4102-92c7-2f11b0d0176a.jpg', '这艺术，科技极了：魅族 17 Pro 晓芳窑艺术典藏版');
+INSERT INTO `video` VALUES ('https://fms.res.meizu.com/dms/2020/05/08/21f8c68f-63b4-4b6a-99cc-218ab3462fbb.jpg', '去噪，去躁：魅族 HD60降噪耳机');
+INSERT INTO `video` VALUES ('https://fms.res.meizu.com/dms/2019/10/23/e598a95b-42e4-48ed-a48a-2e57c1127812.jpg', '玩出我的热爱：魅族 16T 大屏娱乐旗舰');
+INSERT INTO `video` VALUES ('https://fms.res.meizu.com/dms/2019/10/22/cfe6f26c-f28e-4aa3-93bf-18f06977ad44.jpg', 'Flyme 8 概念视频');
+INSERT INTO `video` VALUES ('https://fms.res.meizu.com/dms/2019/10/22/c25ae0b3-95ab-4ed1-99b7-9e269f4876af.jpg', 'Flyme 8 功能视频');
+INSERT INTO `video` VALUES ('https://fms.res.meizu.com/dms/2019/10/22/51368a34-9aed-4b7b-b5e8-0ac7a665de35.jpg', 'Aicy');
+INSERT INTO `video` VALUES ('https://fms.res.meizu.com/dms/2018/11/27/3b75dc9f-7af7-4104-94fa-a384252ef78c.jpg', '安全家庭');
 
 SET FOREIGN_KEY_CHECKS = 1;

@@ -21,8 +21,12 @@ router.post('/login', function (req, res, next) {
     if (err) {
       console.log(err);
     } else {
-      // console.log(data[0]);
-      res.send(data);
+      if(data.length === 0) {
+        res.send('账号密码不存在');
+      }else {
+        res.send('登录成功');
+      }
+      
     }
   });
 });
@@ -43,12 +47,12 @@ router.post('/register', function (req, res, next) {
           if (err) {
             console.log(err)
           } else {
-            // console.log(data);
-            // res.send('注册成功');
+            console.log(data)
             // 存入cookie
-            res.cookie('users', data, {
-              signed: 'meizu'
-            });
+            // res.cookie('users', data, {
+            //   signed: 'meizu'
+            // });
+            res.send('注册成功');
           }
         });
       }
@@ -98,7 +102,7 @@ router.post('/cart', function (req, res, next) {
   });
 });
 
-// 插入购物车
+// 更改购物车信息
 router.post('/incart', function (req, res, next) {
   console.log(req.body.products)
   var usersSql = `update users set cart='${req.body.products}' where account='${req.body.name}'`;

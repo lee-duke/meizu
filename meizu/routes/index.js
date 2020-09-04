@@ -15,6 +15,35 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+// 首页
+router.get('/index', function(req, res, next) {
+  // var handset, music, parts, life, hot, flyme, video
+  var obj = {
+    handset:'',music:'', parts:'', life:'', hot:'', flyme:'', video:''
+  }
+  for(let type in obj) {
+    let sql = `select * from index where type='${type}'`;
+    db.query(sql, function(err, data) {
+      if(err) {
+        console.log(err)
+      }else {
+        obj[type] = data
+      }
+    })
+  }
+  if(obj.handset && obj.music && obj.parts && obj.life && bobj.hot && obj.flyme && obj.video) {
+    res.send(obj)
+  }
+  // var handsetSql = `select * from products where type!='commend'`
+  // db.query(handsetSql, function(err, data) {
+  //   if(err) {
+  //     console.log(err);
+  //   }else {
+  //     handset = data;
+  //   }
+  // })
+});
+
 // 论坛
 router.get('/forum', function(req, res, next) {
   var essaySql = `select * from essay`;

@@ -59,53 +59,14 @@
         // })
     </script>
     <script>
+       
         $.ajax({
-            url: 'http://172.16.5.150/intodata',
+            url: 'http://172.16.5.150/index',
             type: 'get',
-            data: {
-                obj: {
-                    
-                    "00852-001": {
-      "id": "1",
-      "number": "00852-001",
-      "name": "\u9b45\u65cf\u9999\u6e2f\u4e5d\u9f8d\u65fa\u89d2\u5c08\u9580\u5e97",
-      "mapQrcode": "00852-001.png",
-      "photo": 3,
-      "address": "\u4e5d\u9f8d\u65fa\u89d2\u5f4c\u6566\u9053610\u865f ,\u8377\u674e\u6d3b\u5546\u696d\u4e2d\u5fc31901\u5ba4",
-      "addRemark": "",
-      "storeStatus": "2",
-      "sort": "99",
-      "startTime": "1442419200",
-      "bsWorkdays": "10:00 - 20:00",
-      "bsHolidays": "10:00 - 20:00",
-      "goodStoreLevel": "0",
-      "goodStoreDesc": "",
-      "longitude": "114.17034300",
-      "latitude": "22.31684000",
-      "cityId": "810100",
-      "tel": "(852) 2388 2033",
-      "is_book": null,
-      "manager_phone": null,
-      "sortType": "normal"
-    }
-                    
-                }
-            },
             success(data) {
                 console.log(data)
             }
         });
-        // $.ajax({
-        //     url: 'http://172.16.5.150/intodata',
-        //     type: 'get',
-        //     data: {
-        //         obj: {
-        //         }
-        //     },
-        //     success(data) {
-        //         console.log(data, '插入成功')
-        //     }
-        // });
     </script>
 </body>
 

@@ -131,11 +131,11 @@
                     type: 'post',
                     data: `account=${accountValue}&password=${passwordtValue}`,
                     success(data) {
-                        // console.log('请求成功', data)
+                        console.log(data)
                         if(data === '账号已存在'){
                             $('.form-warn').css('opacity', 1);
                             $('.err-info').text('账号已存在');
-                        }else{
+                        }else if(data === '注册成功'){
                             // console.log('注册成功');
                             $(window).attr('location','./index.html');
                         }
