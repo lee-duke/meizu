@@ -157,6 +157,16 @@
                 }
             }
         }
+        .left{
+          @include float-left();
+          li{
+            float: none;
+          }
+        }
+        .right{
+          @include float-left();
+          width: calc(100% - 313px);
+        }
         .big{
             width: 615px;
             height: 610px;

@@ -151,6 +151,16 @@
   color: #666;
   text-decoration: line-through;
 }
+.main-wrap .wrap-content .left {
+  float: left;
+}
+.main-wrap .wrap-content .left li {
+  float: none;
+}
+.main-wrap .wrap-content .right {
+  float: left;
+  width: calc(100% - 313px);
+}
 .main-wrap .wrap-content .big {
   width: 615px;
   height: 610px;

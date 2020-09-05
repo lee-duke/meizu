@@ -274,6 +274,11 @@ header .topnav-cover li a img {
 header .topnav-cover li a em {
   font-style: normal;
 }
+header .topnav-cover li a p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 header .appdown-cover {
   position: absolute;
   top: 82px;

@@ -19,29 +19,65 @@ router.get('/', function(req, res, next) {
 router.get('/index', function(req, res, next) {
   // var handset, music, parts, life, hot, flyme, video
   var obj = {
-    handset:'',music:'', parts:'', life:'', hot:'', flyme:'', video:''
+    "handset": [],"music": [], "parts": [], "life": [], "hot": [], "flyme": [], "video": []
   }
-  for(let type in obj) {
-    let sql = `select * from index where type='${type}'`;
-    db.query(sql, function(err, data) {
-      if(err) {
-        console.log(err)
-      }else {
-        obj[type] = data
-      }
-    })
-  }
-  if(obj.handset && obj.music && obj.parts && obj.life && bobj.hot && obj.flyme && obj.video) {
-    res.send(obj)
-  }
-  // var handsetSql = `select * from products where type!='commend'`
-  // db.query(handsetSql, function(err, data) {
-  //   if(err) {
-  //     console.log(err);
-  //   }else {
-  //     handset = data;
-  //   }
-  // })
+  var sql = `select * from products where type='handset'`;
+  db.query(sql, function(err, data) {
+    if(err) {
+      console.log(err)
+    }else {
+      obj.handset = data;
+      sql = `select * from products where type='music'`;
+      db.query(sql, function(err, data) {
+        if(err) {
+          console.log(err)
+        }else {
+          obj.music = data;
+          sql = `select * from products where type='parts'`;
+          db.query(sql, function(err, data) {
+            if(err) {
+              console.log(err)
+            }else {
+              obj.parts = data;
+              sql = `select * from products where type='life'`;
+              db.query(sql, function(err, data) {
+                if(err) {
+                  console.log(err)
+                }else {
+                  obj.life = data;
+                  sql = `select * from hot`;
+                  db.query(sql, function(err, data) {
+                    if(err) {
+                      console.log(err)
+                    }else {
+                      obj.hot = data;
+                      sql = `select * from flyme`;
+                      db.query(sql, function(err, data) {
+                        if(err) {
+                          console.log(err)
+                        }else {
+                          obj.flyme = data;
+                          sql = `select * from video`;
+                          db.query(sql, function(err, data) {
+                            if(err) {
+                              console.log(err)
+                            }else {
+                              obj.video =  data;
+                              res.send(obj);
+                            }
+                          })
+                        }
+                      })
+                    }
+                  })
+                }
+              })
+            }
+          })
+        }
+      })
+    }
+  })
 });
 
 // 论坛
