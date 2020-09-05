@@ -183,6 +183,17 @@ router.get('/city', function(req, res, next) {
     }
   })
 });
+router.get('/store', function(req, res, next) {
+  // console.log(req.query.cityRid)
+  var sql = `select * from store where cityRid='${req.query.cityRid}'`;
+  db.query(sql, function(err, data) {
+    if(err) {
+      console.log(err)
+    }else {
+      res.send(data)
+    }
+  })
+});
 
 // 插入数据
 router.get('/intodata', function(req, res, next) {

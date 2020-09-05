@@ -75,7 +75,7 @@ header{
             border-radius: 3px;
             text-align: left;
             z-index: 999;
-            display: none;
+            // display: none;
             &::after{
                 position: absolute;
                 content: '';
@@ -114,6 +114,74 @@ header{
                 text-align: left;
                 vertical-align: middle;
                 color: #999;
+            }
+            .user-cart-title{
+              font-size: 12px;
+              margin: 20px 0 5px 20px;
+              color: #999;
+            }
+            .user-cart-item{
+              width: 277px;
+              height: 121px;
+              padding: 0 20px;
+              border-bottom: 1px solid #eee;
+              a{
+                display: block;
+                height: 60px;
+                &:hover p{
+                  color: #00c3f5!important;
+                }
+              }
+              .user-cart-item-left{
+                float: left;
+                margin-right: 5px;
+                img{
+                  width: 48px;
+                  height: 48px;
+                }
+              }
+              .user-cart-item-right{
+                float: left;
+                p{
+                  width: 130px;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  transition: color .5s;
+                  margin-bottom: 6px;
+                  color: #333;
+                  &.desc{
+                    color: #999;
+                  }
+                }
+              }
+              .user-cart-item-bottom{
+                .price{
+                  color: #333;
+                  margin-bottom: 6px;
+                }
+              }
+            }
+            .user-cart-info-bottom{
+              height: 66px;
+              border-top: 1px solid #eee;
+              background-color: #FAFAFC;
+              border-radius: 0 0 3px 3px;
+              .user-cart-info-left{
+                float: left;
+                .user-cart-total{
+                  width: 175px;
+                  line-height: 65px;
+                  padding-left: 20px;
+                  color: #666;
+                  .user-cart-count{
+                    color: #f0415f;
+                  }
+                }
+              }
+              .user-cart-info-right{
+                float: right;
+              }
             }
         }
     }
