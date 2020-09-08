@@ -195,21 +195,52 @@ router.get('/store', function(req, res, next) {
   })
 });
 
+// 社区影像馆
+router.get('/gallery', function(req, res, next) {
+  console.log(req.query.page)
+  var sql = `select * from gallery`;
+  db.query(sql, function(err, data) {
+    if(err) {
+      console.log(err)
+    }else {
+      // console.log(data)
+      var galleryArr = []
+      for(let i = (req.query.page - 1) * 12; i < req.query.page * 12; i++) {
+        galleryArr.push(data[i])
+      }
+      res.send(galleryArr)
+    }
+  })
+})
+
+// flyme系统更新
+router.get('/flyme/update', function(req, res, next) {
+  var sql = `select * from phone`
+  db.query(sql, function(err, data) {
+    if(err) {
+      console.log(err)
+    }else {
+      // console.log(data)
+      res.send(data)
+    }
+  })
+})
+
 // 插入数据
 router.get('/intodata', function(req, res, next) {
 
 
-  var obj = req.query.obj
-  for(let item in obj) {
-    var sql = `insert into store values ('${obj[item].name}', '${obj[item].address}', '${obj[item].addRemark}', '${obj[item].tel}', '${obj[item].cityId}')`;
-    db.query(sql, function(err, data) {
-      if(err) {
-        console.log(err)
-      }else {
-        // console.log(data)
-      }
-    });
-  }
+  // var obj = req.query.obj
+  // for(let item in obj) {
+  //   var sql = `insert into store values ('${obj[item].name}', '${obj[item].address}', '${obj[item].addRemark}', '${obj[item].tel}', '${obj[item].cityId}')`;
+  //   db.query(sql, function(err, data) {
+  //     if(err) {
+  //       console.log(err)
+  //     }else {
+  //       // console.log(data)
+  //     }
+  //   });
+  // }
   
 });
 module.exports = router;

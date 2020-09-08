@@ -16,41 +16,41 @@
     </select>
     <script src="./js/jquery.js"></script>
     <script>
-        $.ajax({
-            url: 'http://172.16.5.150/address',
-            type: 'get',
-            success(data) {
-                console.log(data)
-                var provinceHTML = '';
-                for(let i = 0; i < data.length; i++) {
-                    provinceHTML += `<option value="${data[i].rid}">${data[i].province}</option>`
-                }
-                $('#province').html(provinceHTML)
-                $.ajax({
-                    url: 'http://172.16.5.150/city',
-                    type: 'get',
-                    data: {
-                        provinceRid: data[0].rid
-                    },
-                    success(data) {
-                        console.log(data)
+        // $.ajax({
+        //     url: 'http://172.16.5.150/address',
+        //     type: 'get',
+        //     success(data) {
+        //         console.log(data)
+        //         var provinceHTML = '';
+        //         for(let i = 0; i < data.length; i++) {
+        //             provinceHTML += `<option value="${data[i].rid}">${data[i].province}</option>`
+        //         }
+        //         $('#province').html(provinceHTML)
+        //         $.ajax({
+        //             url: 'http://172.16.5.150/city',
+        //             type: 'get',
+        //             data: {
+        //                 provinceRid: data[0].rid
+        //             },
+        //             success(data) {
+        //                 console.log(data)
 
-                        var cityHTML = `<option value="${data[0].city}">${data[0].city}</option>`
-                        $('#city').html(cityHTML)
-                        $.ajax({
-                          url: 'http://172.16.5.150/store',
-                          type: 'get',
-                          data: {
-                            cityRid: data[0].rid
-                          },
-                          success(data) {
-                            console.log(data)
-                          }
-                        })
-                    }
-                });
-            }
-        });
+        //                 var cityHTML = `<option value="${data[0].city}">${data[0].city}</option>`
+        //                 $('#city').html(cityHTML)
+        //                 $.ajax({
+        //                   url: 'http://172.16.5.150/store',
+        //                   type: 'get',
+        //                   data: {
+        //                     cityRid: data[0].rid
+        //                   },
+        //                   success(data) {
+        //                     console.log(data)
+        //                   }
+        //                 })
+        //             }
+        //         });
+        //     }
+        // });
         // var provinceRid = '';
         // $('body').on('change', '#province', function() {
         //     provinceRid = $(this).val();
@@ -71,14 +71,30 @@
         // })
     </script>
     <script>
-       
-        // $.ajax({
-        //     url: 'http://172.16.5.150/index',
-        //     type: 'get',
-        //     success(data) {
-        //         console.log(data)
-        //     }
-        // });
+      // for(let i = 1; i < 11; i++){
+      //   $.ajax({
+      //       url: 'http://172.16.5.150/gallery',
+      //       type: 'get',
+      //       data: {
+      //         page: i
+      //       },
+      //       success(data) {
+      //           console.log(data)
+      //           var html = ''
+      //           for(let i = 0; i < data.length; i++) {
+      //             html += `<img src="${data[i].url}">`
+      //           }
+      //           $('body').html(html)
+      //       }
+      //   });
+      // }
+      $.ajax({
+        url: 'http://172.16.5.150/flyme/update',
+        type: 'get',
+        success(data) {
+          console.log(data)
+        }
+      })
     </script>
 </body>
 
