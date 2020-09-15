@@ -1,5 +1,5 @@
 $(function() {
-  /* // 购物车相关
+  // 购物车相关
   var user = localStorage.getItem('users');
   if(user){
     $('.user-list').css('background', 'url(./images/user-ico.png) no-repeat center center/cover');
@@ -23,38 +23,38 @@ $(function() {
         <br>
         赶紧去选购吧~
     `);
-  } */
+  }
 
   // 内容相关
   $.ajax({
     url: 'http://172.16.5.150/index',
     type: 'get',
     success(data) {
-      console.log(data)
+      // console.log(data)
       // // 导航模块
       // // 手机
-      // var navHandsetHtml = '';
-      // for(let i = 1; i < 9; i++) {
-      //   navHandsetHtml += `
-      //     <li>
-      //       <a href="javascript:;">
-      //         <img src=${eval("(" + data.handset[i].imgurl + ")")[0]} alt="">`
-      //   if(i === 1 || i === 2){
-      //     navHandsetHtml += `<p>【热卖】${data.handset[i].model}</p>`
-      //   }else {
-      //     navHandsetHtml += `<p>${data.handset[i].model}</p>`
-      //   }
-      //     navHandsetHtml +=`
-      //         <em>￥${eval("(" + data.handset[i].price + ")")[0]}</em>
-      //         <div class="list-cover"></div>
-      //       </a>
-      //     </li>
-      //   `
-      // }
-      // $('.nav-handset').html(navHandsetHtml)
-      // insertNavData('music', data, '.nav-music', 8)
-      // insertNavData('parts', data, '.nav-parts', 8)
-      // insertNavData('life', data, '.nav-life', 8)
+      var navHandsetHtml = '';
+      for(let i = 1; i < 9; i++) {
+        navHandsetHtml += `
+          <li>
+            <a href="javascript:;">
+              <img src=${eval("(" + data.handset[i].imgurl + ")")[0]} alt="">`
+        if(i === 1 || i === 2){
+          navHandsetHtml += `<p>【热卖】${data.handset[i].model}</p>`
+        }else {
+          navHandsetHtml += `<p>${data.handset[i].model}</p>`
+        }
+          navHandsetHtml +=`
+              <em>￥${eval("(" + data.handset[i].price + ")")[0]}</em>
+              <div class="list-cover"></div>
+            </a>
+          </li>
+        `
+      }
+      $('.nav-handset').html(navHandsetHtml)
+      insertNavData('music', data, '.nav-music', 8)
+      insertNavData('parts', data, '.nav-parts', 8)
+      insertNavData('life', data, '.nav-life', 8)
       // 手机内容模块
       var handsetHtml = '';
       for(let i = 1; i < 7; i++) {
@@ -155,22 +155,22 @@ $(function() {
     }
   });
 
-  // function insertNavData(type, data, element, num) {
-  //   var html = '';
-  //   for(let i = 0; i < num + 1; i++) {
-  //     html += `
-  //       <li>
-  //         <a href="javascript:;">
-  //           <img src=${eval("(" + data[type][i].imgurl + ")")[0]} alt="">
-  //           <p>${data[type][i].description}</p>
-  //           <em>￥${data[type][i].price}</em>
-  //           <div class="list-cover"></div>
-  //         </a>
-  //       </li>
-  //     `
-  //     $(element).html(html)
-  //   }
-  // }
+  function insertNavData(type, data, element, num) {
+    var html = '';
+    for(let i = 0; i < num + 1; i++) {
+      html += `
+        <li>
+          <a href="javascript:;">
+            <img src=${eval("(" + data[type][i].imgurl + ")")[0]} alt="">
+            <p>${data[type][i].description}</p>
+            <em>￥${data[type][i].price}</em>
+            <div class="list-cover"></div>
+          </a>
+        </li>
+      `
+      $(element).html(html)
+    }
+  }
 
   function insertContentDate(type, data, element, num) {
     var html = '';

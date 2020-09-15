@@ -75,7 +75,7 @@ header{
             border-radius: 3px;
             text-align: left;
             z-index: 999;
-            // display: none;
+            display: none;
             &::after{
                 position: absolute;
                 content: '';
