@@ -8,12 +8,6 @@
 </head>
 
 <body>
-    <select id="province">
-        <option></option>
-    </select>
-    <select id="city">
-        <option></option>
-    </select>
     <script src="./js/jquery.js"></script>
     <script>
         // $.ajax({
@@ -95,8 +89,12 @@
       //     console.log(data)
       //   }
       // })
+      
+      // console.log(window.location.pathname)
+      // localStorage.setItem('product', 5)
+      const id = localStorage.getItem('product')
       $.ajax({
-        url: 'http://172.16.5.150/product/5',
+        url: 'http://172.16.5.150/product/' + id,
         type: 'get',
         success(data) {
           console.log(data)

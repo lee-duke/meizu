@@ -30,14 +30,14 @@ $(function() {
     url: 'http://172.16.5.150/index',
     type: 'get',
     success(data) {
-      // console.log(data)
+      console.log(data)
       // // 导航模块
       // // 手机
       var navHandsetHtml = '';
       for(let i = 1; i < 9; i++) {
         navHandsetHtml += `
           <li>
-            <a href="javascript:;">
+            <a href="javascript:;" data-id="${data.handset[i].id}">
               <img src=${eval("(" + data.handset[i].imgurl + ")")[0]} alt="">`
         if(i === 1 || i === 2){
           navHandsetHtml += `<p>【热卖】${data.handset[i].model}</p>`
@@ -69,7 +69,7 @@ $(function() {
         }
        
         handsetHtml += `
-          <a href="javascript">
+          <a href="javascript:;" data-id="${data.handset[i].id}">
               <img src=${eval("(" + data.handset[i].imgurl + ")")[0]} alt="">
         `
         if(i === 1 || i === 2) {
@@ -160,7 +160,7 @@ $(function() {
     for(let i = 0; i < num + 1; i++) {
       html += `
         <li>
-          <a href="javascript:;">
+          <a href="javascript:;" data-id="${data[type][i].id}">
             <img src=${eval("(" + data[type][i].imgurl + ")")[0]} alt="">
             <p>${data[type][i].description}</p>
             <em>￥${data[type][i].price}</em>
@@ -181,7 +181,7 @@ $(function() {
         html += `<li>`
       }
       html += `
-          <a href="javascript:;">
+          <a href="javascript:;" data-id="${data[type][i].id}">
             <img src=${eval("(" + data[type][i].imgurl + ")")[0]} alt="">
             <p class="goods">
               <span class="goods-name">${data[type][i].model}</span>
@@ -197,4 +197,18 @@ $(function() {
       $(element).html(html)
     }
   }
+
+  // 点击跳转页面
+  $('body').on('click', '.topnav-cover a', function () {
+    // console.log($(this).attr('data-id'))
+    // 存储商品对应id
+    localStorage.setItem('product', $(this).attr('data-id'))
+    // window.location.href = './test.html'
+  });
+
+  $('body').on('click', '.wrap-content a', function () {
+    // console.log($(this).attr('data-id'))
+    // 存储商品对应id
+    localStorage.setItem('product', $(this).attr('data-id'))
+  })
 })
