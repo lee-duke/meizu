@@ -2,105 +2,34 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-    <script src="./js/jquery.js"></script>
-    <script>
-        // $.ajax({
-        //     url: 'http://172.16.5.150/address',
-        //     type: 'get',
-        //     success(data) {
-        //         console.log(data)
-        //         var provinceHTML = '';
-        //         for(let i = 0; i < data.length; i++) {
-        //             provinceHTML += `<option value="${data[i].rid}">${data[i].province}</option>`
-        //         }
-        //         $('#province').html(provinceHTML)
-        //         $.ajax({
-        //             url: 'http://172.16.5.150/city',
-        //             type: 'get',
-        //             data: {
-        //                 provinceRid: data[0].rid
-        //             },
-        //             success(data) {
-        //                 console.log(data)
+  <script src="./js/jquery.js"></script>
+  <script>
+    $.ajax({
+      url: 'http://172.16.5.150/details',
+      type: 'get',
+      data: {
+        model: '魅族 17 Pro',
+        color: '乌金'
+      },
+      success(data) {
+        console.log(data)
+      }
+    })
+  </script>
+  <script>
+    // for(let i=0;i<$('.preview-thumb img').length;i++){console.log($('.preview-thumb img')[i].src)}
 
-        //                 var cityHTML = `<option value="${data[0].city}">${data[0].city}</option>`
-        //                 $('#city').html(cityHTML)
-        //                 $.ajax({
-        //                   url: 'http://172.16.5.150/store',
-        //                   type: 'get',
-        //                   data: {
-        //                     cityRid: data[0].rid
-        //                   },
-        //                   success(data) {
-        //                     console.log(data)
-        //                   }
-        //                 })
-        //             }
-        //         });
-        //     }
-        // });
-        // var provinceRid = '';
-        // $('body').on('change', '#province', function() {
-        //     provinceRid = $(this).val();
-        //     $.ajax({
-        //             url: 'http://172.16.5.150/city',
-        //             type: 'get',
-        //             data: {
-        //                 provinceRid: provinceRid
-        //             },
-        //             success(data) {
-        //                 var cityHTML = ''
-        //                 for(let i = 0; i < data.length; i++) {
-        //                     cityHTML += `<option value="${data[i].city}">${data[i].city}</option>`
-        //                 }
-        //                 $('#city').html(cityHTML)
-        //             }
-        //         });
-        // })
-    </script>
-    <script>
-      // for(let i = 1; i < 11; i++){
-      //   $.ajax({
-      //       url: 'http://172.16.5.150/gallery',
-      //       type: 'get',
-      //       data: {
-      //         page: i
-      //       },
-      //       success(data) {
-      //           console.log(data)
-      //           var html = ''
-      //           for(let i = 0; i < data.length; i++) {
-      //             html += `<img src="${data[i].url}">`
-      //           }
-      //           $('body').html(html)
-      //       }
-      //   });
-      // }
-      // $.ajax({
-      //   url: 'http://172.16.5.150/flyme/update',
-      //   type: 'get',
-      //   success(data) {
-      //     console.log(data)
-      //   }
-      // })
-      
-      // console.log(window.location.pathname)
-      // localStorage.setItem('product', 5)
-      const id = localStorage.getItem('product')
-      $.ajax({
-        url: 'http://172.16.5.150/product/' + id,
-        type: 'get',
-        success(data) {
-          console.log(data)
-        }
-      })
-    </script>
+
+
+
+
+  </script>
 </body>
 
 </html>
