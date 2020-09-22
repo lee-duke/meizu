@@ -1,0 +1,285 @@
+body {
+    background-color: #f6f6f6;
+}
+
+a:visited {
+    color: black;
+}
+
+.container header {
+    background: #fff;
+    position: relative;
+}
+
+.flyme-header-content .ul li a {
+    color: #000;
+    font-size: 16px;
+}
+
+.flyme-header-content .ul li:hover a {
+    color: #027af6;
+}
+
+.flyme-header-content a .logo {
+    background: url('../images/Flyme-logo-blue.png') no-repeat center center;
+}
+
+.phone-content {
+    position: relative;
+    width: 1240px;
+    min-height: 1110px;
+    background: #fff;
+    margin: 25px auto 0;
+    height: 900px;
+    overflow: hidden;
+}
+
+.phone-list {
+    padding: 80px 0 0px 140px;
+    margin-bottom: 63px;
+    overflow: hidden;
+}
+
+.phone-list li {
+    float: left;
+    margin-right: 155px;
+    height: 280px;
+    margin-bottom: 50px;
+}
+
+.phone-list li a img {
+    width: 120px;
+    height: 230px;
+}
+
+.phone-list li a p {
+    text-align: center;
+    line-height: 20px;
+    font-size: 16px;
+    width: 120px;
+    margin-top: 10px;
+    color: black;
+}
+
+.hidden-word {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    padding-bottom: 50px;
+    color: #1b1b1b;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #fff;
+}
+
+footer {
+    width: 100%;
+    height: 132px;
+    border-top: 1px solid #e5e5e5;
+    background: #fff;
+    margin-top: 80px;
+}
+
+footer .wrapper {
+    position: relative;
+    width: 1240px;
+    margin: 0 auto;
+    font-size: 0;
+    text-align: right
+}
+
+footer ul.navbar {
+    float: left;
+    height: 78px;
+    line-height: 78px
+}
+
+footer ul.navbar li {
+    display: inline;
+    margin-right: 38px;
+    font-size: 15px;
+    color: #999
+}
+
+footer ul.navbar a {
+    color: #999
+}
+
+footer ul.navbar a:hover {
+    color: #027af6
+}
+
+footer ul.navbar .line span {
+    display: inline-block;
+    height: 14px;
+    border-left: 1px solid #d1d1d1
+}
+
+footer ul.navbar .lang-choice {
+    padding-right: 60px;
+    cursor: pointer
+}
+
+footer ul.navbar .phone {
+    margin-right: 27px
+}
+
+footer ul.navbar span.service {
+    display: inline-block;
+    width: 66px;
+    height: 20px;
+    border-radius: 2px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    background: #027af6;
+    cursor: pointer
+}
+
+footer a.media {
+    display: inline-block;
+    margin: 23px 0 23px 35px;
+    color: #999;
+    cursor: pointer
+}
+
+footer a.media span {
+    display: inline-block;
+    font-size: 15px;
+    vertical-align: middle
+}
+
+footer a.media span.icon {
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
+    background: url(../images/footer.png) no-repeat
+}
+
+footer a.wechat span.icon {
+    background-position: -64px 0
+}
+
+footer a.wechat img {
+    display: none;
+    position: absolute;
+    right: 102px;
+    bottom: 108px;
+    z-index: 99;
+}
+
+footer a.weibo span.icon {
+    background-position: 0 0
+}
+
+footer a.wechat:hover {
+    color: #01a50b
+}
+
+footer a.wechat:hover span.icon {
+    background-position: -96px 0
+}
+
+footer a.wechat:hover img {
+    display: block
+}
+
+footer a.weibo:hover {
+    color: #ee3939
+}
+
+footer a.weibo:hover span.icon {
+    background-position: -32px 0
+}
+
+footer p.copyright {
+    line-height: 40px;
+    font-size: 12px;
+    text-align: center;
+    color: #ccc
+}
+
+footer p.copyright a {
+    color: #ccc
+}
+
+footer ul.lang-list {
+    display: none;
+    position: absolute;
+    bottom: 100px;
+    left: 410px;
+    width: 140px;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    box-shadow: 0 0 10px #d9d9d9;
+    text-align: left;
+    background-color: #fff;
+    z-index: 111;
+}
+
+footer ul.lang-list li {
+    border-top: 1px solid #d9d9d9;
+    cursor: pointer
+}
+
+footer ul.lang-list li:first-child {
+    border: 0
+}
+
+footer ul.lang-list li:hover {
+    background-color: #f2f2f2
+}
+
+footer ul.lang-list a {
+    width: 100%;
+    line-height: 40px;
+    color: #111;
+    display: inline-block
+}
+
+footer ul.lang-list a.checked {
+    color: #027af6
+}
+
+footer ul.lang-list a i {
+    margin: 0 10px 0 12px;
+    width: 21px;
+    height: 21px;
+    background: url('../images/footer.png') no-repeat;
+    vertical-align: middle;
+    display: inline-block
+}
+
+footer ul.lang-list a i.cn {
+    background-position: 0 -32px
+}
+
+footer ul.lang-list a i.hk {
+    background-position: -21px -32px
+}
+
+footer ul.lang-list a i.tw {
+    background-position: -42px -32px
+}
+
+footer ul.lang-list a i.en {
+    background-position: -63px -32px
+}
+
+footer ul.lang-list a i.in {
+    background-position: -84px -32px
+}
+
+footer ul.lang-list a i.ru {
+    background-position: -105px -32px
+}
+
+footer ul.lang-list a span {
+    font-size: 14px;
+    vertical-align: middle;
+    display: inline-block
+}

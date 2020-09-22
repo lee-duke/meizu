@@ -1,0 +1,647 @@
+/* 
+
+顶部导航样式改变
+
+*/
+
+.ul a {
+    font-size: 16px;
+    opacity: 0.3;
+}
+
+.ul .ul-active {
+    opacity: 1;
+}
+
+.cloud-sec {
+    width: 100%;
+    height: 969px;
+}
+
+.cover-white {
+    width: 400px;
+    height: 0px;
+    border: 400px solid #fff;
+    border-top: 400px solid transparent;
+    border-left: 400px solid transparent;
+    border-right: 400px solid transparent;
+    transform: scaleX(5);
+    position: absolute;
+    top: -554px;
+    left: 1510px;
+}
+
+.cover-blue {
+    width: 400px;
+    height: 0px;
+    border: 400px solid #fff;
+    border-bottom: 400px solid transparent;
+    border-left: 400px solid transparent;
+    border-right: 400px solid transparent;
+    transform: scaleX(5);
+    position: absolute;
+    top: 0px;
+    left: -490px;
+}
+
+.cloud-btn {
+    width: 216px;
+    height: 56px;
+    display: block;
+    border-radius: 999px;
+    line-height: 56px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.cloud-btn span {
+    position: relative;
+    z-index: 5;
+    transition: all 0.2s;
+}
+
+.cloud-btn i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    display: block;
+    transition: all .2s;
+}
+
+.cloud-login:hover span {
+    color: #1788e8;
+}
+
+.cloud-login:hover i {
+    width: 100%;
+    background-color: #fff;
+}
+
+.cloud-sec .cloud-arrow {
+    width: 40px;
+    height: 22px;
+    background: url('../images/Flyme-arrow.png') no-repeat;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -20.5px;
+    z-index: 99;
+    cursor: pointer;
+}
+
+
+/*
+
+云服务 
+
+*/
+
+.cloud-sec1 {
+    background: #3987ec url('../images/cloud-service.img1.jpg') center bottom no-repeat;
+    margin-top: -90px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sec-content {
+    width: 1240px;
+    color: #fff;
+    position: absolute;
+    top: 35%;
+    left: calc(50% - 620px);
+    overflow: hidden;
+}
+
+.sec-content .sec-words {
+    width: 45%;
+}
+
+.sec-words .sec1-logo {
+    width: 444.4px;
+    height: 100px;
+}
+
+.sec1-logo img {
+    width: 45%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.sec1-logo span {
+    font-size: 50px;
+    font-weight: 600;
+    vertical-align: middle;
+    letter-spacing: 5px;
+}
+
+.sec-words p {
+    font-size: 30px;
+    line-height: 40px;
+    padding: 30px 0 40px;
+    text-shadow: 0 5px 5px rgba(12, 101, 176, .4);
+}
+
+.cloud-login {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.cloud-sec1 .cover-white {
+    top: 415px;
+}
+
+
+/*
+
+数据管理
+
+*/
+
+.cloud-sec2 {
+    background: #fff url('../images/cloud-service.img2.jpg') center top no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.sec-content2 {
+    top: 20%;
+    z-index: 5;
+    height: 581px;
+    color: #3987ec;
+}
+
+.sec-content .sec-words2 {
+    width: 100%;
+    height: 100%;
+}
+
+.sec2-logo {
+    width: 55%;
+    float: left;
+}
+
+.sec-words2 img {
+    width: 100%;
+    height: 100%;
+}
+
+.sec-words2 .p {
+    width: 45%;
+    float: left;
+    margin-top: 10%;
+    padding: 15px;
+    letter-spacing: 2px;
+}
+
+.sec-words2 .p h2 {
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+.sec-words2 .p p {
+    font-size: 20px;
+    line-height: 36px;
+    text-shadow: 0 0 0 transparent;
+    font-weight: lighter;
+}
+
+.cloud-sec2 .cloud-arrow {
+    bottom: 150px;
+    background: url('../images/Flyme-arrow2.png') no-repeat;
+}
+
+
+/*
+
+手机防丢
+
+*/
+
+.cloud-sec3 {
+    background: #3987ec url('../images/Flyme-map.jpg') no-repeat;
+    position: relative;
+    top: -280px;
+    height: 1200px;
+    overflow: hidden;
+}
+
+.cloud-sec3 .cover-white {
+    top: 418px;
+}
+
+.sec-content3 {
+    top: 25%;
+}
+
+.sec-content .sec-words3 {
+    width: 100%;
+    height: 100%;
+}
+
+.sec3-logo {
+    width: 40%;
+    float: left;
+    margin-left: 10%;
+}
+
+.sec-words3 img {
+    width: 100%;
+    height: 100%;
+}
+
+.sec-words3 .sec3-p {
+    width: 45%;
+    float: left;
+    margin-top: 10%;
+    padding: 20px;
+    letter-spacing: 2px;
+}
+
+.sec-words3 .sec3-p h2 {
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+.sec-words3 .sec3-p p {
+    font-size: 20px;
+    line-height: 36px;
+    text-shadow: 0 0 0 transparent;
+    font-weight: lighter;
+}
+
+.cloud-sec3 .cloud-arrow {
+    bottom: 225px;
+}
+
+
+/*
+
+数据迁移
+
+*/
+
+.cloud-sec4 {
+    top: -200px;
+    background-image: none;
+    height: 650px;
+}
+
+.cloud-sec4 .cover-white {
+    top: -752px;
+    z-index: 9;
+}
+
+.cloud-sec4 .sec-content {
+    top: -10%;
+}
+
+.cloud-sec4 .cloud-arrow {
+    bottom: 0px;
+}
+
+
+/*
+
+如何使用
+
+*/
+
+.cloud-sec5 {
+    background-color: #3987ec;
+    background-image: none;
+    /* overflow: hidden; */
+}
+
+.sec-content5 {
+    top: 30%;
+    text-align: center;
+}
+
+.sec-content5 h2 {
+    font-size: 48px;
+    font-weight: lighter;
+}
+
+.sec-content5 .sec-words5 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.sec-words5 div {
+    width: 49%;
+    padding: 100px;
+}
+
+.sec-words5 p {
+    font-size: 20px;
+}
+
+.sec5-p2 img {
+    margin-bottom: 50px;
+}
+
+
+/*
+
+开始使用
+
+*/
+
+.cloud-sec6 {
+    width: 1240px;
+    margin: 0 auto;
+    margin-top: -130px;
+    text-align: center;
+    position: relative;
+}
+
+.cloud-sec6 .cloud-arrow {
+    position: absolute;
+    left: 50%;
+    top: -200px;
+    width: 109px;
+    height: 109px;
+    margin-left: -55px;
+    background: url('../images/Flyme-arrow3.png') no-repeat;
+    cursor: pointer;
+}
+
+.cloud-sec6 h1 {
+    color: #3987ec;
+    font-size: 48px;
+    font-weight: lighter;
+    margin-bottom: 60px;
+}
+
+.cloud-sec6>a {
+    display: inline-block;
+    margin-bottom: 145px;
+    border: 2px solid #1788e8;
+}
+
+.cloud-sec6 .cloud-login2 {
+    background-color: #1f8ce9;
+    color: #fff;
+    margin-right: 30px;
+}
+
+.cloud-login2:hover i {
+    width: 100%;
+    background-color: #0080c3;
+}
+
+.cloud-sec6 .cloud-register {
+    background-color: #fff;
+    color: #1788e8;
+}
+
+.cloud-register:hover span {
+    color: #fff;
+}
+
+.cloud-register:hover i {
+    width: 100%;
+    background-color: #1f8ce9;
+}
+
+
+/*
+
+页脚 
+
+*/
+
+.cloud-footer {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.footer-content {
+    width: 1160px;
+    margin: 24px auto 30px;
+    position: relative;
+}
+
+.footer-layer1 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.footer-link a {
+    color: #b0b6b9;
+    padding: 0 8px;
+    font-size: 14px;
+}
+
+.footer-link a:hover {
+    color: #999;
+}
+
+.footer-service {
+    color: #b0b6b9;
+    font-size: 14px;
+}
+
+.footer-service span {
+    margin-right: 10px;
+}
+
+.footer-service a {
+    display: inline-block;
+    width: 64px;
+    height: 30px;
+    line-height: 28px;
+    padding: 0 8px;
+    text-align: center;
+    background-color: #3987ec;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-left: 10px;
+    transition: all .2s;
+}
+
+.footer-service a:hover {
+    background-color: #107fdd;
+}
+
+.footer-outlink {
+    padding-top: 25px;
+}
+
+.footer-outlink a {
+    display: inline-block;
+    margin-left: 10px;
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
+
+.footer-outlink a i {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url('../images/Flyme-sprite.png') no-repeat;
+}
+
+.footer-outlink a:nth-child(1) i {
+    background-position: -218px -91px;
+}
+
+.footer-outlink a:nth-child(1):hover i {
+    background-position: -218px -137px;
+}
+
+.footer-outlink a:nth-child(2) i {
+    background-position: -302px -91px;
+}
+
+.footer-outlink a:nth-child(2):hover i {
+    background-position: -302px -137px;
+}
+
+.footer-outlink a:nth-child(3) i {
+    background-position: -344px -91px;
+}
+
+.footer-outlink a:nth-child(3):hover i {
+    background-position: -344px -137px;
+}
+
+.footer-outlink a img {
+    position: absolute;
+    top: -277px;
+    left: -140px;
+    display: none;
+}
+
+.footer-outlink a:nth-child(2):hover img {
+    display: block;
+}
+
+.footer-layer2 {
+    width: 1240px;
+    margin: 0 auto;
+    margin-left: 120px;
+}
+
+.footer-layer2 span {
+    color: #b0b6b9;
+    font-size: 12px;
+    letter-spacing: 1px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.footer-layer2 a {
+    color: #b0b6b9;
+    font-size: 12px;
+    letter-spacing: 1px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.footer-layer2 a:hover {
+    color: #999;
+}
+
+.footer-layer2 a img {
+    width: 15px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+
+/* 
+
+楼层导航
+
+*/
+
+.floor-nav {
+    position: fixed;
+    right: 17px;
+    top: 50%;
+    margin-top: -63.5px;
+    z-index: 99;
+}
+
+.floor-nav li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 7px;
+    position: relative;
+}
+
+.floor-nav li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.floor-nav li a span {
+    display: block;
+    width: 4px;
+    height: 4px;
+    border: 1px solid #6c6c6c;
+    border-radius: 50%;
+    background-color: #6c6c6c;
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    margin: -2px 0 0 -2px;
+    transition: all .1s ease-in-out;
+}
+
+.floor-nav li div {
+    font-size: 14px;
+    position: absolute;
+    top: -2px;
+    right: 20px;
+    color: #6c6c6c;
+    max-width: 220px;
+    overflow: hidden;
+    cursor: pointer;
+    width: 60px;
+    text-align: right;
+    opacity: 0;
+}
+
+.floor-nav .active {
+    background: transparent;
+    width: 10px;
+    height: 10px;
+    top: 7px;
+    left: 4px;
+    border: 1px solid #6c6c6c;
+    margin: -6px 0 0 -6px;
+    border-radius: 100%;
+}
+
+.floor-nav li:hover span {
+    width: 10px;
+    height: 10px;
+    top: 7px;
+    left: 4px;
+    margin: -6px 0 0 -6px;
+}
+
+.floor-nav li:hover div {
+    opacity: 1;
+}
