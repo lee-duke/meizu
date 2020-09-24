@@ -100,7 +100,7 @@ $.ajax({
             hm += `<li class="rs-item">
                     <a href="javascript:;" class="store_list_tj_1">
                         <div class="mod-pic">
-                            <img src="${eval('('+data.commend[i].imgurl+')')}" alt="">
+                            <img src="${eval('('+data.commend[i].imgurl+')')[0]}" alt="">
                         </div>
                         <div class="mod-desc">
                             <h4 class="vm-title">${data.commend[i].model}</h4>

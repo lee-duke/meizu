@@ -43,7 +43,7 @@ a {
 }
 
 .main .bg-box .img-box {
-    background: url("../images/han1.jpg") no-repeat center 0px;
+    background: url("../images/parbg.jpg") no-repeat center 0px;
     background-size: cover;
     min-width: 1240px;
     height: 450px;
@@ -207,13 +207,13 @@ a {
     border-radius: 50%;
 }
 
-.goods-list .goods-list-wrap .gl-item .gl-item-link .item-slide .item-slide-dot:first-child {
+/* .goods-list .goods-list-wrap .gl-item .gl-item-link .item-slide .item-slide-dot:first-child {
     float: left;
     width: 26px;
     height: 26px;
     border-radius: 50%;
     border: 1px solid #aaa;
-}
+} */
 
 .goods-list .goods-list-wrap .gl-item .gl-item-link .item-slide .item-slide-dot img {
     width: 100%;

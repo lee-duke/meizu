@@ -31,6 +31,7 @@ let confix = $('.confix')
     //         })
     //     }
     // }
+
 goods.on('click', '.item-slide-dot', function() {
     $(this).parent().siblings().children().eq($(this).index()).addClass('itemPic').siblings().removeClass('itemPic')
 
@@ -64,10 +65,18 @@ $.ajax({
                 <ul class="item-slide">`
 
             for (let n = 0; n < eval('(' + data.data[i].tabImg + ')').length; n++) {
-                html += `<li class="item-slide-dot  item-slide-dot-1" title="${eval('(' + data.data[i].color + ')')[n]}">
+                if(n===0){
+                    html += `<li class="item-slide-dot  item-slide-dot-1 active" title="${eval('(' + data.data[i].color + ')')[n]}">
                         <img src="${eval('(' + data.data[i].tabImg + ')')[n]}" alt="">
                     </li>
                 `
+                }else{
+                    html += `<li class="item-slide-dot  item-slide-dot-1" title="${eval('(' + data.data[i].color + ')')[n]}">
+                        <img src="${eval('(' + data.data[i].tabImg + ')')[n]}" alt="">
+                    </li>
+                `
+                }
+                
             }
 
 
@@ -75,7 +84,7 @@ $.ajax({
                 <p class="item-desc">${data.data[i].description} </p>
                 <p class="item-price">
                     <em>￥</em>
-                    <span class="vm-price">${ data.data[i].price}</span>
+                    <span class="vm-price">${data.data[i].price }</span>
                 </p>
             </a>
         </li>`
@@ -91,7 +100,7 @@ $.ajax({
             hm += `<li class="rs-item">
                     <a href="javascript:;" class="store_list_tj_1">
                         <div class="mod-pic">
-                            <img src="${eval('('+data.commend[i].imgurl+')')}" alt="">
+                            <img src="${eval('('+data.commend[i].imgurl+')')[0]}" alt="">
                         </div>
                         <div class="mod-desc">
                             <h4 class="vm-title">${data.commend[i].model}</h4>
@@ -104,9 +113,9 @@ $.ajax({
                 </li>`
             $('.recommend-slider-wrap').html(hm)
         }
-
     }
 });
+
 
 // let slide = $('.item-slide-dot')
 // console.log(slide)
