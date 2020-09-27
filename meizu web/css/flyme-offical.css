@@ -1,0 +1,283 @@
+/* 轮播图 */
+
+.flyme-banner {
+    width: 100%;
+    height: 680px;
+    position: relative;
+    top: -90px;
+    overflow: hidden;
+}
+
+.flyme-banner>div {
+    width: 300%;
+    height: 100%;
+}
+
+.flyme-banner>div>div {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.flyme-banner>div>div a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.flyme-banner img {
+    position: absolute;
+    left: -18%;
+}
+
+.flyme-banner .pageBar {
+    position: relative;
+    top: -80px;
+    z-index: 5;
+    width: 100%;
+    height: 50px;
+}
+
+.flyme-banner .pageBar span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+
+.flyme-banner .swiper-pagination-bullet {
+    background: #fff;
+    opacity: 1;
+}
+
+.flyme-banner .swiper-pagination-bullet-active {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: transparent;
+}
+
+
+/* 内容区图片 */
+
+.flyme-content-img {
+    width: 1280px;
+    margin: 0 auto;
+    margin-top: -100px;
+    padding: 60px 0;
+}
+
+.flyme-content-img .flyme-content-prev {
+    width: 100%;
+    height: 510px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flyme-content-img img {
+    width: 100%;
+    height: 100%;
+    transition: all .5s
+}
+
+.flyme-content-img .flyme-content-prev a {
+    display: block;
+    height: 100%;
+}
+
+.flyme-content-img .flyme-content-prev a:nth-child(1) {
+    width: 850px;
+}
+
+.flyme-content-img .flyme-content-prev a:nth-child(2) {
+    width: 420px;
+}
+
+.flyme-content-img .flyme-content-next {
+    width: 100%;
+    height: 252px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.flyme-content-img a {
+    display: block;
+    width: 420px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.flyme-content-img .flyme-content-next img {
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+}
+
+.flyme-content-img a:hover img {
+    transform: scale(1.05);
+}
+
+
+/* 底部栏 */
+
+.flyme-footer {
+    width: 100%;
+    color: rgba(0, 0, 0, .35);
+    padding-bottom: 25px;
+    padding-top: 60px;
+}
+
+.flyme-footer-content {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 37px;
+    border-bottom: 1px solid rgba(0, 0, 0, .04);
+}
+
+.flyme-footer-content .flyme-foot-lists {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flyme-foot-lists ul {
+    width: 25%;
+}
+
+.flyme-foot-lists ul h3 {
+    color: rgba(0, 0, 0, .8);
+    margin-bottom: 20px;
+}
+
+.flyme-foot-lists ul li {
+    line-height: 33px;
+    position: relative;
+}
+
+.flyme-foot-lists ul li a {
+    color: rgba(0, 0, 0, .6);
+}
+
+.flyme-foot-lists ul li img {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -154px;
+    left: -51px;
+    display: none;
+}
+
+.flyme-foot-lists ul a:hover {
+    color: rgba(0, 0, 0, .45);
+}
+
+.flyme-foot-lists ul li:hover img {
+    display: block;
+}
+
+.flyme-footer-content .flyme-foot-contact {
+    text-align: right;
+    padding-top: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.flyme-foot-contact h4 {
+    margin: 2px 4px;
+    font-size: 28px;
+    color: rgba(0, 0, 0, .8);
+}
+
+.flyme-foot-contact span {
+    display: block;
+    font-size: 10px;
+    color: rgba(0, 0, 0, .6);
+}
+
+.flyme-foot-contact a {
+    display: block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #0195ff;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.flyme-foot-contact a:hover {
+    opacity: 0.9;
+}
+
+.flyme-foot-last {
+    width: 1280px;
+    margin: 0 auto;
+    margin-top: 16px;
+    position: relative;
+}
+
+.flyme-foot-record a {
+    font-size: 16px;
+    color: rgba(0, 0, 0, .35);
+}
+
+.flyme-foot-record a::after {
+    content: '|';
+    margin: 0 3px;
+    padding-left: 3px;
+}
+
+.flyme-foot-record .disappear::after {
+    color: transparent;
+}
+
+.flyme-language-list {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 123px;
+}
+
+.flyme-language-list>a {
+    text-decoration: underline;
+}
+
+.flyme-language-list a {
+    color: rgba(0, 0, 0, .35);
+}
+
+.flyme-language-list ul {
+    width: 90%;
+    position: absolute;
+    bottom: 100%;
+    left: calc(50% - 45%);
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    display: none;
+}
+
+.flyme-language-list ul li {
+    line-height: 40px;
+    text-indent: 10px;
+}
+
+.flyme-language-list .flyme-color-active {
+    color: #0195ff;
+}
+
+.flyme-language-list .flyme-bgc-active {
+    background-color: #f2f2f2;
+}
+
+.flyme-language-list:hover ul {
+    display: block;
+}
+
+.flyme-language-list li:hover {
+    background-color: #f2f2f2;
+}
