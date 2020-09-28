@@ -1,0 +1,794 @@
+a:hover {
+    text-decoration: none;
+}
+
+
+/* 服务轮播图模块 */
+
+.service-wrap {
+    min-width: 1280px;
+    height: 580px;
+    color: #333;
+}
+
+.swiper-slide.service-content {
+    position: relative;
+    overflow: hidden;
+    height: 580px;
+    /* width: 100%; */
+}
+
+.swiper-slide img {
+    height: 580px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pagination {
+    /* width: 500px; */
+    height: 20px;
+}
+
+.my-bullet {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    margin: 3px 12px !important;
+    background-color: #777;
+}
+
+.my-bullet-active {
+    border: 1px solid #fff;
+    background-color: transparent;
+}
+
+
+/* 注册维修模块 */
+
+.serv-wrap {
+    min-width: 1280px;
+    color: #333;
+}
+
+.serv-registerfix {
+    width: 100%;
+    height: 452px;
+}
+
+.serv-rftotal {
+    width: 1240px;
+    min-width: 1240px;
+    height: 382px;
+    padding: 0 20px;
+    padding-bottom: 70px;
+    margin: 0 auto;
+}
+
+.serv-self {
+    overflow: hidden;
+    height: 209px;
+    width: 100%;
+}
+
+.serv-self ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.serv-selfbox {
+    box-sizing: border-box;
+    width: 177px;
+    height: 211px;
+    padding: 70px 44px 59px;
+    /* border: 1px solid red; */
+    /* text-align: center; */
+    /* display: flex; */
+    /* align-self: center; */
+}
+
+.serv-selfbox a {
+    color: #333;
+    width: 89px;
+    text-align: center;
+}
+
+.serv-selfbox span {
+    display: block;
+    /* text-align: center; */
+    width: 51px;
+    height: 51px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.serv-bg1 {
+    background: url("../images/servlittle1.jpg") no-repeat center center;
+}
+
+.serv-bg2 {
+    background: url("../images/servlittle2.jpg") no-repeat center center;
+}
+
+.serv-bg3 {
+    background: url("../images/servlittle3.jpg") no-repeat center center;
+}
+
+.serv-bg4 {
+    background: url("../images/servlittle4.png") no-repeat center center;
+}
+
+.serv-bg5 {
+    background: url("../images/servlittle5.png") no-repeat center center;
+}
+
+.serv-bg6 {
+    background: url("../images/servlittle6.jpg") no-repeat center center;
+}
+
+.serv-bg7 {
+    background: url("../images/servlittle7.jpg") no-repeat center center;
+}
+
+.serv-selfbox em {
+    display: block;
+    margin: 0 auto;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.serv-aftersale {
+    width: 100%;
+    height: 173px;
+}
+
+.serv-aftersale ul {
+    overflow: hidden;
+}
+
+.serv-more li {
+    float: left;
+    width: 301px;
+    height: 173px;
+    text-align: center;
+    margin-right: 11px;
+}
+
+.serv-morebox1 {
+    background-color: #388ded;
+}
+
+.serv-morebox2 {
+    background-color: #48bf6c;
+}
+
+.serv-morebox3 {
+    background-color: #f6af2a;
+}
+
+.serv-more .serv-morebox4 {
+    margin-right: 0;
+    background-color: #3ec0d1;
+}
+
+.serv-more a {
+    display: block;
+    color: #fff;
+    height: 100%;
+    position: relative;
+}
+
+.serv-more i {
+    display: block;
+    width: 72px;
+    height: 72px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.serv-more em {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.serv-more span {
+    display: block;
+    position: absolute;
+    bottom: 26px;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.serv-morebox1 i {
+    top: 17%;
+    background: url("../images/service-icon1.png") no-repeat center center/cover;
+}
+
+.serv-morebox2 i {
+    top: 12%;
+    background: url("../images/service-icon2.png") no-repeat center center/cover;
+}
+
+.serv-morebox3 i {
+    top: 14%;
+    background: url("../images/service-icon3.png") no-repeat center center/cover;
+}
+
+.serv-morebox4 i {
+    top: 15%;
+    background: url("../images/service-icon4.png") no-repeat center center/cover;
+}
+
+
+/* 选择模块 */
+
+.select-production {
+    width: 100%;
+    background-color: #f4f4f4;
+    height: 705px;
+}
+
+.prosec-contents {
+    width: 1240px;
+    min-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.prosec-title {
+    text-align: center;
+    padding: 68px 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.product-type {
+    margin-bottom: 13px;
+    overflow: hidden;
+}
+
+.product-type li {
+    float: left;
+    width: 406px;
+    height: 298px;
+    text-align: center;
+    background-color: #fff;
+    margin-right: 11px;
+}
+
+
+/* 
+.product-type a {
+    transition: all .5s ease;
+} */
+
+.product-type a {
+    color: #333;
+}
+
+.product-type .sec-production3 {
+    margin-right: 0;
+}
+
+.product-type img {
+    margin: 0 auto;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+}
+
+.product-type p {
+    font-size: 14px;
+    margin-bottom: 27px;
+}
+
+.product-type a:hover img {
+    transform: translateY(-10px);
+}
+
+.product-video {
+    overflow: hidden;
+}
+
+.product-video li {
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 70px;
+}
+
+.product-video .pro-video2 {
+    margin-right: 0;
+}
+
+.product-video a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 1;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.product-video a:hover {
+    opacity: 0.8;
+}
+
+.product-video img {
+    display: block;
+}
+
+.provideo-icon {
+    display: block;
+    position: absolute;
+    top: 54px;
+    left: 165px;
+    width: 51px;
+    height: 51px;
+    background: url("../images/servicebf.png");
+}
+
+.provideo-title {
+    position: absolute;
+    top: 56px;
+    left: 234px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.provideo-ber {
+    position: absolute;
+    top: 83px;
+    left: 234px;
+    font-size: 14px;
+}
+
+.ser-video {
+    display: none;
+    min-width: 1280px;
+    height: 937px;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    opacity: 1;
+    background-color: #000;
+}
+
+.serv-video {
+    width: 960px;
+    height: 540px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+.serv-video video {
+    /* border: none; */
+    outline: none;
+    z-index: 10;
+}
+
+.serv-video div {
+    position: relative;
+}
+
+
+/* 关闭视频 */
+
+.close-vid {
+    position: absolute;
+    left: 100%;
+    top: -35px;
+    width: 28px;
+    height: 28px;
+    margin-left: -30px;
+    cursor: pointer;
+    background: url(../images/close_d.png) no-repeat;
+}
+
+
+/* 专属权益服务 */
+
+.power-self {
+    width: 100%;
+    height: 696px;
+}
+
+.powerself-content {
+    width: 1240px;
+    min-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 696px;
+}
+
+.power-title {
+    margin-bottom: 40px;
+}
+
+.power-detail ul {
+    overflow: hidden;
+}
+
+.power-vip {
+    float: left;
+    height: 245px;
+}
+
+.vip1 {
+    width: 56%;
+}
+
+.vip2 {
+    width: 44%;
+}
+
+.power-logo {
+    float: left;
+    width: 84px;
+    height: 90px;
+    margin: 6px 46px 0 0;
+}
+
+.p-logo1 {
+    background: url("../images/serv-power1.jpg") no-repeat center center;
+}
+
+.p-logo2 {
+    background: url("../images/serv-power2.jpg") no-repeat center center;
+}
+
+.p-logo3 {
+    background: url("../images/serv-power3.jpg") no-repeat center center;
+}
+
+.p-logo4 {
+    background: url("../images/serv-power4.jpg") no-repeat center center;
+}
+
+.power-bri {
+    float: left;
+    width: 387px;
+}
+
+.p-title {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.power-bri p:nth-child(2) {
+    line-height: 24px;
+    margin-bottom: 13px;
+    font-size: 14px;
+}
+
+.power-bri a:nth-child(3) {
+    color: #008cff;
+    font-size: 14px;
+}
+
+
+/* 了解常见问题 */
+
+.faq {
+    width: 100%;
+    background: #f4f4f4;
+    height: 398px;
+}
+
+.faq-content {
+    width: 1240px;
+    min-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 398px;
+}
+
+.faq-title {
+    margin-top: -6px;
+}
+
+.faq-total {
+    overflow: hidden;
+}
+
+.faq-total a {
+    color: #333;
+    font-size: 14px;
+}
+
+.faqlist {
+    float: left;
+    width: 248px;
+    height: 238px;
+    text-align: center;
+}
+
+.faqlist>a {
+    display: block;
+    padding-bottom: 13px;
+    position: relative;
+}
+
+.faqlist>a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 14px;
+    height: 1px;
+    background-color: #929292;
+    margin-left: -7px;
+}
+
+.buy-help {
+    padding-top: 13px;
+    line-height: 27px;
+}
+
+.buy-help a {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+.buy-help a:hover {
+    color: #0cbbef;
+}
+
+
+/* 联系我们 */
+
+.connect-title {
+    padding: 68px 0 36px;
+}
+
+.connect-us {
+    width: 100%;
+    height: 328px;
+}
+
+.connection-box {
+    width: 1240px;
+    min-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 328px;
+}
+
+.connect-way ul {
+    overflow: hidden;
+}
+
+.connect-way li {
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding-bottom: 68px;
+    /* box-sizing: border-box; */
+}
+
+.connect-way a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 26px 0;
+    cursor: pointer;
+    margin-bottom: -20px;
+    color: #333;
+}
+
+.connect-way span {
+    display: block;
+    width: 34px;
+    height: 34px;
+    margin: 0 auto;
+    padding: 26px 0;
+}
+
+.connect-way em {
+    display: block;
+    font-size: 16px;
+    padding-top: 12px;
+    margin-bottom: 7px;
+}
+
+.connect-way i {
+    display: block;
+    font-size: 14px;
+    color: #999;
+    margin-top: -4px;
+    font-style: normal;
+}
+
+.connect-way li:hover em {
+    color: #008cff;
+}
+
+.connect-icon1 {
+    background: url("../images/serv-connect1.jpg") no-repeat center center;
+}
+
+.connect-icon2 {
+    background: url("../images/serv-connect2.jpg") no-repeat center center;
+}
+
+.connect-icon3 {
+    background: url("../images/serv-connect3.jpg") no-repeat center center;
+}
+
+.connect-icon4 {
+    background: url("../images/serv-connect4.jpg") no-repeat center center;
+}
+
+.serv-hover {
+    position: relative;
+}
+
+.serv-hover img {
+    width: 158px;
+    height: 158px;
+    position: absolute;
+    top: 20px;
+    left: 75px;
+    display: none;
+}
+
+.serv-hover:hover img {
+    display: block;
+}
+
+.offline-try {
+    height: 842px;
+}
+
+.offline {
+    margin-bottom: 86px;
+    overflow: hidden;
+}
+
+.off-padding {
+    margin-top: 43px;
+}
+
+.offline>li {
+    float: left;
+    height: 378px;
+    overflow: hidden;
+}
+
+.offline>li:nth-child(1),
+.offline>li:nth-child(3) {
+    width: 621px;
+}
+
+.offline>li:nth-child(2),
+.offline>li:nth-child(4) {
+    width: 619px;
+}
+
+.bouti-bg1 {
+    background-color: #5a66aa;
+}
+
+.boutique-box1 div {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.boutique-box1 .bouti-bg2 {
+    background-color: #f4f4f4;
+    color: #393939;
+}
+
+.bou-tit {
+    font-size: 24px;
+    padding-top: 81px;
+    margin: 0 60px 23px;
+}
+
+.bou-bri {
+    margin: 0 60px 10px;
+    font-size: 14px;
+}
+
+.offline a {
+    color: #008cff;
+    font-size: 14px;
+    margin: 0 60px 50px;
+}
+
+.bou-service {
+    margin: 46px 0 0 60px;
+    overflow: hidden;
+}
+
+.bou-service li {
+    float: left;
+    font-size: 12px;
+    margin-right: 40px;
+}
+
+.bou-service span {
+    display: block;
+    height: 27px;
+    margin: 0 auto;
+    margin-bottom: 8px;
+    background: url("../images/serv-boutique-icons.png") no-repeat;
+}
+
+.bou-icon1 span {
+    width: 16px;
+    background-position: 0 0;
+}
+
+.bou-icon2 span {
+    width: 27px;
+    background-position: -86px 0;
+}
+
+.bou-icon3 span {
+    width: 27px;
+    background-position: -177px 0;
+}
+
+.bou-icon4 span {
+    width: 19px;
+    background-position: -271px 0;
+}
+
+.bou-icon5 span {
+    width: 13px;
+    background-position: -364px 0;
+}
+
+.bou-icon6 span {
+    width: 16px;
+    background-position: -453px 0;
+}
+
+.bou-icon7 span {
+    width: 21px;
+    background-position: 0 -57px;
+}
+
+.bou-icon8 span {
+    width: 27px;
+    background-position: -86px -57px;
+}
+
+.bou-icon9 span {
+    width: 27px;
+    background-position: -177px -57px;
+}
+
+.bou-icon10 span {
+    width: 19px;
+    background-position: -271px -57px;
+}
+
+.bou-icon11 span {
+    width: 13px;
+    background-position: -364px -57px;
+}
+
+.bou-icon12 span {
+    width: 19px;
+    background-position: -450px -57px;
+}

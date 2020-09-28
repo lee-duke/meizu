@@ -1,0 +1,224 @@
+/* 背景图模块 */
+
+.broken-banner {
+    width: 100%;
+}
+
+.broken-bannerbg {
+    width: 100%;
+    height: 380px;
+    background: url('../images/broken-banner.jpg') no-repeat center center;
+}
+
+
+/* 品质保障 */
+
+.quantity {
+    width: 1024px;
+    margin: 0 auto;
+    height: 247px;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.quan-content {
+    padding: 0 10px;
+}
+
+.quan-title {
+    font-weight: bold;
+    text-align: center;
+    margin: 25px auto 15px;
+    font-size: 16px;
+    color: #1f7ffb;
+}
+
+.quan-box ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.quan-box li {
+    /* display: inline-block; */
+    float: left;
+    text-align: center;
+    font-size: 16px;
+}
+
+.quan-box img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5px;
+}
+
+
+/* 详情须知 */
+
+.service-detail {
+    width: 1024px;
+    padding: 0 16px;
+    height: 162px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.sd-title {
+    width: 100%;
+    height: 46px;
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 45px;
+    border-bottom: 1px solid #ebebeb;
+    padding-left: 30px;
+}
+
+.sd-title i {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 100%;
+    background: url('../images/broken-icon1.png') no-repeat 0 50%;
+    background-size: 20px 20px;
+    line-height: 50%;
+}
+
+.sd-content {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 10px 0;
+    color: rgba(0, 0, 0, .4);
+}
+
+.sd-content p {
+    margin-bottom: 10px;
+}
+
+.sd-content p:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+.sd-content a {
+    color: #1f7ffb;
+}
+
+.know-height {
+    height: 201px;
+}
+
+.know-icon i {
+    background: url('../images/broken-icon2.png') no-repeat 0 50%;
+    background-size: 20px 20px;
+}
+
+
+/* 常见问题 */
+
+.question-height {
+    height: 414px;
+}
+
+.ques-icon i {
+    background: url('../images/broken-icon3.png') no-repeat 0 50%;
+    background-size: 20px 20px;
+}
+
+.ques-q {
+    color: #000;
+}
+
+
+/* 报修流程 */
+
+.proc-hei {
+    height: 49px;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+.proc-hei a {
+    width: 100%;
+    height: 49px;
+    line-height: 48px;
+    padding: 0;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    display: block;
+    cursor: default;
+}
+
+.procimg-hei {
+    height: 345px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.procimg-hei img {
+    display: block;
+    margin: 0 auto;
+    width: 942px;
+    height: 342px;
+}
+
+
+/* 底部价格 */
+
+.bottom-price {
+    width: 100%;
+    height: 66px;
+    border-top: 1px solid #ebebeb;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+}
+
+.broken-pri {
+    width: 1024px;
+    height: 66px;
+    margin: 0 auto;
+    /* padding: 0 calc((100%-1024px)/2); */
+}
+
+.left-pri {
+    margin-top: 6px;
+    float: left;
+    line-height: 48px;
+    color: #f12528;
+    width: 859px;
+}
+
+.b-p {
+    font-size: 26px;
+}
+
+.b-p span {
+    padding-left: 5px;
+    font-size: 16px;
+    color: #0f0f0f;
+}
+
+.buyclick {
+    margin-top: 9px;
+    border-radius: 3px;
+    float: right;
+    line-height: 48px;
+    width: 158px;
+    background-color: #e51c23;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+.buyclick:hover {
+    background-color: #c80007;
+}

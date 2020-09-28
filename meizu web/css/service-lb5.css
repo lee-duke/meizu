@@ -1,0 +1,297 @@
+/* 魅族服务 */
+
+.slogan-wrap {
+    width: 100%;
+    height: 830px;
+}
+
+.slogan-back {
+    height: 100%;
+    width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+    background: url("../images/slogan-bg.jpg") no-repeat 46px bottom;
+    position: relative;
+}
+
+.slo-desc {
+    position: absolute;
+    top: 220px;
+    right: 86px;
+    width: 388px;
+    color: #5d5d5d;
+}
+
+.trans p {
+    text-align: left;
+    font-size: 16px;
+    line-height: 28px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 1s 0.8s, opacity 1s 0.8s;
+}
+
+.trans h2 {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 1s 0.5s, opacity 1s 0.5s;
+}
+
+
+/* .shop-icon,
+.vid-icon {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 1s, opacity 1s;
+} */
+
+.s-mt,
+.s-d {
+    text-align: left;
+    font-size: 16px;
+    line-height: 28px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 1s 0.5s, opacity 1s 0.5s;
+}
+
+.s-d {
+    transition: transform 1s, opacity 1s;
+}
+
+.slo-desc .active {
+    transform: none;
+    opacity: 1;
+}
+
+.trans .active {
+    transform: none;
+    opacity: 1;
+}
+
+.s-icon {
+    margin-bottom: 30px;
+}
+
+.s-mt {
+    margin-top: 98px;
+}
+
+
+/* 会员认证 */
+
+.vip-wrap {
+    height: 700px;
+    width: 100%;
+    background-color: #000;
+}
+
+.vip-back {
+    position: relative;
+    height: 100%;
+    width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.vip-desc {
+    position: absolute;
+    top: 230px;
+    left: 60px;
+    width: 367px;
+    color: #fff;
+}
+
+body h2 {
+    font-size: 48px;
+    line-height: 56px;
+    margin: 12px 0 20px;
+}
+
+.vip-rightimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/slogan-bg2.jpg") no-repeat right center;
+}
+
+
+/* 专业客户服务 */
+
+.client-wrap {
+    width: 100%;
+    height: 830px;
+    background: url("../images/slogan-bg3.jpg") no-repeat center bottom;
+}
+
+.client-back {
+    height: 100%;
+    width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.client-desc {
+    width: 613px;
+    margin: 0 auto;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.client-desc p {
+    text-align: center;
+}
+
+
+/* 自动定位门店 */
+
+.shop-wrap {
+    height: 700px;
+    background: url("../images/slogan-bg4.jpg") no-repeat center top;
+}
+
+.shop-back {
+    position: relative;
+    width: 630px;
+    height: 100%;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.shop-desc {
+    position: absolute;
+    top: 140px;
+    width: 100%;
+    color: #fff;
+}
+
+.shop-icon {
+    margin-bottom: 60px;
+}
+
+.shop-icon img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+.shop-desc h2,
+.shop-desc p {
+    text-align: center;
+}
+
+
+/* 五大服务保障 */
+
+.prop-wrap {
+    width: 100%;
+    height: 830px;
+}
+
+.prop-back {
+    height: 100%;
+    width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.proplist {
+    position: absolute;
+    top: 204px;
+    width: 100%;
+}
+
+.proplist li {
+    float: left;
+    margin: 0 37px;
+}
+
+.sicon1 {
+    background: url(../images/sIcon1.png);
+    width: 164px;
+    height: 164px;
+}
+
+.sicon2 {
+    background: url(../images/sIcon2.png);
+    width: 164px;
+    height: 164px;
+}
+
+.sicon3 {
+    background: url(../images/sIcon3.png);
+    width: 164px;
+    height: 164px;
+}
+
+.sicon4 {
+    background: url(../images/sIcon4.png);
+    width: 164px;
+    height: 164px;
+}
+
+.sicon5 {
+    background: url(../images/sIcon5.png);
+    width: 164px;
+    height: 164px;
+}
+
+.prop-desc {
+    position: absolute;
+    top: 470px;
+    width: 100%;
+}
+
+.prop-desc p {
+    width: 662px;
+    margin: auto;
+}
+
+.prop-desc h2,
+.prop-desc p {
+    text-align: center;
+}
+
+
+/* 视频教程 */
+
+.vid-wrap {
+    height: 700px;
+    background-color: #000;
+    background: url("../images/slogan-bg5.jpg") no-repeat center top;
+}
+
+.vid-back {
+    position: relative;
+    width: 1240px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.vid-desc {
+    position: absolute;
+    top: 162px;
+    width: 100%;
+    color: #fff;
+}
+
+.vid-desc p {
+    width: 762px;
+    margin: auto;
+    text-align: center;
+}
+
+.vid-icon img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+.vid-desc h2 {
+    text-align: center;
+    margin-top: 63px;
+}
