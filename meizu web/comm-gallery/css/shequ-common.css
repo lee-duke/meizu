@@ -1,0 +1,458 @@
+body{
+    font: 14px/1.5 Helvetica,Tahoma,Arial,'Hiragino Sans GB','Microsoft YaHei','SimSun','Heiti',sans-serif;
+    background-color: #f2f2f2!important;
+    height: 5000px;
+}
+.w-header{
+    background-color: #fff;
+}
+.border-wrap{
+    position: relative;
+    background-color: #484848;
+}
+.bbs-header{
+    margin: 0 auto;
+    width: 1040px;
+    height: 36px;
+    line-height: 36px;
+    
+}
+.head-nav-r{
+    float: right;
+}
+
+.bbs-header a{
+    display: inline-block;
+    margin-right: 22px;
+    color: #aaa;
+    transition: all .2s linear;
+    /* font-size: 14px; */
+}
+.bbs-header a:hover{
+    color: #fff;
+}
+.head-nav-r .download{
+    margin-right: 0;
+    padding-left: 23px;
+    background-image: url('../images/download_ec461fd.png');
+    background-repeat: no-repeat;
+    background-position: 0;
+}
+.nav-wrap{
+    position: relative;
+    margin: 0 auto;
+    width: 1040px;
+    height: 82px;
+}
+.bbs-logo{
+    float: left;
+    margin-top: 30px;
+    width: 210px;
+    color: #222222;
+}
+.bbs-logo img{
+    display: inline-block;
+    margin-right: 10px;
+    width: 140px;
+    height: 25px;
+    vertical-align: text-bottom;
+}
+.bbs-logo span{
+    display: inline-block;
+    font-size: 20px;
+    color: #333;
+    vertical-align: baseline;
+}
+.search-wrap{
+    float: right;
+    margin-top: 26px;
+    margin-right: 40px;
+    padding: 4px;
+    border: 1px solid #eeeeee;
+}
+#scbar-txt{
+    outline: none;
+    border: none;
+    font-size: 12px;
+    font-family: Helvetica,Tahoma,Arial,'Hiragino Sans GB','Microsoft YaHei','SimSun','Heiti',sans-serif;
+    height: 26px;
+    line-height: 26px;
+    width: 170px;
+    padding: 0 0 0 10px;
+    float: left;
+    color: #999999;
+}
+.user-avatar{
+    float: right;
+    position: relative;
+    margin-right: 10px;
+    margin-top: 27px;
+    width: 24px;
+    cursor: pointer;
+}
+.bbs-avatar{
+    float: right;
+}
+.bbs-avatar img{
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+}
+#scbar-but{
+    width: 30px;
+    height: 26px;
+    background-image: url('../images/scbar-but.png');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    
+}
+#scbar-form{
+    height: 26px;
+}
+.bbs-menu{
+    height: 56px;
+    float: right;
+    margin-top: 26px;
+    margin-right: 20px;
+}
+.bbs-menu li{
+    height: 100%;
+    line-height: 36px;
+    font-size: 14px;
+    float: left;
+}
+.bbs-menu li:hover a{
+    color: #008cff;
+}
+.bbs-menu li a{
+    color: #515151;
+    font-size: 16px;
+    margin: 0 12px;
+    padding: 0 6px;
+}
+.app-down-wp{
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 1px 1px 1px #e2e2e2;
+    left: 0;
+    top: 36px;
+    z-index: 1001;
+    display: none;
+}
+.app-down-content{
+    position: relative;
+    width: 1040px;
+    margin: 0 auto;
+}
+.app-down-content::after{
+    content: '';
+    position: absolute;
+    right: 22px;
+    top: -26px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color:#fff;
+}
+.app-down-wp img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+.app-down-link{
+    position: absolute;
+    width: 125px;
+    height: 28px;
+    top: 176px;
+    color: #222222;
+}
+.app-down-link img{
+    width: 100%;
+}
+.app-down-link-2{
+    right: 79px;
+}
+.app-down-link-3{
+    left: 319px;
+}
+.fr .user-menu{
+    position: absolute;
+    display: none;
+    left: -44px;
+    top: 44px;
+    padding: 10px;
+    width: 80px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 4px #ccc;
+    border-radius: 3px;
+    z-index: 99;
+}
+
+.user-menu .arrow{
+    position: absolute;
+    left: 45px;
+    top: -6px;
+    width: 12px;
+    height: 6px;
+    background: url('../images/avatar-arrow.png') no-repeat 0 0;
+    z-index: 99;
+}
+.notloglist{
+    text-align: center;
+}
+.notloglist li{
+    height: 18px;
+    line-height: 18px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+.notloglist li a,.notloglist li span{
+    color: #a2a2a2;
+    font-size: 12px;
+}
+.other-login a{
+    width: 22px;
+    height: 22px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background-size: 100%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url('../images/login_icon_weibo.png');
+    display: inline-block;
+}
+.other-login .weixin{
+    background-image: url('../images/login_icon_weixin.png');
+}
+.user-menu li a:hover{
+    color:  #008cff;
+}
+.bbs-all-menu{
+    position: absolute;
+    left: 320px;
+    top: 95px;
+    padding: 20px;
+    box-sizing: border-box;
+    min-width: 480px;
+    background: #fff;
+    z-index: 999;
+    box-shadow: 0 0 10px #d2d2d2;
+    display: none;
+}
+.all-menu-arrow{
+    position: absolute;
+    left: 195px;
+    top: -14px;
+    width: 20px;
+    height: 14px;
+    background: url('../images/all-menu-arrow.png') no-repeat 0 0;
+}
+.bbs-all-menu .menu-item{
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.bbs-all-menu  .blueitem{
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    width: 60px;
+    font-size: 14px;
+    background: url('../images/all-menu-s.png') no-repeat 50px 12px;
+}
+.bbs-all-menu .menu-item .blueitems{
+    margin-left: 20px;
+    width: 80%;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f4f4f4;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+}
+
+.bbs-all-menu .blueitems a{
+    display: inline-block;
+    margin-right: 25px;
+    font-size: 14px;
+    color: #222222;
+    
+}
+.lastchild{
+    margin-bottom: 0;
+}
+.meizu-footer{
+    margin-top: 30px;
+    padding: 40px 0;
+    background: #fff;
+}
+.footer-inner{
+    margin: 0 auto;
+    width: 1040px;
+}
+.maizu-row{
+    width: 100%;
+    position: relative;
+    color: #999;
+    text-align: left;
+    font-size: 12px;
+}
+.meizu-footer-info-left{
+    display: inline-block;
+    margin: 0 auto;
+    width: 980px;
+    height: 60px;
+}
+.listfix{
+    color: #999;
+    text-align: left;
+    font-size: 12px;
+}
+.meizu-footer-info-left .listfix li{
+    padding-right: 15px;
+    display: inline-block;
+    margin-right: 15px;
+    border-right: 1px solid #f1f1f1;
+}
+.meizu-footer-info-left .listfix a{
+    position: relative;
+    display: block;
+    line-height: 18px;
+    color: #999;
+}
+.meizu-footer-info-left .listfix .no-border{
+    border: 0;
+    position: relative;
+}
+.meizu-footer-info-left .button-language{
+    position: relative;
+    display: block;
+    margin-top: 5px;
+    padding-left: 24px;
+    cursor: pointer;
+    padding-right: 10px;
+    color: #999;
+    font-size: 12px;
+}
+.meizu-footer-info-left .button-language .icon-lang-cn{
+    background-position: 0 0;
+}
+.meizu-footer-info-left .button-language i{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 0;
+    left: 0;
+    background-image: url('../images/language.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#lang-list-footer{
+    padding-top: 6px;
+    bottom: 26px;
+    right: 0;
+    top: auto;
+    left: -20px;
+    height: 156px;
+    width: 108px;
+    background: #fff;
+    border: 1px solid #f1f1f1;
+    z-index: 999;
+    position: absolute;
+    display: none;
+}
+.lang_list_ .footerLi{
+    display: inline-block;
+    margin-right: 15px;
+    padding: 0;
+    margin: 0;
+    height: 37px;
+    width: 83%;
+    padding-left: 10px;
+    padding-top: 2px;
+    background: #fff;
+    border: 0;  
+}
+.lang_list_ .footerLi a{
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    display: block;
+    color: #999;
+}
+#lang-list-footer i{
+    top: 2px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.lang_list_ .footerLi a span{
+    position: relative;
+    display: block;
+    margin-top: 5px;
+    padding-left: 24px;
+    cursor: pointer;
+    height: 24px;
+    color: #333;
+    line-height: 24px;
+    font-size: 14px;
+}
+#meizu-footer-langlist span:hover{
+   color:#515151;
+}
+#meizu-footer-langlist:hover #lang-list-footer{
+    display: block;
+}
+.meizu-footer-certificate{
+    padding-top: 8px;  
+    color: #999;
+    text-align: left;
+    font-size: 12px;     
+}
+.meizu-footer-certificate a{
+    color: #999;
+    text-align: left;
+    font-size: 12px;
+}
+.footer-into-record{
+    margin: 0 6px;
+}
+.meizu-footer-certificate i{
+    background-image: url('../images/footer-into-record.png');
+    width: 14px;
+    position: relative;
+    top: 4px;
+    display: inline-block;
+    height: 18px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+.footer-info-license{
+    margin: 0;
+}
+.meizu-footer-certificate .footer-info-license i{
+    background-image: url('../images/footer-info-license.png');
+    width: 20px;
+}
+.meizu-footer-certificate .footer-info-license i:hover{
+    background-image: url('../images/footer-info-license-blue.png');
+}
+.meizu-footer-certificate .footer-info-wel i{
+    background-image: url('../images/footer-info-wel.png');
+    width: 20px;
+}
+.meizu-footer-certificate .footer-info-wel i:hover{
+    background-image: url('../images/footer-info-wel-blue.png');
+}
+.meizu-footer-certificate .footer-info-trust i{
+    background-image: url('../images/footer-info-trust.png');
+    width: 20px;
+}
+.meizu-footer-certificate .footer-info-trust i:hover{
+    background-image: url('../images/footer-info-trust-blue.png');
+}

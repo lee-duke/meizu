@@ -1,0 +1,147 @@
+html,
+body {
+    background-color: #f2f2f2;
+}
+
+.ery-header {
+    margin: 0 auto;
+    width: 1002px;
+    height: 48px;
+}
+
+.galhead-list {
+    float: right;
+    margin-right: -30px;
+}
+
+.galhead-list .galhead-item {
+    float: left;
+    margin-right: 30px;
+    line-height: 48px;
+}
+
+.galhead-item a {
+    color: #777;
+    font-size: 14px;
+}
+.mainContainer{
+    margin: 0 auto;
+    width: 1002px;
+}
+.mainContainer .filter{
+    padding: 20px;
+    font-size: 12px;
+    background: #fff;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box
+    ;
+}
+.filter dt ,.filter dd{
+    float: left;
+    font-size: 12px;
+    height: 14px;
+    line-height: 13px;
+    
+}
+.filter dd{
+    margin-bottom: 10px;
+    padding: 0 15px;
+    border-right: 1px solid #000;
+    padding-left: 18px;
+}
+.filter .noborder{
+    border-right: none;
+}
+.filter dt{
+    margin-right: 28px;
+}
+.photo-main {
+    margin-top: 18px;
+    padding: 18px 18px 0;
+    background: #fff;
+    overflow: hidden;
+    width: 1002px;
+    box-sizing: border-box;
+    /* margin: 0 auto; */
+}
+.image-list{
+    overflow: hidden;
+    width: 110%;
+}
+.image-item {
+    height: 228px;
+    width: 228px;
+    position: relative;
+    float: left;
+    margin: 0 18px 18px 0;
+    overflow: hidden;
+
+}
+
+.image-item img {
+    height: 100%;
+    width: 100%;
+}
+
+.image-hot {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 12px;
+    color: #fff;
+    display: none;
+}
+
+.image-bottom {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: none;
+}
+
+.image-bottom .image-title {
+    padding-bottom: 5px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.image-author {
+    font-size: 12px;
+    color: #fff;
+}
+
+.image-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -230px;
+    background: #000;
+    opacity: .5;
+    z-index: 1;
+    transition: top .3s
+}
+
+.image-item:hover .image-hot {
+    display: block;
+}
+
+.image-item:hover .image-bottom {
+    display: block;
+}
+
+.image-item:hover .image-cover {
+    top: 0;
+    z-index: 0;
+}
+.gotop{
+    position: fixed;
+    right: 50%;
+    bottom: 13px;
+    margin-right: -561px;
+    display: none;
+}
+.gotop.top{
+    cursor: pointer;
+}

@@ -1,0 +1,617 @@
+html,
+body {
+    background-color: #f2f2f2 !important;
+    font: 14px/1.5 Helvetica, Tahoma, Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 'SimSun', 'Heiti', sans-serif;
+}
+
+.clearfix:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0
+}
+
+.wp {
+    margin: 0 auto;
+    width: 1040px;
+    padding: 0px 20px;
+    overflow: hidden;
+}
+
+.plate-mn {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 4px #ECECEC;
+    width: 700px;
+    float: left;
+    border: 1px solid #E6E6E6;
+}
+
+.plate-mn .th {
+    font-size: 14px;
+    padding: 0px;
+    margin: 0px 20px;
+}
+
+.th ul {
+    width: 100%;
+    padding: 24px 0px;
+    margin: 0px !important;
+    border-bottom: 2px solid #E6E6E6;
+    color: #000000;
+    overflow: hidden;
+}
+
+.th .th1 {
+    margin-right: 30px;
+    float: left;
+    line-height: 38px;
+}
+
+.th1 a {
+    color: #000000;
+}
+
+.th2 a {
+    color: #000000;
+    float: left;
+    line-height: 38px;
+}
+
+.th2 .pie2 {
+    float: left;
+    line-height: 38px;
+    margin: 0px 10px 2px;
+    margin-top: 13px;
+    width: 1px;
+    height: 14px;
+    background: url('../images/main_icon.png') no-repeat -24px -215px;
+}
+
+.th3 {
+    padding: 0px 12px;
+    margin-left: 28px;
+    line-height: 38px;
+    float: left;
+    position: relative;
+}
+
+.th3 a {
+    color: #000000;
+}
+
+.arrow-dark {
+    bottom: 8px;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    right: 4px;
+    background: url('../images/main_icon.png') transparent no-repeat -149px -347px;
+}
+
+.th4 a {
+    float: right;
+    line-height: 36px;
+    color: #666;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px !important;
+    width: 96px;
+    height: 36px;
+    text-align: center;
+    background-color: #008cff;
+    border: 1px solid #008cff;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+}
+
+.bm-c {
+    padding: 0px 20px;
+}
+
+.bm-c ul {
+    width: 100%;
+}
+
+.normalthread {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 12px 0px;
+    position: relative;
+}
+
+.normalthread:hover {
+    background-color: #f7fafc;
+}
+
+.normalthread .userhead {
+    width: 64px;
+    text-align: left;
+    /* padding: 12px 0px; */
+    position: relative;
+}
+
+.normalthread .userhead img {
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 22px;
+    cursor: pointer;
+}
+
+.normalthread .itemcont {
+    overflow: hidden;
+    padding-right: 13px;
+    padding-left: 7px;
+    width: 468px;
+    text-align: left;
+    font-weight: 400;
+}
+
+.itemcont a {
+    font-size: 16px;
+    width: 480px;
+    height: 30px;
+    color: #222222;
+    overflow: hidden;
+    line-height: 30px;
+    vertical-align: middle;
+    line-height: 45px;
+}
+
+.userhead,
+.itemcont {
+    float: left;
+    position: relative;
+}
+
+.itemcont img {
+    margin: 0px 0px 0px 6px;
+    overflow: hidden;
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+.itemcont .pagebar-postlist {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.itemcont .pagebar-postlist a {
+    color: #ff9c00 !important;
+    padding: 0px 2px;
+    font-size: 16px;
+}
+
+em {
+    color: #ff9c00;
+}
+
+.latestreply {
+    width: 96px;
+    text-align: right;
+    height: 45px;
+    display: inline-block;
+}
+
+.latestreply a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    visibility: visible;
+    color: #999999;
+    font-size: 12px;
+    margin-top: -5px;
+}
+
+.latestreply span {
+    color: #999999;
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 3px;
+}
+
+.user-info {
+    height: 200px;
+    width: 300px;
+    background-color: #fff;
+    position: absolute;
+    border: 1px solid #eeeeee;
+}
+
+.expandBox {
+    width: 276px;
+    overflow: hidden;
+    box-shadow: 0px 0px 4px #ECECEC;
+    border: 1px solid #E6E6E6;
+    background-color: #FFFFFF;
+    float: right;
+    padding: 23px 20px 15px;
+}
+
+
+/*点击头像浮动窗口样式*/
+
+.space-card-new {
+    position: absolute;
+    top: -22px;
+    left: -21px;
+    display: none;
+    background-color: #FFFFFF;
+    z-index: 301;
+    border: 1px solid #e6e6e6;
+    padding: 20px;
+    box-shadow: 0px 0px 5px #E6E6E6;
+    width: 340px;
+}
+
+.space-card-new .head-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.space-card-new .head-avatar a {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+}
+
+.space-card-new .head-avatar a img {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+}
+
+.space-card-new .user-info2 {
+    float: left;
+    margin-left: 20px;
+}
+
+.space-card-new .user-info2 .user-name {
+    color: #008cff;
+    padding-bottom: 12px;
+    width: 270px;
+    display: block;
+}
+
+.userhead:hover .space-card-new {
+    display: block;
+}
+
+.sightml {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 20px;
+    color: #999999;
+    width: 270px;
+    margin-bottom: 5px;
+}
+
+.user-info2-r {
+    color: #999999;
+    overflow: hidden;
+}
+
+.user-info2-r .r {
+    float: left;
+}
+
+.rmargin {
+    margin-left: 20px;
+}
+
+#card-follow {
+    border: 1px solid #bae3f0;
+    background-color: #dbf3fb;
+    display: block;
+    height: 27px;
+    line-height: 27px;
+    text-align: center;
+    width: 70px;
+    float: right;
+    margin-top: 30px;
+    color: #222222;
+}
+
+
+/*右部分*/
+
+.mz-sign-box {
+    position: relative;
+    margin: 0 auto;
+    width: 270px;
+    height: 60px;
+    background-color: #f7f7f7;
+}
+
+.show-today {
+    line-height: 60px;
+    cursor: pointer;
+    float: left;
+    width: 48%;
+    height: 60px;
+}
+
+.icon-calendar {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 12px;
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    background: url('../images/right/calendar-blue.png') no-repeat 50%;
+}
+
+.mz-today {
+    line-height: 60px;
+    cursor: pointer;
+    color: #515151;
+}
+
+.mz-sign {
+    margin-left: 4%;
+    float: left;
+    width: 48%;
+    height: 60px;
+}
+
+.unsign {
+    display: inline-block;
+    margin: 10px 0;
+    width: 90%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #008cff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.icon-unsign {
+    margin-right: 5px;
+    width: 15px;
+    height: 14px;
+    background: url('../images/right/icon-unsign.png') no-repeat 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.titlebar-expand {
+    border-bottom: 1px solid #E6E6E6;
+    height: 58px;
+    line-height: 58px;
+    color: #222222;
+}
+
+.titlebar-expand h3 {
+    float: left;
+    color: #008cff;
+    font-size: 18px;
+}
+
+.titlebar-expand span {
+    float: right;
+}
+
+.readblock-expand {
+    padding: 20px 0px 0px 0px;
+    line-height: 28px;
+    color: #222222;
+    padding-top: 12px;
+}
+
+.xi2 a {
+    margin-right: 13px;
+    color: #222222;
+}
+
+.bm-pintro {
+    margin-bottom: 16px;
+    width: 276px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.forum-rules {
+    color: #222222;
+}
+
+.readblock-expand {
+    padding-top: 20px !important;
+    line-height: 28px;
+    color: #222222;
+}
+
+#portal-block-701 {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+.portal-blocks {
+    float: left;
+    margin-right: 28px;
+    width: 124px;
+}
+
+.portal-blocks img {
+    width: 100%;
+    display: block;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.nomarr {
+    margin-right: 0;
+}
+
+.portal-blocks a {
+    color: #222222;
+}
+
+.portal-block-752 a {
+    height: 44px;
+    line-height: 44px;
+    display: inline-block;
+    color: #222222;
+}
+
+.portal-block-752 {
+    border-top: 1px solid rgb(230, 230, 230);
+}
+
+.intrs .intr {
+    border-bottom: 1px solid #f0f0f0;
+    overflow: hidden;
+}
+
+.intrs .intrs-img {
+    padding: 33px 0;
+    overflow: hidden;
+    display: block;
+    text-align: left;
+    float: left;
+    width: 59px;
+}
+
+.intrs .intrs-img img {
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 22px;
+}
+
+.intrs-info {
+    padding: 16px 0;
+    float: left;
+    color: #999999;
+    width: 160px;
+    overflow: hidden;
+}
+
+.intrs-info a {
+    color: #222222;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.intrs-info p {
+    line-height: 28px;
+}
+
+.intr .listen-in {
+    padding: 16px 0;
+    display: block;
+    float: right;
+    color: #008cff;
+    line-height: 28px;
+}
+
+.intrs .intrs-img2 {
+    padding: 20px 0;
+}
+
+.readblock-banner {
+    padding-top: 20px;
+}
+
+.readblock-banner img {
+    width: 276px !important;
+    height: auto !important;
+    margin: 10px 0px;
+}
+
+
+/*分页器*/
+
+.forumpaging {
+    padding: 31px 20px;
+    margin: 0px;
+    overflow: hidden;
+    position: relative;
+}
+
+.forumpaging .paging {
+    margin-left: 36px;
+    overflow: hidden;
+    width: auto;
+    margin-right: 0;
+    float: left;
+}
+
+.forumpaging .pagingitem {
+    float: left;
+    font-size: 18px;
+    height: 34px;
+    line-height: 34px;
+    margin-left: 10px;
+    padding: 0px 12px;
+    color: #333333;
+    overflow: hidden;
+    background-color: #F3F3F3;
+    border: 1px solid #F0F0F0;
+    border-radius: 18px 18px 18px 18px;
+    cursor: pointer;
+}
+
+.prev {
+    font-size: 18px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0px 12px;
+    overflow: hidden;
+    text-decoration: none;
+    background-color: #F3F3F3;
+    border: 1px solid #F0F0F0;
+    border-radius: 18px 18px 18px 18px;
+    position: absolute;
+    top: 31px;
+    left: 20px;
+}
+
+.previcon {
+    display: inline-block;
+    width: 10px;
+    height: 17px;
+    background: url('../images/main_icon.png') no-repeat -124px -568px;
+    margin: 9px 0px 0px 0px;
+}
+
+.next {
+    font-size: 18px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0px 12px;
+    overflow: hidden;
+    text-decoration: none;
+    background-color: #F3F3F3;
+    border: 1px solid #F0F0F0;
+    border-radius: 18px 18px 18px 18px;
+    width: 10px;
+    margin-left: 10px;
+    float: left;
+}
+
+.nextvicon {
+    display: inline-block;
+    width: 10px;
+    height: 17px;
+    background: url('../images/main_icon.png') no-repeat -152px -568px;
+    margin: 9px 0px 0px 0px;
+}
+
+.forumpaging .cutcolor {
+    color: #FFFFFF;
+    background-color: #008cff;
+    border: 1px solid #008cff;
+}
